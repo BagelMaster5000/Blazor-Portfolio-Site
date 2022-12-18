@@ -1,0 +1,28 @@
+﻿<div>
+    <nav style="align-content:center; align-items:center; float:unset">
+		<NavLink href="" Match="NavLinkMatch.All" style="text-decoration:none; color:black; padding:5px 10px" @onclick="SetPageHome">
+            Home
+        </NavLink>
+		<NavLink href="games" style="text-decoration:none; color:black; padding:5px 10px" @onclick="SetPageGames">
+            Games
+        </NavLink>
+        <NavLink href="projects" style="text-decoration:none; color:black; padding:5px 10px">
+            Other Projects
+        </NavLink>
+        <NavLink href="resume" style="text-decoration:none; color:black; padding:5px 10px">
+            Resume
+        </NavLink>
+        <NavLink href="about" style="text-decoration:none; color:black; padding:5px 10px">
+            About
+        </NavLink>
+        <NavLink href="contact" style="text-decoration:none; color:black; padding:5px 10px">
+            Contact Me
+        </NavLink>
+    </nav>
+</div>
+
+@code {
+    void SetPageHome() => GlobalVariables.CurPageName = "Home";
+    void SetPageGames() => GlobalVariables.CurPageName = "Games";
+
+}
