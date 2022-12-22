@@ -1,28 +1,43 @@
-﻿<div>
-    <nav style="align-content:center; align-items:center; float:unset">
-		<NavLink href="" Match="NavLinkMatch.All" style="text-decoration:none; color:black; padding:5px 10px" @onclick="SetPageHome">
-            Home
-        </NavLink>
-		<NavLink href="games" style="text-decoration:none; color:black; padding:5px 10px" @onclick="SetPageGames">
-            Games
-        </NavLink>
-        <NavLink href="projects" style="text-decoration:none; color:black; padding:5px 10px">
-            Other Projects
-        </NavLink>
-        <NavLink href="resume" style="text-decoration:none; color:black; padding:5px 10px">
-            Resume
-        </NavLink>
-        <NavLink href="about" style="text-decoration:none; color:black; padding:5px 10px">
-            About
-        </NavLink>
-        <NavLink href="contact" style="text-decoration:none; color:black; padding:5px 10px">
-            Contact Me
-        </NavLink>
-    </nav>
-</div>
+﻿<span style="float:center">
+    <a class="@GetHomeLinkClass()" href="" @onclick="SetPageHome">
+        Home
+    </a>
+    <a class="@GetGamesLinkClass()" href="games" @onclick="SetPageGames">
+        Games
+    </a>
+    <a class="navlink" href="projects">
+        Other Projects
+    </a>
+    <a class="navlink" href="resume">
+        Resume
+    </a>
+    <a class="navlink" href="about">
+        About
+    </a>
+    <a class="navlink" href="contact">
+        Contact Me
+    </a>
+</span>
 
 @code {
     void SetPageHome() => GlobalVariables.CurPageName = "Home";
     void SetPageGames() => GlobalVariables.CurPageName = "Games";
 
+    public string GetHomeLinkClass() {
+        if (GlobalVariables.CurPageName == "Home") {
+            return "home-link-active";
+        }
+        else {
+            return "home-link";
+        }
+    }
+
+    public string GetGamesLinkClass() {
+        if (GlobalVariables.CurPageName == "Games") {
+            return "games-link-active";
+        }
+        else {
+            return "games-link";
+        }
+    }
 }

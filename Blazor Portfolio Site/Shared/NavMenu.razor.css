@@ -1,23 +1,36 @@
-.top-row {
-    height: 3.5rem;
-    background-color: rgba(0,0,0,0.4);
+ nav {
+    align-content: center;
+    align-items: center;
+    float: unset;
 }
 
-.navbar-brand {
-    font-size: 1.1rem;
+a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: .2s ease-out;
 }
 
-.oi {
-    width: 2rem;
-    font-size: 1.1rem;
-    vertical-align: text-top;
-    top: -2px;
+    a:active {
+        color: white;
+    }
+
+    a:hover {
+        color: gray;
+    }
+
+.home-link {
+    background-color: none;
+}
+.home-link-active {
+    background-color: lavender;
 }
 
-NavLink {
-    color:black;
-    background:none;
-    border:none;
-    text-decoration:none;
-    padding: 5px 10px
+.games-link {
+    background-color: none
+}
+
+.games-link-active {
+    background-color: lightblue;
 }
