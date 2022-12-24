@@ -11,19 +11,17 @@ main {
 
 article {
     text-align: center;
-    transition: .4s ease;
+    transition: .3s ease;
 
 }
 
-.home-class {
-    background: lavender;
-}
-.games-class {
-    background: lightblue;
-}
-.base-class{
-    background: gray;
-}
+.home-class { background: lavender; }
+.games-class { background: lightblue; }
+.other-class { background: lightseagreen; }
+.resume-class { background: lightsalmon; }
+.about-class { background: lightcoral; }
+.contact-class { background: navajowhite; }
+.base-class { background: gray; }
 
 @media (max-width: 640.98px) {
     .top-row:not(.auth) {

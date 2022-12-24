@@ -7,30 +7,29 @@
 a {
     text-decoration: none;
     color: black;
-    padding: 5px 5px 3px 9px;
+    padding: 5px 5px 4px 9px;
     border-radius: 5px 5px 0px 0px;
     transition: .2s ease-out;
 }
 
-    a:active {
-        color: white;
-    }
-
     a:hover {
-        color: gray;
+        opacity: 0.5;
     }
 
-.home-link {
-    background-color: none;
-}
-.home-link-active {
-    background-color: lavender;
-}
+.home-link { background-color: none; }
+.home-link-active { background-color: lavender; }
 
-.games-link {
-    background-color: none
-}
+.games-link { background-color: none }
+.games-link-active { background-color: lightblue; }
 
-.games-link-active {
-    background-color: lightblue;
-}
+.other-link { background-color: none }
+.other-link-active { background-color: lightseagreen; }
+
+.resume-link { background-color: none }
+.resume-link-active { background-color: lightsalmon; }
+
+.about-link { background-color: none }
+.about-link-active { background-color: lightcoral; }
+
+.contact-link { background-color: none }
+.contact-link-active { background-color: navajowhite; }

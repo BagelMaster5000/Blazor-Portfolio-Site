@@ -5,23 +5,27 @@
     <a class="@GetGamesLinkClass()" href="games" @onclick="SetPageGames">
         Games
     </a>
-    <a class="navlink" href="projects">
-        Other Projects
+    <a class="@GetOtherLinkClass()" href="other" @onclick="SetPageOther">
+        Other
     </a>
-    <a class="navlink" href="resume">
+    <a class="@GetResumeLinkClass()" href="resume" @onclick="SetPageResume">
         Resume
     </a>
-    <a class="navlink" href="about">
+    <a class="@GetAboutLinkClass()" href="about" @onclick="SetPageAbout">
         About
     </a>
-    <a class="navlink" href="contact">
-        Contact Me
+    <a class="@GetContactLinkClass()" href="contact" @onclick="SetPageContact">
+        Contact
     </a>
 </span>
 
 @code {
     void SetPageHome() => GlobalVariables.CurPageName = "Home";
     void SetPageGames() => GlobalVariables.CurPageName = "Games";
+    void SetPageOther() => GlobalVariables.CurPageName = "Other";
+    void SetPageResume() => GlobalVariables.CurPageName = "Resume";
+    void SetPageAbout() => GlobalVariables.CurPageName = "About";
+    void SetPageContact() => GlobalVariables.CurPageName = "Contact";
 
     public string GetHomeLinkClass() {
         if (GlobalVariables.CurPageName == "Home") {
@@ -38,6 +42,42 @@
         }
         else {
             return "games-link";
+        }
+    }
+
+    public string GetOtherLinkClass() {
+        if (GlobalVariables.CurPageName == "Other") {
+            return "other-link-active";
+        }
+        else {
+            return "other-link";
+        }
+    }
+
+    public string GetResumeLinkClass() {
+        if (GlobalVariables.CurPageName == "Resume") {
+            return "resume-link-active";
+        }
+        else {
+            return "resume-link";
+        }
+    }
+
+    public string GetAboutLinkClass() {
+        if (GlobalVariables.CurPageName == "About") {
+            return "about-link-active";
+        }
+        else {
+            return "about-link";
+        }
+    }
+
+    public string GetContactLinkClass() {
+        if (GlobalVariables.CurPageName == "Contact") {
+            return "contact-link-active";
+        }
+        else {
+            return "contact-link";
         }
     }
 }

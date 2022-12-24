@@ -13,8 +13,22 @@
         <div style="text-align:center">
             <NavMenu />
         </div>
-		<article class="@CurPageClassName" style="padding: 20px 0px">
+		<article class="@GetCurPageClassName()" style="padding: 20px 0px">
 			@Body
 		</article>
     </main>
 </div>
+
+@code {
+    public string GetCurPageClassName() {
+        switch (GlobalVariables.CurPageName) {
+            case "Home": return "home-class";
+            case "Games": return "games-class";
+            case "Other": return "other-class";
+            case "Resume": return "resume-class";
+            case "About": return "about-class";
+            case "Contact": return "contact-class";
+            default: return "base-class";
+        }
+    }
+}
