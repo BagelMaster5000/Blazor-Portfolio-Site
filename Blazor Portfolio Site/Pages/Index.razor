@@ -27,29 +27,67 @@
 		</Column>
 		<Column ColumnSize="ColumnSize.Is5">
 			<Row Margin="Margin.Is2">
-				<Card Background="Background.White" Padding="Padding.Is2">
-					<CardImage src="images/pizzadeliverybagel.gif" Alt="Pizza Delivery Bagel gif" />
-					<CardBody>
-						<CardTitle>
-							<Heading Size="HeadingSize.Is6">
-								I work on programming projects all the time (mostly video games)!
-							</Heading>
-						</CardTitle>
-					</CardBody>
-				</Card>
+				<div class="clicky-card">
+					<Card Background="Background.White" Padding="Padding.Is2">
+						<CardImage src="images/pizzadeliverybagel.gif" Alt="Pizza Delivery Bagel gif" />
+						<CardBody>
+							<CardTitle>
+								<Heading Size="HeadingSize.Is6">
+									I work on programming projects all the time (mostly video games)!
+								</Heading>
+							</CardTitle>
+						</CardBody>
+					</Card>
+				</div>
 			</Row>
 			<Row Margin="Margin.Is2">
-				<Card Background="Background.White" Padding="Padding.Is2">
-					<CardImage src="images/drawing.jpg" Alt="Christmas Cats Drawing" />
-					<CardBody>
-						<CardTitle>
-							<Heading Size="HeadingSize.Is6">
-								I also enjoy drawing cute things and making stickers as hobbies!
-							</Heading>
-						</CardTitle>
-					</CardBody>
-				</Card>
+				<div class="clicky-card">
+					<Card Background="Background.White" Padding="Padding.Is2" @onclick="ShowHobbiesPopup">
+						<CardImage src="images/drawing.jpg" Alt="Christmas Cats Drawing" />
+						<CardBody>
+							<CardTitle>
+								<Heading Size="HeadingSize.Is6">
+									I also enjoy drawing cute things and making stickers as hobbies!
+								</Heading>
+							</CardTitle>
+						</CardBody>
+					</Card>
+				</div>
 			</Row>
 		</Column>
 	</Row>
 </Container>
+
+<Modal @bind-Visible="@hobbiesPopupVisible">
+	<ModalContent Size="ModalSize.Large">
+		<ModalHeader>
+			<ModalTitle>Hobbies</ModalTitle>
+			<CloseButton />
+		</ModalHeader>
+		<ModalBody>
+			<Image src="images/drawing.jpg" Alt="Christmas Cats Drawing" Width="Width.Is100"/>
+			<Image src="images/drawing.jpg" Alt="Christmas Cats Drawing" Width="Width.Is100"/>
+			<Image src="images/drawing.jpg" Alt="Christmas Cats Drawing" Width="Width.Is100"/>
+			<Image src="images/drawing.jpg" Alt="Christmas Cats Drawing" Width="Width.Is100"/>
+			<Image src="images/drawing.jpg" Alt="Christmas Cats Drawing" Width="Width.Is100"/>
+			<Image src="images/drawing.jpg" Alt="Christmas Cats Drawing" Width="Width.Is100"/>
+			<Image src="images/drawing.jpg" Alt="Christmas Cats Drawing" Width="Width.Is100"/>
+			<Image src="images/drawing.jpg" Alt="Christmas Cats Drawing" Width="Width.Is100"/>
+			<Image src="images/drawing.jpg" Alt="Christmas Cats Drawing" Width="Width.Is100"/>
+			<Image src="images/drawing.jpg" Alt="Christmas Cats Drawing" Width="Width.Is100"/>
+			<Paragraph>
+				Test
+			</Paragraph>
+		</ModalBody>
+	</ModalContent>
+</Modal>
+
+@code {
+	private bool hobbiesPopupVisible;
+	private void ShowHobbiesPopup() {
+		hobbiesPopupVisible = true;
+	}
+	private void HideHobbiesPopup() {
+		hobbiesPopupVisible = false;
+	}
+}
