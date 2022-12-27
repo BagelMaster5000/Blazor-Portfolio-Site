@@ -1,25 +1,27 @@
 ﻿@inherits LayoutComponentBase
 
-<PageTitle>Sammy Mahmoudi</PageTitle>
+<PageTitle>
+    Sammy Mahmoudi
+</PageTitle>
 
-<div class="page">
-    <main>
-        <article>
-            <h1>
-                Sammy Mahmoudi
-            </h1>
-            <h3>
-                Programming & Games Portfolio
-            </h3>
-        </article>
-        <div style="text-align:center">
-            <NavMenu />
-        </div>
-		<article class="@GetCurPageClassName()" style="padding: 20px 0px">
-			@Body
+<Layout>
+    <LayoutHeader Padding="Padding.Is2">
+        <Heading Size="HeadingSize.Is1" TextAlignment="TextAlignment.Center">
+            Sammy Mahmoudi
+        </Heading>
+        <Heading Size="HeadingSize.Is3" TextAlignment="TextAlignment.Center">
+            Programming & Games Portfolio
+        </Heading>
+    </LayoutHeader>
+    <Container TextAlignment="TextAlignment.Center">
+        <NavMenu/>
+    </Container>
+		<article class="@GetCurPageClassName()">
+            <Container Padding="Padding.Is3">
+		    	@Body
+            </Container>
 		</article>
-    </main>
-</div>
+</Layout>
 
 @code {
     public string GetCurPageClassName() {
@@ -32,5 +34,56 @@
             case "Contact": return "contact-class";
             default: return "base-class";
         }
+    }
+}
+
+@*<Layout>
+    <LayoutHeader>
+        <Heading Size="HeadingSize.Is1" TextAlignment="TextAlignment.Center">
+            Sammy Mahmoudi
+        </Heading>
+        <Heading Size="HeadingSize.Is3" TextAlignment="TextAlignment.Center">
+            Programming & Games Portfolio
+        </Heading>
+    </LayoutHeader>
+    <LayoutContent>
+        <Container>
+            <Tabs SelectedTab="@selectedTab" SelectedTabChanged="@OnSelectedTabChanged" Justified=true>
+                <Items>
+                    <Tab Name="home">Home</Tab>
+                    <Tab Name="projects">Projects</Tab>
+                    <Tab Name="resume">Resume</Tab>
+                    <Tab Name="contact">Contact</Tab>
+                </Items>
+                <Content>
+                    <TabPanel Name="home">
+                        <Container Padding="Padding.Is3">
+                            <Blazor_Portfolio_Site.Pages.Index/>
+                        </Container>
+                    </TabPanel>
+                    <TabPanel Name="profile">
+                        <Blazor_Portfolio_Site.Pages.Games/>
+                    </TabPanel>
+                    <TabPanel Name="resume">
+                        <Container Padding="Padding.Is3">
+                            <Blazor_Portfolio_Site.Pages.Resume />
+                        </Container>
+                    </TabPanel>
+                    <TabPanel Name="contact">
+                        <Blazor_Portfolio_Site.Pages.Contact/>
+                    </TabPanel>
+                </Content>
+            </Tabs>
+        </Container>
+    </LayoutContent>
+</Layout>*@
+
+@code {
+    string selectedTab = "profile";
+
+    private Task OnSelectedTabChanged(string name) {
+        selectedTab = name;
+
+        return Task.CompletedTask;
     }
 }
