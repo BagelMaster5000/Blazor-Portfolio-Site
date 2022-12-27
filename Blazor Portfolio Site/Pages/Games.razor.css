@@ -1,4 +1,4 @@
-﻿.projects-grid {
+﻿/*.projects-grid {
     display: grid;
     grid-template-columns: auto auto;
     padding: 0px 300px;
@@ -49,4 +49,4 @@
     .project-link-image {
         width: 350px;
     }
-}
+}*/

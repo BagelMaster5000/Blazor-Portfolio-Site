@@ -1,33 +1,44 @@
 ﻿@page "/games"
 
-<div style="padding: 30px">
-	<h1>Games</h1>
-
-	<div class="projects-grid">
-		<div class="project-link-container">
-			<img class="project-link-image" src="thumbnails/games/pizzadeliverybagel.gif" />
-			<h3 class="project-link-title">Pizza Delivery Bagel</h3>
-			<p class="project-link-subtitle">C#, Unity, Wwise</p>
-		</div>
-		<div class="project-link-container">
-			<img class="project-link-image" src="thumbnails/games/pizzadeliverybagel.gif" />
-			<h3 class="project-link-title">Pizza Delivery Bagel</h3>
-			<p class="project-link-subtitle">C#, Unity, Wwise</p>
-		</div>
-		<div class="project-link-container">
-			<img class="project-link-image" src="thumbnails/games/pizzadeliverybagel.gif" />
-			<h3 class="project-link-title">Pizza Delivery Bagel</h3>
-			<p class="project-link-subtitle">C#, Unity, Wwise</p>
-		</div>
-		<div class="project-link-container">
-			<img class="project-link-image" src="thumbnails/games/pizzadeliverybagel.gif" />
-			<h3 class="project-link-title">Pizza Delivery Bagel</h3>
-			<p class="project-link-subtitle">C#, Unity, Wwise</p>
-		</div>
-		<div class="project-link-container">
-			<img class="project-link-image" src="thumbnails/games/pizzadeliverybagel.gif" />
-			<h3 class="project-link-title">Pizza Delivery Bagel</h3>
-			<p class="project-link-subtitle">C#, Unity, Wwise</p>
-		</div>
-	</div>
-</div>
+<Container>
+	<Row VerticalGutter="32">
+		<Column ColumnSize="ColumnSize.IsHalf">
+			<Card Background="Background.White" Padding="Padding.Is2">
+				<CardImage src="thumbnails/games/pizzadeliverybagel.gif" Alt="Pizza Delivery Bagel Thumbnail"/>
+				<CardBody>
+					<CardTitle>Pizza Delivery Bagel</CardTitle>
+					<CardText>C#, Unity, Wwise, Visual Studio, Git</CardText>
+				</CardBody>
+			</Card>
+		</Column>
+		<Column ColumnSize="ColumnSize.IsHalf">
+			<Card Background="Background.White" Padding="Padding.Is2">
+				<CardImage src="thumbnails/games/pizzadeliverybagel.gif" Alt="Pizza Delivery Bagel Thumbnail" />
+				<CardBody>
+					<CardTitle>Pizza Delivery Bagel</CardTitle>
+					<CardText>C#, Unity, Wwise, Visual Studio, Git</CardText>
+				</CardBody>
+			</Card>
+		</Column>
+	</Row>
+	<Row VerticalGutter="32">
+		<Column ColumnSize="ColumnSize.IsHalf">
+			<Card Background="Background.White" Padding="Padding.Is2">
+				<CardImage src="thumbnails/games/pizzadeliverybagel.gif" Alt="Pizza Delivery Bagel Thumbnail"/>
+				<CardBody>
+					<CardTitle>Pizza Delivery Bagel</CardTitle>
+					<CardText>C#, Unity, Wwise, Visual Studio, Git</CardText>
+				</CardBody>
+			</Card>
+		</Column>
+		<Column ColumnSize="ColumnSize.IsHalf">
+			<Card Background="Background.White" Padding="Padding.Is2">
+				<CardImage src="thumbnails/games/pizzadeliverybagel.gif" Alt="Pizza Delivery Bagel Thumbnail" />
+				<CardBody>
+					<CardTitle>Pizza Delivery Bagel</CardTitle>
+					<CardText>C#, Unity, Wwise, Visual Studio, Git</CardText>
+				</CardBody>
+			</Card>
+		</Column>
+	</Row>
+</Container>
