@@ -1,7 +1,49 @@
 ﻿@page "/contact"
 
 <Animate Auto Animation="GlobalVariables.PageAnimation">
-	<Container TextAlignment="TextAlignment.Center">
-		Contact Me
+	<Container TextAlignment="TextAlignment.Center" Width="Width.Is50">
+		<Card Height="Height.Is100" Padding="Padding.Is2">
+			<CardBody>
+				<Heading Size="HeadingSize.Is3">
+					Contact Me
+				</Heading>
+
+				<Divider/>
+
+				<Row Height="Height.Is100">
+					<Link To="mailto:sammymahmoudi@gmail.com" VerticalAlignment="VerticalAlignment.Middle">
+						<Paragraph>
+							sammymahmoudi@gmail.com
+						</Paragraph>
+					</Link>
+				</Row>
+
+				<Div Margin="Margin.Is2"/>
+
+				<Row>
+					<Column ColumnSize="ColumnSize.Is4">
+						<Link To="https://github.com/BagelMaster5000">
+							<div class="clicky-card">
+								<Image src="socialicons/github.png" />
+							</div>
+						</Link>
+					</Column>
+					<Column ColumnSize="ColumnSize.Is4">
+						<Link To="https://www.linkedin.com/in/sammymahmoudi/">
+							<div class="clicky-card">
+								<Image src="socialicons/linkedin.png" />
+							</div>
+						</Link>
+					</Column>
+					<Column ColumnSize="ColumnSize.Is4">
+						<Link To="mailto:sammymahmoudi@gmail.com">
+							<div class="clicky-card">
+								<Image src="socialicons/email-outline.png" />
+							</div>
+						</Link>
+					</Column>
+				</Row>
+			</CardBody>
+		</Card>
 	</Container>
 </Animate>

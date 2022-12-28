@@ -1,24 +1,19 @@
-﻿.about {
-    border-radius: 10px;
-    padding: 0px;
-    background-color: lightcoral;
-}
-
-.clicky-card {
+﻿.clicky-card {
     transition: .2s ease-out;
+    border-width: 2px;
+    border: dashed;
+    border-color: transparent;
 }
 
     .clicky-card:hover {
         opacity: 0.8;
         border-color: black;
-        border: dashed;
-        border-width: 2px;
-        transform: scale(1.02);
+        transform: scaleX(1.03) scaleY(1);
     }
 
     .clicky-card:active {
         opacity: 0.5;
-        border: none;
-        transform: scale(0.98);
+        border-color: transparent;
+        transform: scaleX(0.95) scaleY(0.98);
         transition: 0s;
     }
