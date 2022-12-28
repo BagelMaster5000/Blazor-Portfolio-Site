@@ -13,13 +13,26 @@
             Programming & Games Portfolio
         </Heading>
     </LayoutHeader>
-    <Container TextAlignment="TextAlignment.Center">
-        <NavMenu/>
-    </Container>
-	<article class="@GetCurPageClassName()">
-        <Container Padding="Padding.Is3">
-            @Body
+
+    <LayoutContent>
+        <Container TextAlignment="TextAlignment.Center">
+            <NavMenu/>
         </Container>
+	    <article class="@GetCurPageClassName()">
+            <Container Padding="Padding.Is3">
+                @Body
+            </Container>
+	    </article>
+    </LayoutContent>
+
+	<article class="@GetCurPageClassName()">
+        <LayoutFooter>
+            <Container TextAlignment="TextAlignment.Center">
+                <Paragraph Padding="Padding.Is2">
+                    Website created by Sammy Mahmoudi in Microsoft Blazor. Using Blazorise UI components. Hosted in Azure (pending).
+                </Paragraph>
+            </Container>
+        </LayoutFooter>
 	</article>
 </Layout>
 
