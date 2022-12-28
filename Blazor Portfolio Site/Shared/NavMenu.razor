@@ -2,7 +2,7 @@
     <a class="@GetHomeLinkClass()" href="" @onclick="SetPageHome">
         Home
     </a>
-    <a class="@GetGamesLinkClass()" href="games" @onclick="SetPageGames">
+    <a class="@GetProjectsLinkClass()" href="projects" @onclick="SetPageProjects">
         Projects
     </a>
     <a class="@GetResumeLinkClass()" href="resume" @onclick="SetPageResume">
@@ -14,64 +14,49 @@
 </span>
 
 @code {
-    void SetPageHome() => GlobalVariables.CurPageName = "Home";
-    void SetPageGames() => GlobalVariables.CurPageName = "Games";
-    void SetPageOther() => GlobalVariables.CurPageName = "Other";
-    void SetPageResume() => GlobalVariables.CurPageName = "Resume";
-    void SetPageAbout() => GlobalVariables.CurPageName = "About";
-    void SetPageContact() => GlobalVariables.CurPageName = "Contact";
+    void SetPageHome() {
+        switch (GlobalVariables.CurPageName) {
+            case "Home": GlobalVariables.PageAnimationSlideDirection = 0; break;
+            case "Projects": GlobalVariables.PageAnimationSlideDirection = -1; break;
+            case "Resume": GlobalVariables.PageAnimationSlideDirection = -1; break;
+            case "Contact": GlobalVariables.PageAnimationSlideDirection = -1; break;
+        }
 
-    public string GetHomeLinkClass() {
-        if (GlobalVariables.CurPageName == "Home") {
-            return "home-link-active";
+        GlobalVariables.CurPageName = "Home";
+    }
+    void SetPageProjects() {
+        switch (GlobalVariables.CurPageName) {
+            case "Home": GlobalVariables.PageAnimationSlideDirection = 1; break;
+            case "Projects": GlobalVariables.PageAnimationSlideDirection = 0; break;
+            case "Resume": GlobalVariables.PageAnimationSlideDirection = -1; break;
+            case "Contact": GlobalVariables.PageAnimationSlideDirection = -1; break;
         }
-        else {
-            return "home-link";
+
+        GlobalVariables.CurPageName = "Projects";
+    }
+    void SetPageResume() {
+        switch (GlobalVariables.CurPageName) {
+            case "Home": GlobalVariables.PageAnimationSlideDirection = 1; break;
+            case "Projects": GlobalVariables.PageAnimationSlideDirection = 1; break;
+            case "Resume": GlobalVariables.PageAnimationSlideDirection = 0; break;
+            case "Contact": GlobalVariables.PageAnimationSlideDirection = -1; break;
         }
+
+        GlobalVariables.CurPageName = "Resume";
+    }
+    void SetPageContact() {
+        switch (GlobalVariables.CurPageName) {
+            case "Home": GlobalVariables.PageAnimationSlideDirection = 1; break;
+            case "Projects": GlobalVariables.PageAnimationSlideDirection = 1; break;
+            case "Resume": GlobalVariables.PageAnimationSlideDirection = 1; break;
+            case "Contact": GlobalVariables.PageAnimationSlideDirection = 0; break;
+        }
+
+        GlobalVariables.CurPageName = "Contact";
     }
 
-    public string GetGamesLinkClass() {
-        if (GlobalVariables.CurPageName == "Games") {
-            return "games-link-active";
-        }
-        else {
-            return "games-link";
-        }
-    }
-
-    public string GetOtherLinkClass() {
-        if (GlobalVariables.CurPageName == "Other") {
-            return "other-link-active";
-        }
-        else {
-            return "other-link";
-        }
-    }
-
-    public string GetResumeLinkClass() {
-        if (GlobalVariables.CurPageName == "Resume") {
-            return "resume-link-active";
-        }
-        else {
-            return "resume-link";
-        }
-    }
-
-    public string GetAboutLinkClass() {
-        if (GlobalVariables.CurPageName == "About") {
-            return "about-link-active";
-        }
-        else {
-            return "about-link";
-        }
-    }
-
-    public string GetContactLinkClass() {
-        if (GlobalVariables.CurPageName == "Contact") {
-            return "contact-link-active";
-        }
-        else {
-            return "contact-link";
-        }
-    }
+    public string GetHomeLinkClass() => (GlobalVariables.CurPageName == "Home") ? "home-link-active" : "home-link";
+    public string GetProjectsLinkClass() => (GlobalVariables.CurPageName == "Projects") ? "projects-link-active" : "projects-link";
+    public string GetResumeLinkClass() => (GlobalVariables.CurPageName == "Resume") ? "resume-link-active" : "resume-link";
+    public string GetContactLinkClass() => (GlobalVariables.CurPageName == "Contact") ? "contact-link-active" : "contact-link";
 }

@@ -19,17 +19,11 @@ a {
 .home-link { background-color: none; }
 .home-link-active { background-color: lavender; }
 
-.games-link { background-color: none }
-.games-link-active { background-color: lightblue; }
-
-.other-link { background-color: none }
-.other-link-active { background-color: lightseagreen; }
+.projects-link { background-color: none }
+.projects-link-active { background-color: lightblue; }
 
 .resume-link { background-color: none }
 .resume-link-active { background-color: lightsalmon; }
-
-.about-link { background-color: none }
-.about-link-active { background-color: lightcoral; }
 
 .contact-link { background-color: none }
 .contact-link-active { background-color: navajowhite; }

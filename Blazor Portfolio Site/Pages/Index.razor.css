@@ -10,5 +10,15 @@
 
     .clicky-card:hover {
         opacity: 0.8;
+        border-color: black;
+        border: dashed;
+        border-width: 2px;
         transform: scale(1.02);
+    }
+
+    .clicky-card:active {
+        opacity: 0.5;
+        border: none;
+        transform: scale(0.98);
+        transition: 0s;
     }
