@@ -28,18 +28,20 @@
 			</Column>
 			<Column ColumnSize="ColumnSize.Is5">
 				<Row>
-					<div class="clicky-card">
-						<Card Background="Background.White" Padding="Padding.Is2" Margin="Margin.Is2">
-							<CardImage src="images/pizzadeliverybagel.gif" Alt="Pizza Delivery Bagel gif" />
-							<CardBody>
-								<CardTitle>
-									<Heading Size="HeadingSize.Is6">
-										I work on programming projects all the time (mostly video games)!
-									</Heading>
-								</CardTitle>
-							</CardBody>
-						</Card>
-					</div>
+					<Link To="projects">
+						<div class="clicky-card">
+							<Card Background="Background.White" Padding="Padding.Is2" Margin="Margin.Is2">
+								<CardImage src="images/pizzadeliverybagel.gif" Alt="Pizza Delivery Bagel gif" />
+								<CardBody>
+									<CardTitle>
+										<Heading Size="HeadingSize.Is6">
+											I work on programming projects all the time (mostly video games)!
+										</Heading>
+									</CardTitle>
+								</CardBody>
+							</Card>
+						</div>
+					</Link>
 				</Row>
 				<Row>
 					<div class="clicky-card">
@@ -54,6 +56,51 @@
 							</CardBody>
 						</Card>
 					</div>
+				</Row>
+
+				<Row>
+					<Card Background="Background.White" Padding="Padding.Is2" Margin="Margin.Is2" @onclick="ShowHobbiesPopup" TextAlignment="TextAlignment.Center">
+						<CardBody>
+							<CardTitle>
+								<Heading Size="HeadingSize.Is5">
+									Contact Me
+								</Heading>
+							</CardTitle>
+
+							<Divider />
+
+							<Row>
+								<Link To="mailto:sammymahmoudi@gmail.com" VerticalAlignment="VerticalAlignment.Middle">
+								<Paragraph>
+									sammymahmoudi@gmail.com
+								</Paragraph>
+								</Link>
+							</Row>
+							<Row>
+								<Column ColumnSize="ColumnSize.Is4">
+									<Link To="https://github.com/BagelMaster5000" Target="Target.Blank">
+									<div class="clicky-card">
+										<Image src="socialicons/github.png" />
+									</div>
+									</Link>
+								</Column>
+								<Column ColumnSize="ColumnSize.Is4">
+									<Link To="https://www.linkedin.com/in/sammymahmoudi/" Target="Target.Blank">
+									<div class="clicky-card">
+										<Image src="socialicons/linkedin.png" />
+									</div>
+									</Link>
+								</Column>
+								<Column ColumnSize="ColumnSize.Is4">
+									<Link To="mailto:sammymahmoudi@gmail.com">
+									<div class="clicky-card">
+										<Image src="socialicons/email-outline.png" />
+									</div>
+									</Link>
+								</Column>
+							</Row>
+						</CardBody>
+					</Card>
 				</Row>
 			</Column>
 		</Row>
