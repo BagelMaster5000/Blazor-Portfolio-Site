@@ -1,4 +1,5 @@
 ﻿@inherits LayoutComponentBase
+@inject NavigationManager NavigationManager
 
 <PageTitle>
     Sammy Mahmoudi
@@ -16,7 +17,7 @@
 
     <LayoutContent>
         <Container TextAlignment="TextAlignment.Center">
-            <NavMenu/>
+            <NavMenu />
         </Container>
 	    <article class="@GetCurPageClassName()">
             <Container Padding="Padding.Is3">
@@ -36,14 +37,27 @@
 	</article>
 </Layout>
 
+
 @code {
+    bool doneSettingUpNavigationManager = false;
+
     public string GetCurPageClassName() {
-        switch (GlobalVariables.CurPageName) {
-            case "Home": return "home-class";
-            case "Projects": return "projects-class";
-            case "Resume": return "resume-class";
-            case "Contact": return "contact-class";
-            default: return "base-class";
+        TrySetupNavigationManager();
+
+        string currentUrl = NavigationManager.Uri;
+        if (currentUrl.Contains("projects")) { return "projects-class"; }
+        else if (currentUrl.Contains("resume")) { return "resume-class"; }
+        else if (currentUrl.Contains("contact")) { return "contact-class"; }
+        else { return "home-class"; }
+    }
+
+    private void TrySetupNavigationManager() {        
+        if (!doneSettingUpNavigationManager) {
+            NavigationManager.LocationChanged += (obj, lcea) => {
+                GlobalVariables.OnPageJump?.Invoke();
+            };
+
+            doneSettingUpNavigationManager = true;
         }
     }
 }
