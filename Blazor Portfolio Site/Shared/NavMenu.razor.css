@@ -7,7 +7,7 @@
 a {
     text-decoration: none;
     color: black;
-    padding: 5px 5px 4px 9px;
+    padding: 5px 30px 4px 30px;
     border-radius: 5px 5px 0px 0px;
     transition: .2s ease-out;
 }

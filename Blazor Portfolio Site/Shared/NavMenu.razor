@@ -1,17 +1,27 @@
-﻿<span style="float:center">
-    <a class="@GetHomeLinkClass()" href="" @onclick="SetPageHome">
-        Home
-    </a>
-    <a class="@GetProjectsLinkClass()" href="projects" @onclick="SetPageProjects">
-        Projects
-    </a>
-    <a class="@GetResumeLinkClass()" href="resume" @onclick="SetPageResume">
-        Resume
-    </a>
-    <a class="@GetContactLinkClass()" href="contact" @onclick="SetPageContact">
-        Contact
-    </a>
-</span>
+﻿<Container Width="Width.Is50">
+    <Row TextAlignment="TextAlignment.Center">
+        <Div Width="Width.Is25">
+            <a class="@GetHomeLinkClass()" href="" @onclick="SetPageHome">
+                Home
+            </a>
+        </Div>
+        <Div Width="Width.Is25">
+        <a class="@GetProjectsLinkClass()" href="projects" @onclick="SetPageProjects">
+            Projects
+        </a>
+        </Div>
+        <Div Width="Width.Is25">
+        <a class="@GetResumeLinkClass()" href="resume" @onclick="SetPageResume">
+            Resume
+        </a>
+        </Div>
+        <Div Width="Width.Is25">
+        <a class="@GetContactLinkClass()" href="contact" @onclick="SetPageContact">
+            Contact
+        </a>
+        </Div>
+    </Row>
+</Container>
 
 @code {
     void SetPageHome() {
