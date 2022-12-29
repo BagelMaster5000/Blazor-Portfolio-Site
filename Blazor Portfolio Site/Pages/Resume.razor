@@ -1,6 +1,19 @@
 ﻿@page "/resume"
 
 <Animate Auto Animation="GlobalVariables.PageAnimation">
+	<Div Margin="Margin.Is1"/>
+
+	<Container Width="Width.Is25" TextAlignment="TextAlignment.Center">
+		<Link To="pdfs/Sammy Mahmoudi Resume.pdf" Target="Target.Blank">
+			<div class="clicky-card-link">
+				<Heading Size="HeadingSize.Is6" VerticalAlignment="VerticalAlignment.Middle">
+					<img src="miscicons/open-in-new.png" height="20px" style="margin: 0px 5px 0px 0px; flood-color: blue"/>
+					Open in new tab
+				</Heading>
+			</div>
+		</Link>
+	</Container>
+
 	<Container Width="Width.Is75" Padding="Padding.Is2">
 		<Card Padding="Padding.Is2" Width="Width.Max100">
 			<iframe class="resume" src="pdfs/Sammy Mahmoudi Resume.pdf"/>
