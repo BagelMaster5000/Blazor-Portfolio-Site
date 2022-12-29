@@ -29,4 +29,8 @@
     <Resource Include="wwwroot\images\self2.jpg" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\portfolioimages\hobbies\" />
+  </ItemGroup>
+
 </Project>
