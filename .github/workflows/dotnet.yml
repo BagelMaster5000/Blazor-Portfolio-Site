@@ -10,6 +10,10 @@ jobs:
       uses: actions/setup-dotnet@v1 # Setup .NET Core
       with:
         dotnet-version: 3.1.300 # Change to your version of .NET Core
+    - name: Change to correct directory
+      run: cd "Blazor Portfolio Site"
+    - name: Checking if in right directory...
+      run: ls
     - name: Build with dotnet
       run: dotnet build --configuration Release 
     - name: Publish Blazor webassembly using dotnet 
