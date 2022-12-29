@@ -15,10 +15,10 @@ jobs:
     - name: Checking if in right directory...
       run: ls
     - name: Build with dotnet
-      run: dotnet build --configuration Release 
+      run: cd "Blazor Portfolio Site"; dotnet build --configuration Release 
     - name: Publish Blazor webassembly using dotnet 
       #create Blazor WebAssembly dist output folder in the project directory
-      run: dotnet publish -c Release --no-build -o publishoutput # Don't build again, just publish
+      run: cd "Blazor Portfolio Site"; dotnet publish -c Release --no-build -o publishoutput # Don't build again, just publish
     - name: Publish generated Blazor webassembly to Netlify
       uses: netlify/actions/cli@master #uses Netlify Cli actions
       env: # These are the environment variables added in GitHub Secrets for this repo
