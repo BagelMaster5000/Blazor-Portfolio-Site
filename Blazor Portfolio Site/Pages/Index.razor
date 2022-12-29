@@ -33,22 +33,22 @@
 			<Column ColumnSize="ColumnSize.Is5">
 				<Row>
 					<Link To="projects">
-						<div class="clicky-card-link">
-							<Card Background="Background.White" Padding="Padding.Is2" Margin="Margin.Is2">
-								<CardImage src="images/pizzadeliverybagel.gif" Alt="Pizza Delivery Bagel gif" />
-								<CardBody>
-									<CardTitle>
-										<Heading Size="HeadingSize.Is6">
-											I work on programming projects all the time (mostly video games)!
-										</Heading>
-									</CardTitle>
-								</CardBody>
-							</Card>
-						</div>
+					<Div class="clicky-card-link">
+						<Card Background="Background.White" Padding="Padding.Is2" Margin="Margin.Is2">
+							<CardImage src="images/pizzadeliverybagel.gif" Alt="Pizza Delivery Bagel gif" />
+							<CardBody>
+								<CardTitle>
+									<Heading Size="HeadingSize.Is6">
+										I work on programming projects all the time (mostly video games)!
+									</Heading>
+								</CardTitle>
+							</CardBody>
+						</Card>
+					</Div>
 					</Link>
 				</Row>
 				<Row>
-					<div class="clicky-card">
+					<Div class="clicky-card">
 						<Card Background="Background.White" Padding="Padding.Is2" Margin="Margin.Is2" @onclick="ShowHobbiesPopup">
 							<CardImage src="images/drawing.jpg" Alt="Christmas Cats Drawing" />
 							<CardBody>
@@ -59,7 +59,7 @@
 								</CardTitle>
 							</CardBody>
 						</Card>
-					</div>
+					</Div>
 				</Row>
 
 				<Row>
@@ -83,23 +83,23 @@
 							<Row>
 								<Column ColumnSize="ColumnSize.Is4">
 									<Link To="https://github.com/BagelMaster5000" Target="Target.Blank">
-									<div class="clicky-card-link">
+									<Div class="clicky-card-link">
 										<Image src="socialicons/github.png" />
-									</div>
+									</Div>
 									</Link>
 								</Column>
 								<Column ColumnSize="ColumnSize.Is4">
 									<Link To="https://www.linkedin.com/in/sammymahmoudi/" Target="Target.Blank">
-									<div class="clicky-card-link">
+									<Div class="clicky-card-link">
 										<Image src="socialicons/linkedin.png" />
-									</div>
+									</Div>
 									</Link>
 								</Column>
 								<Column ColumnSize="ColumnSize.Is4">
 									<Link To="mailto:sammymahmoudi@gmail.com">
-									<div class="clicky-card-link">
+									<Div class="clicky-card-link">
 										<Image src="socialicons/email-outline.png" />
-									</div>
+									</Div>
 									</Link>
 								</Column>
 							</Row>
@@ -118,19 +118,7 @@
 			<CloseButton />
 		</ModalHeader>
 		<ModalBody>
-			<Image src="images/drawing.jpg" Alt="Christmas Cats Drawing" Width="Width.Is100"/>
-			<Image src="images/drawing.jpg" Alt="Christmas Cats Drawing" Width="Width.Is100"/>
-			<Image src="images/drawing.jpg" Alt="Christmas Cats Drawing" Width="Width.Is100"/>
-			<Image src="images/drawing.jpg" Alt="Christmas Cats Drawing" Width="Width.Is100"/>
-			<Image src="images/drawing.jpg" Alt="Christmas Cats Drawing" Width="Width.Is100"/>
-			<Image src="images/drawing.jpg" Alt="Christmas Cats Drawing" Width="Width.Is100"/>
-			<Image src="images/drawing.jpg" Alt="Christmas Cats Drawing" Width="Width.Is100"/>
-			<Image src="images/drawing.jpg" Alt="Christmas Cats Drawing" Width="Width.Is100"/>
-			<Image src="images/drawing.jpg" Alt="Christmas Cats Drawing" Width="Width.Is100"/>
-			<Image src="images/drawing.jpg" Alt="Christmas Cats Drawing" Width="Width.Is100"/>
-			<Paragraph>
-				Test
-			</Paragraph>
+			<Blazor_Portfolio_Site.Writeups.Hobbies />
 		</ModalBody>
 	</ModalContent>
 </Modal>

@@ -4,9 +4,9 @@
 	<Container TextAlignment="TextAlignment.Center">
 		<Row VerticalGutter="32">
 			<Column ColumnSize="ColumnSize.IsHalf">
-				<div class="clicky-card">
-					<Card Background="Background.White" Padding="Padding.Is2" Margin="Margin.Is2">
-						<CardImage src="thumbnails/games/pizzadeliverybagel.gif" Alt="Pizza Delivery Bagel Thumbnail"/>
+				<Div class="clicky-card">
+					<Card Background="Background.White" Padding="Padding.Is2" Margin="Margin.Is2" @onclick="ShowPizzaDeliveryBagelPopup">
+						<CardImage src="thumbnails/games/pizzadeliverybagel.gif" Alt="Pizza Delivery Bagel Thumbnail" />
 						<CardBody>
 							<CardTitle>
 								<Heading Size="HeadingSize.Is5">
@@ -18,11 +18,11 @@
 							</CardText>
 						</CardBody>
 					</Card>
-				</div>
+				</Div>
 			</Column>
 			<Column ColumnSize="ColumnSize.IsHalf">
-				<div class="clicky-card">
-					<Card Background="Background.White" Padding="Padding.Is2" Margin="Margin.Is2">
+				<Div class="clicky-card">
+					<Card Background="Background.White" Padding="Padding.Is2" Margin="Margin.Is2" @onclick="ShowProject9thMondayPopup">
 						<CardImage src="thumbnails/games/project9thmonday.gif" Alt="Project 9th Monday Thumbnail" />
 						<CardBody>
 							<CardTitle>
@@ -35,14 +35,14 @@
 							</CardText>
 						</CardBody>
 					</Card>
-				</div>
+				</Div>
 			</Column>
 		</Row>
 		<Row VerticalGutter="32">
 			<Column ColumnSize="ColumnSize.IsHalf">
-				<div class="clicky-card">
-					<Card Background="Background.White" Padding="Padding.Is2" Margin="Margin.Is2">
-						<CardImage src="thumbnails/games/theeaterer.gif" Alt="The Eaterer Thumbnail"/>
+				<Div class="clicky-card">
+					<Card Background="Background.White" Padding="Padding.Is2" Margin="Margin.Is2" @onclick="ShowEatererPopup">
+						<CardImage src="thumbnails/games/theeaterer.gif" Alt="The Eaterer Thumbnail" />
 						<CardBody>
 							<CardTitle>
 								<Heading Size="HeadingSize.Is5">
@@ -54,11 +54,11 @@
 							</CardText>
 						</CardBody>
 					</Card>
-				</div>
+				</Div>
 			</Column>
 			<Column ColumnSize="ColumnSize.IsHalf">
-				<div class="clicky-card">
-					<Card Background="Background.White" Padding="Padding.Is2" Margin="Margin.Is2">
+				<Div class="clicky-card">
+					<Card Background="Background.White" Padding="Padding.Is2" Margin="Margin.Is2" @onclick="ShowMonkeyManEnclosurePopup">
 						<CardImage src="thumbnails/games/monkeymanenclosure.gif" Alt="Monkey Man Enclosure Thumbnail" />
 						<CardBody>
 							<CardTitle>
@@ -71,8 +71,90 @@
 							</CardText>
 						</CardBody>
 					</Card>
-				</div>
+				</Div>
 			</Column>
 		</Row>
 	</Container>
 </Animate>
+
+<Modal @bind-Visible="@pizzaDeliveryBagelVisible">
+	<ModalContent Size="ModalSize.ExtraLarge">
+		<ModalHeader>
+			<ModalTitle>Pizza Delivery Bagel</ModalTitle>
+			<CloseButton />
+		</ModalHeader>
+		<ModalBody>
+			<Blazor_Portfolio_Site.Writeups.PizzaDeliveryBagel />
+		</ModalBody>
+	</ModalContent>
+</Modal>
+
+<Modal @bind-Visible="@eatererVisible">
+	<ModalContent Size="ModalSize.ExtraLarge">
+		<ModalHeader>
+			<ModalTitle>The Eaterer</ModalTitle>
+			<CloseButton />
+		</ModalHeader>
+		<ModalBody>
+			<Blazor_Portfolio_Site.Writeups.TheEaterer />
+		</ModalBody>
+	</ModalContent>
+</Modal>
+
+<Modal @bind-Visible="@project9thMondayVisible">
+	<ModalContent Size="ModalSize.ExtraLarge">
+		<ModalHeader>
+			<ModalTitle>Project 9th Monday</ModalTitle>
+			<CloseButton />
+		</ModalHeader>
+		<ModalBody>
+			<Blazor_Portfolio_Site.Writeups.Project9thMonday />
+		</ModalBody>
+	</ModalContent>
+</Modal>
+
+<Modal @bind-Visible="@monkeyManEnclosureVisible">
+	<ModalContent Size="ModalSize.ExtraLarge">
+		<ModalHeader>
+			<ModalTitle>Monkey Man Enclosure</ModalTitle>
+			<CloseButton />
+		</ModalHeader>
+		<ModalBody>
+			<Blazor_Portfolio_Site.Writeups.MonkeyManEnclosure />
+		</ModalBody>
+	</ModalContent>
+</Modal>
+
+@code {
+	private bool pizzaDeliveryBagelVisible;
+	private void ShowPizzaDeliveryBagelPopup() {
+		pizzaDeliveryBagelVisible = true;
+	}
+	private void HidePizzaDeliveryBagelPopup() {
+		pizzaDeliveryBagelVisible = false;
+	}
+
+	private bool eatererVisible;
+	private void ShowEatererPopup() {
+		eatererVisible = true;
+	}
+	private void HideEatererPopup() {
+		eatererVisible = false;
+	}
+
+	private bool project9thMondayVisible;
+	private void ShowProject9thMondayPopup() {
+		project9thMondayVisible = true;
+	}
+	private void HideProject9thMondayPopup() {
+		project9thMondayVisible = false;
+	}
+
+	private bool monkeyManEnclosureVisible;
+	private void ShowMonkeyManEnclosurePopup() {
+		monkeyManEnclosureVisible = true;
+	}
+	private void HideMonkeyManEnclosurePopup() {
+		monkeyManEnclosureVisible = false;
+	}
+}
