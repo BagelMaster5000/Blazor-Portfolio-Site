@@ -1,63 +1,61 @@
 ﻿@inherits LayoutComponentBase
 @inject NavigationManager NavigationManager
 
-<PageTitle>
-    Sammy Mahmoudi
-</PageTitle>
+<PageTitle>Sammy Mahmoudi</PageTitle>
 
 <Layout>
-    <LayoutHeader Padding="Padding.Is2">
-        <Heading Size="HeadingSize.Is1" TextAlignment="TextAlignment.Center">
-            Sammy Mahmoudi
-        </Heading>
-        <Heading Size="HeadingSize.Is3" TextAlignment="TextAlignment.Center">
-            Programming & Games Portfolio
-        </Heading>
-    </LayoutHeader>
+	@*Header*@
+	<LayoutHeader Padding="Padding.Is2">
+		<Heading Size="HeadingSize.Is1" TextAlignment="TextAlignment.Center">Sammy Mahmoudi</Heading>
+		<Heading Size="HeadingSize.Is3" TextAlignment="TextAlignment.Center">Programming & Games Portfolio</Heading>
+	</LayoutHeader>
 
-    <LayoutContent>
-        <Container TextAlignment="TextAlignment.Center">
-            <NavMenu />
-        </Container>
-	    <article class="@GetCurPageClassName()">
-            <Container Padding="Padding.Is3">
-                @Body
-            </Container>
-	    </article>
-    </LayoutContent>
+	@*Tabs*@
+	<Container TextAlignment="TextAlignment.Center">
+		<NavMenu />
+	</Container>
 
-	<article class="@GetCurPageClassName()">
-        <LayoutFooter>
-            <Container TextAlignment="TextAlignment.Center">
-                <Paragraph Padding="Padding.Is2">
-                    Website created by Sammy Mahmoudi in Microsoft Blazor. Using Blazorise UI components. Hosted on Netlify. 🥯
-                </Paragraph>
-            </Container>
-        </LayoutFooter>
-	</article>
+	@*Body*@
+	<LayoutContent>
+		<div class="@GetCurPageClassName()">
+			<Container Padding="Padding.Is3">
+				@Body
+			</Container>
+		</div>
+	</LayoutContent>
+
+	@*Footer*@
+	<div class="@GetCurPageClassName()">
+		<LayoutFooter>
+			<Container TextAlignment="TextAlignment.Center">
+				<Paragraph Padding="Padding.Is2">
+					Website created by Sammy Mahmoudi in Microsoft Blazor. Using Blazorise UI components. Hosted on Netlify. 🥯
+				</Paragraph>
+			</Container>
+		</LayoutFooter>
+	</div>
 </Layout>
 
-
 @code {
-    bool doneSettingUpNavigationManager = false;
+	bool doneSettingUpNavigationManager = false;
 
-    public string GetCurPageClassName() {
-        TrySetupNavigationManager();
+	public string GetCurPageClassName() {
+		TrySetupNavigationManager();
 
-        string currentUrl = NavigationManager.Uri;
-        if (currentUrl.Contains("projects")) { return "projects-class"; }
-        else if (currentUrl.Contains("resume")) { return "resume-class"; }
-        else if (currentUrl.Contains("contact")) { return "contact-class"; }
-        else { return "home-class"; }
-    }
+		string currentUrl = NavigationManager.Uri;
+		if (currentUrl.Contains("projects")) { return "projects-class"; }
+		else if (currentUrl.Contains("resume")) { return "resume-class"; }
+		else if (currentUrl.Contains("contact")) { return "contact-class"; }
+		else { return "home-class"; }
+	}
 
-    private void TrySetupNavigationManager() {        
-        if (!doneSettingUpNavigationManager) {
-            NavigationManager.LocationChanged += (obj, lcea) => {
-                GlobalVariables.OnPageJump?.Invoke();
-            };
+	private void TrySetupNavigationManager() {
+		if (!doneSettingUpNavigationManager) {
+			NavigationManager.LocationChanged += (obj, lcea) => {
+				GlobalVariables.OnPageJump?.Invoke();
+			};
 
-            doneSettingUpNavigationManager = true;
-        }
-    }
+			doneSettingUpNavigationManager = true;
+		}
+	}
 }

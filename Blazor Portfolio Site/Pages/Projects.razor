@@ -4,14 +4,13 @@
 	<Container TextAlignment="TextAlignment.Center">
 		<Row VerticalGutter="32">
 			<Column ColumnSize="ColumnSize.IsHalf">
+				@*Pizza Delivery Bagel Button*@
 				<Div class="clicky-card">
 					<Card Background="Background.White" Padding="Padding.Is2" Margin="Margin.Is2" @onclick="ShowPizzaDeliveryBagelPopup">
 						<CardImage src="thumbnails/games/pizzadeliverybagel.gif" Alt="Pizza Delivery Bagel Thumbnail" />
 						<CardBody>
 							<CardTitle>
-								<Heading Size="HeadingSize.Is5">
-									Pizza Delivery Bagel
-								</Heading>
+								<Heading Size="HeadingSize.Is5">Pizza Delivery Bagel</Heading>
 							</CardTitle>
 							<CardText>
 								C#, Unity, Wwise, Visual Studio, Git
@@ -21,14 +20,13 @@
 				</Div>
 			</Column>
 			<Column ColumnSize="ColumnSize.IsHalf">
+				@*Project 9th Monday Button*@
 				<Div class="clicky-card">
 					<Card Background="Background.White" Padding="Padding.Is2" Margin="Margin.Is2" @onclick="ShowProject9thMondayPopup">
 						<CardImage src="thumbnails/games/project9thmonday.gif" Alt="Project 9th Monday Thumbnail" />
 						<CardBody>
 							<CardTitle>
-								<Heading Size="HeadingSize.Is5">
-									Project 9th Monday
-								</Heading>
+								<Heading Size="HeadingSize.Is5">Project 9th Monday</Heading>
 							</CardTitle>
 							<CardText>
 								C#, Unity, Wwise, Visual Studio, Git
@@ -40,14 +38,13 @@
 		</Row>
 		<Row VerticalGutter="32">
 			<Column ColumnSize="ColumnSize.IsHalf">
+				@*The Eaterer Button*@
 				<Div class="clicky-card">
 					<Card Background="Background.White" Padding="Padding.Is2" Margin="Margin.Is2" @onclick="ShowEatererPopup">
 						<CardImage src="thumbnails/games/theeaterer.gif" Alt="The Eaterer Thumbnail" />
 						<CardBody>
 							<CardTitle>
-								<Heading Size="HeadingSize.Is5">
-									The Eaterer
-								</Heading>
+								<Heading Size="HeadingSize.Is5">The Eaterer</Heading>
 							</CardTitle>
 							<CardText>
 								C#, Unity, Visual Studio, Git
@@ -57,14 +54,13 @@
 				</Div>
 			</Column>
 			<Column ColumnSize="ColumnSize.IsHalf">
+				@*Monkey Man Enclosure Button*@
 				<Div class="clicky-card">
 					<Card Background="Background.White" Padding="Padding.Is2" Margin="Margin.Is2" @onclick="ShowMonkeyManEnclosurePopup">
 						<CardImage src="thumbnails/games/monkeymanenclosure.gif" Alt="Monkey Man Enclosure Thumbnail" />
 						<CardBody>
 							<CardTitle>
-								<Heading Size="HeadingSize.Is5">
-									Monkey Man Enclosure
-								</Heading>
+								<Heading Size="HeadingSize.Is5">Monkey Man Enclosure</Heading>
 							</CardTitle>
 							<CardText>
 								C#, Unity, Visual Studio, Git
@@ -77,6 +73,7 @@
 	</Container>
 </Animate>
 
+@*Pizza Delivery Bagel Popup*@
 <Modal @bind-Visible="@pizzaDeliveryBagelVisible">
 	<ModalContent Size="ModalSize.ExtraLarge">
 		<ModalHeader>
@@ -89,6 +86,7 @@
 	</ModalContent>
 </Modal>
 
+@*The Eaterer Popup*@
 <Modal @bind-Visible="@eatererVisible">
 	<ModalContent Size="ModalSize.ExtraLarge">
 		<ModalHeader>
@@ -101,6 +99,7 @@
 	</ModalContent>
 </Modal>
 
+@*Project 9th Monday Popup*@
 <Modal @bind-Visible="@project9thMondayVisible">
 	<ModalContent Size="ModalSize.ExtraLarge">
 		<ModalHeader>
@@ -113,6 +112,7 @@
 	</ModalContent>
 </Modal>
 
+@*Monkey Man Enclosure Popup*@
 <Modal @bind-Visible="@monkeyManEnclosureVisible">
 	<ModalContent Size="ModalSize.ExtraLarge">
 		<ModalHeader>

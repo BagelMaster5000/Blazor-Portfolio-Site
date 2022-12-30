@@ -1,93 +1,85 @@
 ﻿@inject NavigationManager NavigationManager
 
 <Container Width="Width.Is50">
-    <Row TextAlignment="TextAlignment.Center" Padding="Padding.Is1">
-        <Div Width="Width.Is25">
-            <a class="@GetHomeLinkClass()" href="" @onclick="RefreshAnimationDirectionGoToHome">
-                Home
-            </a>
-        </Div>
-        <Div Width="Width.Is25">
-            <a class="@GetProjectsLinkClass()" href="projects" @onclick="RefreshAnimationDirectionGoToProjects">
-                Projects
-            </a>
-        </Div>
-        <Div Width="Width.Is25">
-            <a class="@GetResumeLinkClass()" href="resume" @onclick="RefreshAnimationDirectionGoToResume">
-                Resume
-            </a>
-        </Div>
-        <Div Width="Width.Is25">
-            <a class="@GetContactLinkClass()" href="contact" @onclick="RefreshAnimationDirectionGoToContact">
-                Contact
-            </a>
-        </Div>
-    </Row>
+	<Row TextAlignment="TextAlignment.Center" Padding="Padding.Is1">
+		<Div Width="Width.Is25">
+			<a class="@GetHomeLinkClass()" href="" @onclick="RefreshAnimationDirectionGoToHome">Home</a>
+		</Div>
+		<Div Width="Width.Is25">
+			<a class="@GetProjectsLinkClass()" href="projects" @onclick="RefreshAnimationDirectionGoToProjects">Projects</a>
+		</Div>
+		<Div Width="Width.Is25">
+			<a class="@GetResumeLinkClass()" href="resume" @onclick="RefreshAnimationDirectionGoToResume">Resume</a>
+		</Div>
+		<Div Width="Width.Is25">
+			<a class="@GetContactLinkClass()" href="contact" @onclick="RefreshAnimationDirectionGoToContact">Contact</a>
+		</Div>
+	</Row>
 </Container>
 
 @code {
-    public NavMenu() {
-        GlobalVariables.OnPageJump += ForceRefresh;
-    }
+	public NavMenu() {
+		GlobalVariables.OnPageJump += ForceRefresh;
+	}
 
-    private string GetHomeLinkClass() => (GetCurrentPageName() == "Home") ? "home-link-active" : "home-link";
-    private string GetProjectsLinkClass() => (GetCurrentPageName() == "Projects") ? "projects-link-active" : "projects-link";
-    private string GetResumeLinkClass() => (GetCurrentPageName() == "Resume") ? "resume-link-active" : "resume-link";
-    private string GetContactLinkClass() => (GetCurrentPageName() == "Contact") ? "contact-link-active" : "contact-link";
+	private string GetHomeLinkClass() => (GetCurrentPageName() == "Home") ? "home-link-active" : "home-link";
+	private string GetProjectsLinkClass() => (GetCurrentPageName() == "Projects") ? "projects-link-active" : "projects-link";
+	private string GetResumeLinkClass() => (GetCurrentPageName() == "Resume") ? "resume-link-active" : "resume-link";
+	private string GetContactLinkClass() => (GetCurrentPageName() == "Contact") ? "contact-link-active" : "contact-link";
 
-    private string GetCurrentPageName() {
-        if (NavigationManager == null) {
-            return "";
-        }
+	private string GetCurrentPageName() {
+		if (NavigationManager == null) {
+			return "";
+		}
 
-        string currentUrl = NavigationManager.Uri;
+		string currentUrl = NavigationManager.Uri;
 
-        if (currentUrl.Contains("projects")) { return "Projects"; }
-        else if (currentUrl.Contains("resume")) { return "Resume"; }
-        else if (currentUrl.Contains("contact")) { return "Contact"; }
-        else { return "Home"; }        
-    }
+		if (currentUrl.Contains("projects")) { return "Projects"; }
+		else if (currentUrl.Contains("resume")) { return "Resume"; }
+		else if (currentUrl.Contains("contact")) { return "Contact"; }
+		else { return "Home"; }
+	}
 
-    private void RefreshAnimationDirectionGoToHome() {
-        string curPageName = GetCurrentPageName();
-        switch (curPageName) {
-            case "Home": GlobalVariables.PageAnimationSlideDirection = 0; break;
-            case "Projects": GlobalVariables.PageAnimationSlideDirection = -1; break;
-            case "Resume": GlobalVariables.PageAnimationSlideDirection = -1; break;
-            case "Contact": GlobalVariables.PageAnimationSlideDirection = -1; break;
-        }
-    }
-    private void RefreshAnimationDirectionGoToProjects() {
-        string curPageName = GetCurrentPageName();
-        switch (curPageName) {
-            case "Home": GlobalVariables.PageAnimationSlideDirection = 1; break;
-            case "Projects": GlobalVariables.PageAnimationSlideDirection = 0; break;
-            case "Resume": GlobalVariables.PageAnimationSlideDirection = -1; break;
-            case "Contact": GlobalVariables.PageAnimationSlideDirection = -1; break;
-        }
-    }
-    private void RefreshAnimationDirectionGoToResume() {
-        string curPageName = GetCurrentPageName();
-        switch (curPageName) {
-            case "Home": GlobalVariables.PageAnimationSlideDirection = 1; break;
-            case "Projects": GlobalVariables.PageAnimationSlideDirection = 1; break;
-            case "Resume": GlobalVariables.PageAnimationSlideDirection = 0; break;
-            case "Contact": GlobalVariables.PageAnimationSlideDirection = -1; break;
-        }
-    }
-    private void RefreshAnimationDirectionGoToContact() {
-        string curPageName = GetCurrentPageName();
-        switch (curPageName) {
-            case "Home": GlobalVariables.PageAnimationSlideDirection = 1; break;
-            case "Projects": GlobalVariables.PageAnimationSlideDirection = 1; break;
-            case "Resume": GlobalVariables.PageAnimationSlideDirection = 1; break;
-            case "Contact": GlobalVariables.PageAnimationSlideDirection = 0; break;
-        }
-    }
+	private void RefreshAnimationDirectionGoToHome() {
+		string curPageName = GetCurrentPageName();
+		switch (curPageName) {
+			case "Home": GlobalVariables.PageAnimationSlideDirection = 0; break;
+			case "Projects": GlobalVariables.PageAnimationSlideDirection = -1; break;
+			case "Resume": GlobalVariables.PageAnimationSlideDirection = -1; break;
+			case "Contact": GlobalVariables.PageAnimationSlideDirection = -1; break;
+		}
+	}
+	private void RefreshAnimationDirectionGoToProjects() {
+		string curPageName = GetCurrentPageName();
+		switch (curPageName) {
+			case "Home": GlobalVariables.PageAnimationSlideDirection = 1; break;
+			case "Projects": GlobalVariables.PageAnimationSlideDirection = 0; break;
+			case "Resume": GlobalVariables.PageAnimationSlideDirection = -1; break;
+			case "Contact": GlobalVariables.PageAnimationSlideDirection = -1; break;
+		}
+	}
+	private void RefreshAnimationDirectionGoToResume() {
+		string curPageName = GetCurrentPageName();
+		switch (curPageName) {
+			case "Home": GlobalVariables.PageAnimationSlideDirection = 1; break;
+			case "Projects": GlobalVariables.PageAnimationSlideDirection = 1; break;
+			case "Resume": GlobalVariables.PageAnimationSlideDirection = 0; break;
+			case "Contact": GlobalVariables.PageAnimationSlideDirection = -1; break;
+		}
+	}
+	private void RefreshAnimationDirectionGoToContact() {
+		string curPageName = GetCurrentPageName();
+		switch (curPageName) {
+			case "Home": GlobalVariables.PageAnimationSlideDirection = 1; break;
+			case "Projects": GlobalVariables.PageAnimationSlideDirection = 1; break;
+			case "Resume": GlobalVariables.PageAnimationSlideDirection = 1; break;
+			case "Contact": GlobalVariables.PageAnimationSlideDirection = 0; break;
+		}
+	}
 
-    private void ForceRefresh() {
-        GlobalVariables.PageAnimationSlideDirection = 0;
+	private void ForceRefresh() {
+		GlobalVariables.PageAnimationSlideDirection = 0;
 
-        StateHasChanged();
-    }
+		StateHasChanged();
+	}
 }

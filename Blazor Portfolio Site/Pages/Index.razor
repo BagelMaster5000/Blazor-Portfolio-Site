@@ -2,12 +2,14 @@
 
 <Animate Auto Animation="GlobalVariables.PageAnimation">
 	<Container>
+		@*Site Warning*@
 		<Heading Size="HeadingSize.Is5" TextColor="TextColor.Secondary" TextAlignment="TextAlignment.Center" Margin="Margin.Is2">
 			⚠ This website is under construction! ⚠
 		</Heading>
 
 		<Row>
 			<Column ColumnSize="ColumnSize.Is7">
+				@*Introduction*@
 				<Card Background="Background.White" Padding="Padding.Is2">
 					<CardImage src="images/self2.jpg" Alt="Picture of me with stone cats" />
 					<CardBody>
@@ -35,6 +37,7 @@
 			</Column>
 			<Column ColumnSize="ColumnSize.Is5">
 				<Row>
+					@*Projects Button Link*@
 					<Link To="projects">
 					<Div class="clicky-card-link">
 						<Card Background="Background.White" Padding="Padding.Is2" Margin="Margin.Is2">
@@ -51,6 +54,7 @@
 					</Link>
 				</Row>
 				<Row>
+					@*Hobbies Button*@
 					<Div class="clicky-card">
 						<Card Background="Background.White" Padding="Padding.Is2" Margin="Margin.Is2" @onclick="ShowHobbiesPopup">
 							<CardImage src="images/drawing.jpg" Alt="Christmas Cats Drawing" />
@@ -66,21 +70,17 @@
 				</Row>
 
 				<Row>
+					@*Contact*@
 					<Card Background="Background.White" Padding="Padding.Is2" Margin="Margin.Is2" TextAlignment="TextAlignment.Center">
 						<CardBody>
 							<CardTitle>
-								<Heading Size="HeadingSize.Is5">
-									Contact Me
-								</Heading>
+								<Heading Size="HeadingSize.Is5">Contact Me</Heading>
 							</CardTitle>
 
 							<Divider />
 
-							<Row>
-								<Paragraph>
-									sammymahmoudi@gmail.com
-								</Paragraph>
-							</Row>
+							<Paragraph>sammymahmoudi@gmail.com</Paragraph>
+
 							<Row>
 								<Column ColumnSize="ColumnSize.Is4">
 									<Link To="https://github.com/BagelMaster5000" Target="Target.Blank">
@@ -112,6 +112,7 @@
 	</Container>
 </Animate>
 
+@*Hobbies Popup*@
 <Modal @bind-Visible="@hobbiesPopupVisible">
 	<ModalContent Size="ModalSize.ExtraLarge">
 		<ModalHeader>
