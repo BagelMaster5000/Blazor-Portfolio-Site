@@ -7,7 +7,7 @@
 a {
     text-decoration: none;
     color: black;
-    padding: 6px 30px 7px 30px;
+    padding: 6px 45px 7px 45px;
     border-radius: 5px 5px 0px 0px;
     transition: .2s ease-out;
 }
@@ -30,6 +30,6 @@ a {
 
 @media (max-width: 1000px) {
     a {
-        padding: 6px 15px 7px 16px;
+        padding: 6px 20px 7px 20px;
     }
 }
