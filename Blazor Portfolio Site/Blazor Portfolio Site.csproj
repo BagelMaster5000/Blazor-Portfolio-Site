@@ -7,11 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\images\self1.jpg" />
-    <Content Remove="wwwroot\images\self2.jpg" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Include="GlobalVariables.cs" />
   </ItemGroup>
 
@@ -22,11 +17,6 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.1" PrivateAssets="all" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="2.2.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="wwwroot\images\self1.jpg" />
-    <Resource Include="wwwroot\images\self2.jpg" />
   </ItemGroup>
 
   <ItemGroup>
