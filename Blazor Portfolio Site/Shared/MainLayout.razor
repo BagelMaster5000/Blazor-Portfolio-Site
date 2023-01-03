@@ -1,19 +1,27 @@
 ﻿@inherits LayoutComponentBase
 @inject NavigationManager NavigationManager
 
+
 <PageTitle>Sammy Mahmoudi</PageTitle>
 
 <Layout>
-	@*Header*@
-	<LayoutHeader Padding="Padding.Is2">
-		<Heading Size="HeadingSize.Is1" TextAlignment="TextAlignment.Center">Sammy Mahmoudi</Heading>
-		<Heading Size="HeadingSize.Is3" TextAlignment="TextAlignment.Center">Programming & Games Portfolio</Heading>
-	</LayoutHeader>
+	<Div Background="Background.Primary">
+		@*Header*@
+		<LayoutHeader Padding="Padding.Is2" TextColor="TextColor.Primary">
+			@*Dark Mode Switch*@
+			<div style="position:absolute; right:20px; top:10px">
+				<Switch TextAlignment="TextAlignment.End" TValue="bool" Checked="GlobalVariables.DarkModeActivated" CheckedChanged="@ToggleTheme">🌙</Switch>
+			</div>
 
-	@*Tabs*@
-	<Container TextAlignment="TextAlignment.Center">
-		<NavMenu />
-	</Container>
+			<Heading Size="HeadingSize.Is1" TextAlignment="TextAlignment.Center">Sammy Mahmoudi</Heading>
+			<Heading Size="HeadingSize.Is3" TextAlignment="TextAlignment.Center">Programming & Games Portfolio</Heading>
+		</LayoutHeader>
+
+		@*Tabs*@
+		<Container TextAlignment="TextAlignment.Center">
+			<NavMenu />
+		</Container>
+	</Div>
 
 	@*Body*@
 	<LayoutContent>
@@ -40,19 +48,46 @@
 </Layout>
 
 @code {
-	bool doneSettingUpNavigationManager = false;
-
 	public string GetCurPageClassName() {
-		TrySetupNavigationManager();
+		SetUpNavigationManagerIfNotSetUp();
 
 		string currentUrl = NavigationManager.Uri;
-		if (currentUrl.Contains("projects")) { return "projects-class"; }
-		else if (currentUrl.Contains("resume")) { return "resume-class"; }
-		else if (currentUrl.Contains("contact")) { return "contact-class"; }
-		else { return "home-class"; }
+		if (GlobalVariables.DarkModeActivated) {
+			if (currentUrl.Contains("projects")) { return "projects-class-dark"; }
+			else if (currentUrl.Contains("resume")) { return "resume-class-dark"; }
+			else if (currentUrl.Contains("contact")) { return "contact-class-dark"; }
+			else { return "home-class-dark"; }
+		}
+		else {
+			if (currentUrl.Contains("projects")) { return "projects-class-light"; }
+			else if (currentUrl.Contains("resume")) { return "resume-class-light"; }
+			else if (currentUrl.Contains("contact")) { return "contact-class-light"; }
+			else { return "home-class-light"; }
+		}
 	}
 
-	private void TrySetupNavigationManager() {
+	[CascadingParameter] Theme Theme { get; set; }
+	Task ToggleTheme() {
+		GlobalVariables.DarkModeActivated = !GlobalVariables.DarkModeActivated;
+		bool temp = GlobalVariables.DarkModeActivated;
+
+		Theme newTheme = GlobalVariables.CurTheme;
+		Theme.TextColorOptions.Primary = newTheme.TextColorOptions.Primary;
+		Theme.ColorOptions.Primary = newTheme.ColorOptions.Primary;
+		Theme.ColorOptions.Secondary = newTheme.ColorOptions.Secondary;
+		Theme.ColorOptions.Light = newTheme.ColorOptions.Light;
+		Theme.ColorOptions.Info = newTheme.ColorOptions.Info;
+		Theme.BackgroundOptions.Primary = newTheme.BackgroundOptions.Primary;
+		Theme.ThemeHasChanged();
+
+		GlobalVariables.OnPageJump?.Invoke();
+
+		return Task.CompletedTask;
+	}
+
+	#region Helpers
+	bool doneSettingUpNavigationManager = false;
+	private void SetUpNavigationManagerIfNotSetUp() {
 		if (!doneSettingUpNavigationManager) {
 			NavigationManager.LocationChanged += (obj, lcea) => {
 				GlobalVariables.OnPageJump?.Invoke();
@@ -61,4 +96,5 @@
 			doneSettingUpNavigationManager = true;
 		}
 	}
+	#endregion
 }

@@ -3,14 +3,14 @@
 <Animate Auto Animation="GlobalVariables.PageAnimation">
 	<Container>
 		@*Site Warning*@
-		<Heading Size="HeadingSize.Is5" TextColor="TextColor.Secondary" TextAlignment="TextAlignment.Center" Margin="Margin.Is2">
+		<Heading Size="HeadingSize.Is5" TextAlignment="TextAlignment.Center" Margin="Margin.Is2">
 			⚠ This website is under construction! ⚠
 		</Heading>
 
 		<Row>
 			<Column ColumnSize="ColumnSize.Is7">
 				@*Introduction*@
-				<Card Background="Background.White" Padding="Padding.Is2">
+				<Card Padding="Padding.Is2">
 					<CardImage src="images/self2.jpg" Alt="Picture of me with stone cats" />
 					<CardBody>
 						<CardTitle>
@@ -40,7 +40,7 @@
 					@*Projects Button Link*@
 					<Link To="projects">
 					<Div class="clicky-card-link">
-						<Card Background="Background.White" Padding="Padding.Is2" Margin="Margin.Is2">
+						<Card Padding="Padding.Is2" Margin="Margin.Is2">
 							<CardImage src="images/pizzadeliverybagel.gif" Alt="Pizza Delivery Bagel gif" />
 							<CardBody>
 								<CardTitle>
@@ -55,8 +55,9 @@
 				</Row>
 				<Row>
 					@*Hobbies Button*@
+					<Div>
 					<Div class="clicky-card">
-						<Card Background="Background.White" Padding="Padding.Is2" Margin="Margin.Is2" @onclick="ShowHobbiesPopup">
+						<Card Padding="Padding.Is2" Margin="Margin.Is2" @onclick="ShowHobbiesPopup">
 							<CardImage src="images/drawing.jpg" Alt="Christmas Cats Drawing" />
 							<CardBody>
 								<CardTitle>
@@ -67,11 +68,12 @@
 							</CardBody>
 						</Card>
 					</Div>
+					</Div>
 				</Row>
 
 				<Row>
 					@*Contact*@
-					<Card Background="Background.White" Padding="Padding.Is2" Margin="Margin.Is2" TextAlignment="TextAlignment.Center">
+					<Card Padding="Padding.Is2" Margin="Margin.Is2" TextAlignment="TextAlignment.Center">
 						<CardBody>
 							<CardTitle>
 								<Heading Size="HeadingSize.Is5">Contact Me</Heading>

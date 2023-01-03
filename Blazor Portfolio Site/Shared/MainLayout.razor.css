@@ -1,5 +1,12 @@
-.home-class { background: lavender; }
-.projects-class { background: lightblue; }
-.resume-class { background: lightsalmon; }
-.contact-class { background: navajowhite; }
+.home-class-light { background-color: var(--home-light); }
+.projects-class-light { background-color: var(--projects-light); }
+.resume-class-light { background-color: var(--resume-light); }
+.contact-class-light { background-color: var(--contact-light); }
+
+
+.home-class-dark { background-color: var(--home-dark); }
+.projects-class-dark { background-color: var(--projects-dark); }
+.resume-class-dark { background-color: var(--resume-dark); }
+.contact-class-dark { background-color: var(--contact-dark); }
+
 .base-class { background: gray; }

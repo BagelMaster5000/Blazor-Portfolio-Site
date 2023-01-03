@@ -2,16 +2,16 @@
 
 <Container Width="Width.Is75">
 	<Row TextAlignment="TextAlignment.Center" Padding="Padding.Is1">
-		<Div Width="Width.Is25">
-			<a class="@GetHomeLinkClass()" href="" @onclick="RefreshAnimationDirectionGoToHome">Home</a>
+		<Div Width="Width.Is25" TextColor="TextColor.Primary">
+			<a Class="@GetHomeLinkClass()" href="" @onclick="RefreshAnimationDirectionGoToHome">Home</a>
 		</Div>
-		<Div Width="Width.Is25">
+		<Div Width="Width.Is25" TextColor="TextColor.Primary">
 			<a class="@GetProjectsLinkClass()" href="projects" @onclick="RefreshAnimationDirectionGoToProjects">Projects</a>
 		</Div>
-		<Div Width="Width.Is25">
+		<Div Width="Width.Is25" TextColor="TextColor.Primary">
 			<a class="@GetResumeLinkClass()" href="resume" @onclick="RefreshAnimationDirectionGoToResume">Resume</a>
 		</Div>
-		<Div Width="Width.Is25">
+		<Div Width="Width.Is25" TextColor="TextColor.Primary">
 			<a class="@GetContactLinkClass()" href="contact" @onclick="RefreshAnimationDirectionGoToContact">Contact</a>
 		</Div>
 	</Row>
@@ -22,24 +22,42 @@
 		GlobalVariables.OnPageJump += ForceRefresh;
 	}
 
-	private string GetHomeLinkClass() => (GetCurrentPageName() == "Home") ? "home-link-active" : "home-link";
-	private string GetProjectsLinkClass() => (GetCurrentPageName() == "Projects") ? "projects-link-active" : "projects-link";
-	private string GetResumeLinkClass() => (GetCurrentPageName() == "Resume") ? "resume-link-active" : "resume-link";
-	private string GetContactLinkClass() => (GetCurrentPageName() == "Contact") ? "contact-link-active" : "contact-link";
-
-	private string GetCurrentPageName() {
-		if (NavigationManager == null) {
-			return "";
+	#region Get Tab Classes
+	private string GetHomeLinkClass() {
+		if (GetCurrentPageName() == "Home") {
+			return (GlobalVariables.DarkModeActivated) ? "home-link-active-dark" : "home-link-active-light";
 		}
-
-		string currentUrl = NavigationManager.Uri;
-
-		if (currentUrl.Contains("projects")) { return "Projects"; }
-		else if (currentUrl.Contains("resume")) { return "Resume"; }
-		else if (currentUrl.Contains("contact")) { return "Contact"; }
-		else { return "Home"; }
+		else {
+			return "home-link";
+		}
 	}
+	private string GetProjectsLinkClass() {
+		if (GetCurrentPageName() == "Projects") {
+			return (GlobalVariables.DarkModeActivated) ? "projects-link-active-dark" : "projects-link-active-light";
+		}
+		else {
+			return "projects-link";
+		}
+	}
+	private string GetResumeLinkClass() {
+		if (GetCurrentPageName() == "Resume") {
+			return (GlobalVariables.DarkModeActivated) ? "resume-link-active-dark" : "resume-link-active-light";
+		}
+		else {
+			return "resume-link";
+		}
+	}
+	private string GetContactLinkClass() {
+		if (GetCurrentPageName() == "Contact") {
+			return (GlobalVariables.DarkModeActivated) ? "contact-link-active-dark" : "contact-link-active-light";
+		}
+		else {
+			return "contact-link";
+		}
+	}
+	#endregion
 
+	#region Animation Directions
 	private void RefreshAnimationDirectionGoToHome() {
 		string curPageName = GetCurrentPageName();
 		switch (curPageName) {
@@ -76,10 +94,26 @@
 			case "Contact": GlobalVariables.PageAnimationSlideDirection = 0; break;
 		}
 	}
+	#endregion
+
+	#region Helpers
+	private string GetCurrentPageName() {
+		if (NavigationManager == null) {
+			return "";
+		}
+
+		string currentUrl = NavigationManager.Uri;
+
+		if (currentUrl.Contains("projects")) { return "Projects"; }
+		else if (currentUrl.Contains("resume")) { return "Resume"; }
+		else if (currentUrl.Contains("contact")) { return "Contact"; }
+		else { return "Home"; }
+	}
 
 	private void ForceRefresh() {
 		GlobalVariables.PageAnimationSlideDirection = 0;
 
 		StateHasChanged();
 	}
+	#endregion
 }
