@@ -1,8 +1,20 @@
-nav { align-content: center; align-items: center; float: unset; }
+nav {
+    align-content: center;
+    align-items: center;
+    float: unset;
+}
 
-a { text-decoration: none; color: var(--b-theme-secondary); padding: 6px 45px 7px 45px; border-radius: 5px 5px 0px 0px; transition: .2s ease-out; }
+a {
+    text-decoration: none;
+    color: var(--b-theme-secondary);
+    padding: 6px 45px 7px 45px;
+    border-radius: 5px 5px 0px 0px;
+    transition: .2s ease-out;
+}
 
-    a:hover { opacity: 0.5; }
+    a:hover {
+        opacity: 0.5;
+    }
 
 .home-link { background-color: none; }
 .home-link-active-light { background-color: var(--home-light); }

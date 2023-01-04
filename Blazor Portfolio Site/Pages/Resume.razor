@@ -1,16 +1,17 @@
 ﻿@page "/resume"
+@inherits PageBase
 
 <Animate Auto Animation="GlobalVariables.PageAnimation">
-	<Div Margin="Margin.Is1"/>
+	<Div Margin="Margin.Is1" />
 
 	@*Open Externally Button*@
 	<Container Width="Width.Is25" TextAlignment="TextAlignment.Center">
 		<Link To="pdfs/Sammy Mahmoudi Resume.pdf" Target="Target.Blank">
-			<Div class="clicky-card-link" style="padding: 5px 0px 0px 0px">
-				<Heading Size="HeadingSize.Is6" VerticalAlignment="VerticalAlignment.Middle">
-					<Icon Name="IconName.ExternalLinkSquareAlt" /> Open
-				</Heading>
-			</Div>
+		<Div class="clicky-card-link" style="padding: 5px 0px 0px 0px">
+			<Heading Size="HeadingSize.Is6" VerticalAlignment="VerticalAlignment.Middle">
+				<Icon Name="IconName.ExternalLinkSquareAlt" /> Open
+			</Heading>
+		</Div>
 		</Link>
 	</Container>
 

@@ -1,4 +1,6 @@
-﻿@*Header*@
+﻿@inherits PageBase
+
+@*Header*@
 <Container Width="Width.Is100" TextAlignment="TextAlignment.Center">
 	<Heading Size="HeadingSize.Is2">
 		My Hobbies!
@@ -42,7 +44,7 @@
 				<Card Margin="Margin.Is2">
 					<CardBody>
 						<CardText>
-							<img src="socialicons/tumblr.png" height="30px" width="30px" style="margin: 0px 5px 0px 0px" />
+							<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent); margin: 0px 5px 0px 0px;" src="icons/tumblr.png" height="30px" width="30px"/>
 							<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">My Tumblr!</Text>
 						</CardText>
 					</CardBody>

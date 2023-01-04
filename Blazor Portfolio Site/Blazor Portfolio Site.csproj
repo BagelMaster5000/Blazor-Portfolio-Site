@@ -7,6 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\icons\miscicons\**" />
+    <Compile Remove="wwwroot\icons\socialicons\**" />
+    <Content Remove="wwwroot\icons\miscicons\**" />
+    <Content Remove="wwwroot\icons\socialicons\**" />
+    <EmbeddedResource Remove="wwwroot\icons\miscicons\**" />
+    <EmbeddedResource Remove="wwwroot\icons\socialicons\**" />
+    <None Remove="wwwroot\icons\miscicons\**" />
+    <None Remove="wwwroot\icons\socialicons\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="GlobalVariables.cs" />
   </ItemGroup>
 

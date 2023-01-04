@@ -1,19 +1,25 @@
 ﻿@inherits LayoutComponentBase
 @inject NavigationManager NavigationManager
 
-
 <PageTitle>Sammy Mahmoudi</PageTitle>
 
 <Layout>
 	<Div Background="Background.Primary">
 		@*Header*@
 		<LayoutHeader Padding="Padding.Is2" TextColor="TextColor.Primary">
-			@*Dark Mode Switch*@
-			<div style="position:absolute; right:20px; top:10px">
-				<Switch TextAlignment="TextAlignment.End" TValue="bool" Checked="GlobalVariables.DarkModeActivated" CheckedChanged="@ToggleTheme">🌙</Switch>
-			</div>
 
-			<Heading Size="HeadingSize.Is1" TextAlignment="TextAlignment.Center">Sammy Mahmoudi</Heading>
+			<Row>
+				<Column ColumnSize="ColumnSize.Is2" />
+				<Column ColumnSize="ColumnSize.Is8">
+					<Heading Size="HeadingSize.Is1" TextAlignment="TextAlignment.Center">Sammy Mahmoudi</Heading>
+				</Column>
+				<Column ColumnSize="ColumnSize.Is2">
+					<Container Margin="Margin.Is2" Padding="Padding.Is2">
+						@*Dark Mode Switch*@
+						<Switch VerticalAlignment="VerticalAlignment.Bottom" TValue="bool" Checked="GlobalVariables.DarkModeActivated" CheckedChanged="@ToggleTheme">🌙</Switch>
+					</Container>
+				</Column>
+			</Row>
 			<Heading Size="HeadingSize.Is3" TextAlignment="TextAlignment.Center">Programming & Games Portfolio</Heading>
 		</LayoutHeader>
 
@@ -80,7 +86,7 @@
 		Theme.BackgroundOptions.Primary = newTheme.BackgroundOptions.Primary;
 		Theme.ThemeHasChanged();
 
-		GlobalVariables.OnPageJump?.Invoke();
+		GlobalVariables.OnDarkModeToggled?.Invoke();
 
 		return Task.CompletedTask;
 	}

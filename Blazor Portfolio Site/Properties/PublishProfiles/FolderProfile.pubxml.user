@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\bagel\Documents\! Github\Blazor-Portfolio-Site\MostRecentBuild</_PublishTargetUrl>
-    <History>True|2022-12-30T18:03:17.2891903Z;True|2022-12-29T17:40:05.1534854-05:00;False|2022-12-29T17:38:34.3734318-05:00;False|2022-12-29T17:35:34.4711434-05:00;True|2022-12-29T17:02:12.6841686-05:00;</History>
+    <History>True|2023-01-04T03:09:52.0477986Z;False|2023-01-03T22:08:28.9579533-05:00;True|2023-01-03T16:29:39.4394499-05:00;True|2023-01-03T16:25:48.9540581-05:00;True|2022-12-30T13:03:17.2891903-05:00;True|2022-12-29T17:40:05.1534854-05:00;False|2022-12-29T17:38:34.3734318-05:00;False|2022-12-29T17:35:34.4711434-05:00;True|2022-12-29T17:02:12.6841686-05:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

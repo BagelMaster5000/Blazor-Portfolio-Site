@@ -1,4 +1,6 @@
-﻿@*Header*@
+﻿@inherits PageBase
+
+@*Header*@
 <Container Width="Width.Is50" TextAlignment="TextAlignment.Center">
 	<Image src="images/drawing.jpg" Width="Width.Is100" Padding="Padding.Is2" />
 	<Heading Size="HeadingSize.Is2">
@@ -37,7 +39,7 @@
 			<Card Margin="Margin.Is2">
 				<CardBody>
 					<CardText>
-						<img src="miscicons/steam.png" height="30px" width="30px" style="margin: 0px 5px 0px 0px" />
+						<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent); margin: 0px 5px 0px 0px;" src="icons/steam.png" height="30px" width="30px" />						
 						<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Steam!</Text>
 					</CardText>
 				</CardBody>
@@ -49,7 +51,7 @@
 			<Card Margin="Margin.Is2">
 				<CardBody>
 					<CardText>
-						<img src="miscicons/google-play.png" height="30px" width="30px" style="margin: 0px 5px 0px 0px" />
+						<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent); margin: 0px 5px 0px 0px;" src="icons/google-play.png" height="30px" width="30px" />						
 						<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Google Play!</Text>
 					</CardText>
 				</CardBody>
@@ -61,7 +63,7 @@
 			<Card Margin="Margin.Is2">
 				<CardBody>
 					<CardText>
-						<img src="miscicons/itchio.png" height="30px" width="30px" style="margin: 0px 5px 0px 0px" />
+						<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent); margin: 0px 5px 0px 0px;" src="icons/itchio.png" height="30px" width="30px" />						
 						<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Itch.io!</Text>
 					</CardText>
 				</CardBody>

@@ -13,7 +13,7 @@ a, .btn-link {
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 .content {
@@ -119,7 +119,7 @@ a, .btn-link {
 
     .clicky-card:hover {
         opacity: 0.8;
-        border-color: black;
+        border-color: var(--b-theme-secondary);
         transform: scaleX(1.03) scaleY(1);
     }
 
@@ -135,6 +135,7 @@ a, .btn-link {
     border-width: 2px;
     border: dashed;
     border-color: transparent;
+    color: var(--b-theme-secondary);
 }
 
     .clicky-card-link:hover {
@@ -153,7 +154,7 @@ a, .btn-link {
 .card {
     background-color: black;
     background-color: var(--b-theme-primary);
-    color: var(--b-theme-secondary)
+    color: var(--b-theme-secondary);
 }
 
 .close {
@@ -181,4 +182,8 @@ a, .btn-link {
 
 .container {
     color: var(--b-theme-secondary);
+}
+
+.custom-control-label:focus {
+    outline: none;
 }
