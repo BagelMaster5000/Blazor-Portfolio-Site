@@ -26,7 +26,7 @@
 	#region Get Tab Classes
 	private string GetHomeLinkClass() {
 		if (GetCurrentPageName() == "Home") {
-			return (GlobalVariables.DarkModeActivated) ? "home-link-active-dark" : "home-link-active-light";
+			return (GlobalVariables.DarkModeActive) ? "home-link-active-dark" : "home-link-active-light";
 		}
 		else {
 			return "home-link";
@@ -34,7 +34,7 @@
 	}
 	private string GetProjectsLinkClass() {
 		if (GetCurrentPageName() == "Projects") {
-			return (GlobalVariables.DarkModeActivated) ? "projects-link-active-dark" : "projects-link-active-light";
+			return (GlobalVariables.DarkModeActive) ? "projects-link-active-dark" : "projects-link-active-light";
 		}
 		else {
 			return "projects-link";
@@ -42,7 +42,7 @@
 	}
 	private string GetResumeLinkClass() {
 		if (GetCurrentPageName() == "Resume") {
-			return (GlobalVariables.DarkModeActivated) ? "resume-link-active-dark" : "resume-link-active-light";
+			return (GlobalVariables.DarkModeActive) ? "resume-link-active-dark" : "resume-link-active-light";
 		}
 		else {
 			return "resume-link";
@@ -50,7 +50,7 @@
 	}
 	private string GetContactLinkClass() {
 		if (GetCurrentPageName() == "Contact") {
-			return (GlobalVariables.DarkModeActivated) ? "contact-link-active-dark" : "contact-link-active-light";
+			return (GlobalVariables.DarkModeActive) ? "contact-link-active-dark" : "contact-link-active-light";
 		}
 		else {
 			return "contact-link";

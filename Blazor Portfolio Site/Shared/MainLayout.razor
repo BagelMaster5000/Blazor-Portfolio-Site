@@ -1,5 +1,6 @@
 ﻿@inherits LayoutComponentBase
 @inject NavigationManager NavigationManager
+@inject IJSRuntime JS
 
 <PageTitle>Sammy Mahmoudi</PageTitle>
 
@@ -16,7 +17,7 @@
 				<Column ColumnSize="ColumnSize.Is2">
 					<Container Margin="Margin.Is2" Padding="Padding.Is2">
 						@*Dark Mode Switch*@
-						<Switch VerticalAlignment="VerticalAlignment.Bottom" TValue="bool" Checked="GlobalVariables.DarkModeActivated" CheckedChanged="@ToggleTheme">🌙</Switch>
+						<Switch VerticalAlignment="VerticalAlignment.Bottom" TValue="bool" Checked="GlobalVariables.DarkModeActive" CheckedChanged="@ToggleDarkMode">🌙</Switch>
 					</Container>
 				</Column>
 			</Row>
@@ -54,11 +55,16 @@
 </Layout>
 
 @code {
+	protected override async Task OnInitializedAsync() {
+		await DetectBrowserDarkModeAndSetAppDarkMode();
+	}
+
+	//Navigation
 	public string GetCurPageClassName() {
 		SetUpNavigationManagerIfNotSetUp();
 
 		string currentUrl = NavigationManager.Uri;
-		if (GlobalVariables.DarkModeActivated) {
+		if (GlobalVariables.DarkModeActive) {
 			if (currentUrl.Contains("projects")) { return "projects-class-dark"; }
 			else if (currentUrl.Contains("resume")) { return "resume-class-dark"; }
 			else if (currentUrl.Contains("contact")) { return "contact-class-dark"; }
@@ -72,10 +78,16 @@
 		}
 	}
 
+	//Dark Mode Slider Switch
 	[CascadingParameter] Theme Theme { get; set; }
-	Task ToggleTheme() {
-		GlobalVariables.DarkModeActivated = !GlobalVariables.DarkModeActivated;
-		bool temp = GlobalVariables.DarkModeActivated;
+	Task ToggleDarkMode() {
+		GlobalVariables.DarkModeActive = !GlobalVariables.DarkModeActive;
+		RefreshDarkModeState();
+
+		return Task.CompletedTask;
+	}
+	public void RefreshDarkModeState() {
+		bool temp = GlobalVariables.DarkModeActive;
 
 		Theme newTheme = GlobalVariables.CurTheme;
 		Theme.TextColorOptions.Primary = newTheme.TextColorOptions.Primary;
@@ -87,8 +99,16 @@
 		Theme.ThemeHasChanged();
 
 		GlobalVariables.OnDarkModeToggled?.Invoke();
+	}
 
-		return Task.CompletedTask;
+	//Dark Mode Auto-Set
+	private async Task DetectBrowserDarkModeAndSetAppDarkMode() {
+		bool isBrowserInDarkMode = await JS.InvokeAsync<bool>("getBrowserDarkMode");
+
+		if (GlobalVariables.DarkModeActive != isBrowserInDarkMode) {
+			GlobalVariables.DarkModeActive = isBrowserInDarkMode;
+			RefreshDarkModeState();
+		}
 	}
 
 	#region Helpers

@@ -16,10 +16,11 @@ public static class GlobalVariables {
 
 	// Theme switching
 	public static Action? OnDarkModeToggled;
-	public static bool DarkModeActivated { get; set; } = false;
-	public static Theme CurTheme => (DarkModeActivated) ? darkTheme : lightTheme;
-	public static int DarkModeColorInvertPercent { get { return (DarkModeActivated) ? 0 : 100; } }
+	public static bool DarkModeActive { get; set; } = false;
 
+	public static int DarkModeColorInvertPercent { get { return (DarkModeActive) ? 0 : 100; } }
+
+	public static Theme CurTheme => (DarkModeActive) ? darkTheme : lightTheme;
 	private static Theme lightTheme = new Theme {
 		TextColorOptions = new ThemeTextColorOptions() {
 			Primary = "#000000", // Heading text color
