@@ -21,10 +21,25 @@
 </head>
 
 <body>
+    <style scoped>
+        body {
+            background-color: white;
+        }
+        .loading-progress-text {
+            color: #212121;
+        }
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #212121;
+            }
+            .loading-progress-text {
+                color: #f1f1f1;
+            }
+        }
+    </style>
     <div id="app">
         <svg class="loading-progress">
-            <circle r="40%" cx="50%" cy="50%" />
-            <circle r="40%" cx="50%" cy="50%" />
+            <circle r="40%" cx="50%" cy="50%" style="stroke: cornflowerblue" />
         </svg>
         <div class="loading-progress-text"></div>
     </div>
