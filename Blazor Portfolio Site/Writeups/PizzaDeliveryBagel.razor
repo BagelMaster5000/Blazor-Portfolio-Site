@@ -2,7 +2,7 @@
 
 @*Header*@
 <Container Width="Width.Is50" TextAlignment="TextAlignment.Center">
-	<Image src="images/drawing.jpg" Width="Width.Is100" Padding="Padding.Is2" />
+	<Image src="portfolioimages/pizzadeliverybagel/header.jpg" Width="Width.Is100" Padding="Padding.Is2" />
 	<Heading Size="HeadingSize.Is2">
 		Pizza Delivery Bagel
 	</Heading>
@@ -14,18 +14,20 @@
 <Divider />
 
 @*About*@
-<Heading Size="HeadingSize.Is3" TextAlignment="TextAlignment.Center"><u>About</u></Heading>
+<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">About</Heading>
 <Row Margin="Margin.Is2">
 	<Column ColumnSize="ColumnSize.Is8">
 		<Paragraph>
-			Sample text Sample text Sample text Sample text Sample text Sample textSample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample textSample textSample text Sample text Sample text Sample text
+			A chaotic action-arcade game about delivering as many pizzas as possible before inevitably getting fired.
 		</Paragraph>
 		<Paragraph>
-			Sample text Sample text Sample text Sample text Sample text Sample textSample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample textSample textSample text Sample text Sample text Sample text
+			I developed this game entirely by myself (programming, game design, art, sound effects, music, etc.) in my free time. I used this game as an opportunity to learn many different skills: implementing game audio through the Wwise audio engine, mobile game development, cross-platform development, cloud saving, tools development, and seeing a project through to completion.
 		</Paragraph>
-		<Paragraph>
-			Sample text Sample text Sample text Sample text Sample text Sample textSample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample textSample textSample text Sample text Sample text Sample text
-		</Paragraph>
+		<Column ColumnSize="ColumnSize.Is8">
+			<Figure>
+				<FigureImage Source="portfolioimages/pizzadeliverybagel/gif1.gif" Rounded />
+			</Figure>
+		</Column>
 	</Column>
 	<Column ColumnSize="ColumnSize.Is4">
 		<Text>Source: <Text TextWeight="TextWeight.Bold">Closed Source</Text></Text> <br />
@@ -39,7 +41,7 @@
 			<Card Margin="Margin.Is2">
 				<CardBody>
 					<CardText>
-						<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent); margin: 0px 5px 0px 0px;" src="icons/steam.png" height="30px" width="30px" />						
+						<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent); margin: 0px 5px 0px 0px;" src="icons/steam.png" height="30px" width="30px" />
 						<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Steam!</Text>
 					</CardText>
 				</CardBody>
@@ -51,7 +53,7 @@
 			<Card Margin="Margin.Is2">
 				<CardBody>
 					<CardText>
-						<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent); margin: 0px 5px 0px 0px;" src="icons/google-play.png" height="30px" width="30px" />						
+						<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent); margin: 0px 5px 0px 0px;" src="icons/google-play.png" height="30px" width="30px" />
 						<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Google Play!</Text>
 					</CardText>
 				</CardBody>
@@ -63,7 +65,7 @@
 			<Card Margin="Margin.Is2">
 				<CardBody>
 					<CardText>
-						<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent); margin: 0px 5px 0px 0px;" src="icons/itchio.png" height="30px" width="30px" />						
+						<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent); margin: 0px 5px 0px 0px;" src="icons/itchio.png" height="30px" width="30px" />
 						<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Itch.io!</Text>
 					</CardText>
 				</CardBody>
@@ -76,17 +78,132 @@
 <Divider />
 
 @*Gallery*@
-<Heading Size="HeadingSize.Is3" TextAlignment="TextAlignment.Center"><u>Gallery</u></Heading>
-<Container Width="Width.Is75">
-	<Carousel Autoplay=false Crossfade Margin="Margin.Is2">
-		<CarouselSlide Name="1">
-			<Image src="images/drawing.jpg" Display="Display.Block" Width="Width.Is100" />
-		</CarouselSlide>
-		<CarouselSlide Name="2">
-			<Image src="images/drawing.jpg" Display="Display.Block" Width="Width.Is100" />
-		</CarouselSlide>
-		<CarouselSlide Name="3">
-			<Image src="images/drawing.jpg" Display="Display.Block" Width="Width.Is100" />
-		</CarouselSlide>
-	</Carousel>
-</Container>
+<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Gallery</Heading>
+<Row Margin="Margin.Is2" Padding="Padding.Is2">
+	<Column ColumnSize="ColumnSize.IsHalf">
+		<Figure>
+			<FigureImage Source="portfolioimages/pizzadeliverybagel/gif1.gif" Rounded />
+		</Figure>
+	</Column>
+	<Column ColumnSize="ColumnSize.IsHalf">
+		<Figure>
+			<FigureImage Source="portfolioimages/pizzadeliverybagel/gif2.gif" Rounded />
+		</Figure>
+	</Column>
+	<Column ColumnSize="ColumnSize.IsHalf">
+		<Figure>
+			<FigureImage Source="portfolioimages/pizzadeliverybagel/gif3.gif" Rounded />
+		</Figure>
+	</Column>
+</Row>
+
+<Divider />
+
+<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Cross-Platform Development</Heading>
+<Row Margin="Margin.Is2">
+	<Paragraph>
+		Pizza Delivery Bagel supports multiple different control schemes: keyboard, touch, gamepad, and arcade cabinet! When starting the game, the control scheme is set based on the detected platform.
+	</Paragraph>
+	<Paragraph>
+		If playing on PC, the keyboard and gamepad control schemes can be switched between mid-game.
+	</Paragraph>
+	<Figure>
+		<FigureImage Source="portfolioimages/pizzadeliverybagel/allcontrols.gif" Rounded />
+	</Figure>
+	<Paragraph>
+		Depending on the control scheme, some player controller adjustments are made to improve game feel:
+	</Paragraph>
+	<UnorderedList>
+		<UnorderedListItem>
+			When playing with a physical or virtual joystick: wall grinding detection is more sensitive. This is because the wall-grinding speed boost is most effective when moving into a wall at a 45 degree angle, which is easiest to reliably do with keyboard directional arrows.
+		</UnorderedListItem>
+		<UnorderedListItem>
+			When playing on a PC with a gamepad: car acceleration and deacceleration are mapped to the triggers rather than to the up and down movement directions. On keyboard it’s fun to control the car entirely with the arrow keys, but on a joystick or d-pad it doesn’t feel natural.
+		</UnorderedListItem>
+		<UnorderedListItem>
+			When playing on mobile: tank controls aren’t an option in the settings. The tank controls feel too awkward and unforgiving on a touchscreen, so they’re made exclusive to the PC and arcade cabinet versions.
+		</UnorderedListItem>
+	</UnorderedList>
+</Row>
+
+<Divider />
+
+<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Object Pooling</Heading>
+<Row Margin="Margin.Is2">
+	<Paragraph>
+		I utilized object pooling to minimize garbage collection and improve performance. Nothing is destroyed or creating while playing the game. Instead, all objects are created at the start of the game and disabled, enabled, and re-positioned over time as needed.
+	</Paragraph>
+	<Figure>
+		<FigureImage Source="portfolioimages/pizzadeliverybagel/maxchaos.gif" Rounded />
+	</Figure>
+</Row>
+
+<Divider />
+
+<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Development Tools</Heading>
+<Row Margin="Margin.Is2">
+	<Column ColumnSize="ColumnSize.IsHalf" Padding="Padding.Is2">
+		<Figure>
+			<FigureImage Source="portfolioimages/pizzadeliverybagel/terminal.gif" Rounded />
+			<FigureCaption TextAlignment="TextAlignment.Center">
+				I implemented a terminal for executing debug commands in-game. I utilized a 3rd party terminal because it provided all the utility I needed and saved development time.
+			</FigureCaption>
+		</Figure>
+	</Column>
+	<Column ColumnSize="ColumnSize.IsHalf" Padding="Padding.Is2">
+		<Figure>
+			<FigureImage Source="portfolioimages/pizzadeliverybagel/customeditor.png" Rounded />
+			<FigureCaption TextAlignment="TextAlignment.Center">
+				I created a basic custom editor for debugging shortcuts.
+			</FigureCaption>
+		</Figure>
+	</Column>
+</Row>
+
+<Divider />
+
+<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Check Out the Game!</Heading>
+<Row Margin="Margin.Is2">
+	<Column ColumnSize="ColumnSize.IsThird" Padding="Padding.Is2">
+		<Link To="https://store.steampowered.com/app/1996780/Pizza_Delivery_Bagel/" Target="Target.Blank">
+		<Div class="clicky-card-link">
+			<Card Margin="Margin.Is2">
+				<CardBody>
+					<CardText>
+						<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent); margin: 0px 5px 0px 0px;" src="icons/steam.png" height="30px" width="30px" />
+						<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Steam!</Text>
+					</CardText>
+				</CardBody>
+			</Card>
+		</Div>
+		</Link>
+	</Column>
+	<Column ColumnSize="ColumnSize.IsThird" Padding="Padding.Is2">
+		<Link To="https://play.google.com/store/apps/details?id=com.BagelmasterCo.PizzaDeliveryBagel&hl=en_US&gl=US" Target="Target.Blank">
+		<Div class="clicky-card-link">
+			<Card Margin="Margin.Is2">
+				<CardBody>
+					<CardText>
+						<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent); margin: 0px 5px 0px 0px;" src="icons/google-play.png" height="30px" width="30px" />
+						<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Google Play!</Text>
+					</CardText>
+				</CardBody>
+			</Card>
+		</Div>
+		</Link>
+	</Column>
+	<Column ColumnSize="ColumnSize.IsThird" Padding="Padding.Is2">
+		<Link To="https://bagelo-masterson.itch.io/pizza-delivery-bagel" Target="Target.Blank">
+		<Div class="clicky-card-link">
+			<Card Margin="Margin.Is2">
+				<CardBody>
+					<CardText>
+						<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent); margin: 0px 5px 0px 0px;" src="icons/itchio.png" height="30px" width="30px" />
+						<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Itch.io!</Text>
+					</CardText>
+				</CardBody>
+			</Card>
+		</Div>
+		</Link>
+	</Column>
+</Row>
