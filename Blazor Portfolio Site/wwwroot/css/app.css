@@ -96,6 +96,14 @@ a, .btn-link {
 
 
 
+
+
+
+
+
+
+
+
 /*Custom*/
 
 :root {
@@ -103,11 +111,11 @@ a, .btn-link {
     --home-light: lavender;
     --home-dark: var(--b-theme-light);
     --projects-light: lightblue;
-    --projects-dark: cornflowerblue;
+    --projects-dark: var(--b-theme-light);
     --resume-light: lightsalmon;
-    --resume-dark: salmon;
+    --resume-dark: var(--b-theme-light);
     --contact-light: navajowhite;
-    --contact-dark: chocolate;
+    --contact-dark: var(--b-theme-light);
 }
 
 
@@ -175,10 +183,6 @@ a, .btn-link {
 .gallery-item img {
     border-radius: 15px;
     position: relative;
-}
-
-.rounded-image {
-    border-radius: 10px;
 }
 
 
