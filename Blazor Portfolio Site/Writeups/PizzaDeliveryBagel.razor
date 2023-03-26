@@ -7,7 +7,7 @@
 		<Container Width="Width.Is25" TextAlignment="TextAlignment.Center">
 			<Link To="projects">
 			<Div class="clicky-card-link" style="padding: 5px 0px 0px 0px">
-				<Heading Size="HeadingSize.Is6" VerticalAlignment="VerticalAlignment.Middle">
+				<Heading Size="HeadingSize.Is6" VerticalAlignment="VerticalAlignment.Middle" Padding="Padding.Is2">
 					<Icon Name="IconName.ArrowLeft" /> Back
 				</Heading>
 			</Div>
@@ -53,36 +53,48 @@
 
 					<Link To="https://store.steampowered.com/app/1996780/Pizza_Delivery_Bagel/" Target="Target.Blank">
 					<Div class="clicky-card-link">
-						<Card Margin="Margin.Is2">
+						<Card Margin="Margin.Is2" class="outlined-card">
 							<CardBody>
-								<CardText>
-									<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent); margin: 0px 5px 0px 0px;" src="icons/steam.png" height="30px" width="30px" />
-									<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Steam!</Text>
-								</CardText>
+								<Row>
+									<Column ColumnSize="ColumnSize.Is2">
+										<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent)" src="icons/steam.png" height="30px" width="30px" />
+									</Column>
+									<Column ColumnSize="ColumnSize.Is10">
+										<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Steam!</Text>
+									</Column>
+								</Row>
 							</CardBody>
 						</Card>
 					</Div>
 					</Link>
 					<Link To="https://play.google.com/store/apps/details?id=com.BagelmasterCo.PizzaDeliveryBagel&hl=en_US&gl=US" Target="Target.Blank">
 					<Div class="clicky-card-link">
-						<Card Margin="Margin.Is2">
+						<Card Margin="Margin.Is2" class="outlined-card">
 							<CardBody>
-								<CardText>
-									<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent); margin: 0px 5px 0px 0px;" src="icons/google-play.png" height="30px" width="30px" />
-									<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Google Play!</Text>
-								</CardText>
+								<Row>
+									<Column ColumnSize="ColumnSize.Is2">
+										<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent)" src="icons/google-play.png" height="30px" width="30px" />
+									</Column>
+									<Column ColumnSize="ColumnSize.Is10">
+										<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Google Play!</Text>
+									</Column>
+								</Row>
 							</CardBody>
 						</Card>
 					</Div>
 					</Link>
 					<Link To="https://bagelo-masterson.itch.io/pizza-delivery-bagel" Target="Target.Blank">
 					<Div class="clicky-card-link">
-						<Card Margin="Margin.Is2">
+						<Card Margin="Margin.Is2" class="outlined-card">
 							<CardBody>
-								<CardText>
-									<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent); margin: 0px 5px 0px 0px;" src="icons/itchio.png" height="30px" width="30px" />
-									<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Itch.io!</Text>
-								</CardText>
+								<Row>
+									<Column ColumnSize="ColumnSize.Is2">
+										<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent)" src="icons/itchio.png" height="30px" width="30px" />
+									</Column>
+									<Column ColumnSize="ColumnSize.Is10">
+										<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Itch.io!</Text>
+									</Column>
+								</Row>
 							</CardBody>
 						</Card>
 					</Div>
@@ -183,18 +195,22 @@
 
 			<Divider />
 
-			@*Links*@
+			@*Bottom Links*@
 			<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Check Out the Game!</Heading>
 			<Row Margin="Margin.Is2">
 				<Column ColumnSize="ColumnSize.IsThird" Padding="Padding.Is2">
 					<Link To="https://store.steampowered.com/app/1996780/Pizza_Delivery_Bagel/" Target="Target.Blank">
 					<Div class="clicky-card-link">
-						<Card Margin="Margin.Is2">
+						<Card Margin="Margin.Is2" class="outlined-card">
 							<CardBody>
-								<CardText>
-									<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent); margin: 0px 5px 0px 0px;" src="icons/steam.png" height="30px" width="30px" />
-									<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Steam!</Text>
-								</CardText>
+								<Row>
+									<Column ColumnSize="ColumnSize.Is2">
+										<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent)" src="icons/steam.png" height="30px" width="30px" />
+									</Column>
+									<Column ColumnSize="ColumnSize.Is10">
+										<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Steam!</Text>
+									</Column>
+								</Row>
 							</CardBody>
 						</Card>
 					</Div>
@@ -203,12 +219,16 @@
 				<Column ColumnSize="ColumnSize.IsThird" Padding="Padding.Is2">
 					<Link To="https://play.google.com/store/apps/details?id=com.BagelmasterCo.PizzaDeliveryBagel&hl=en_US&gl=US" Target="Target.Blank">
 					<Div class="clicky-card-link">
-						<Card Margin="Margin.Is2">
+						<Card Margin="Margin.Is2" class="outlined-card">
 							<CardBody>
-								<CardText>
-									<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent); margin: 0px 5px 0px 0px;" src="icons/google-play.png" height="30px" width="30px" />
-									<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Google Play!</Text>
-								</CardText>
+								<Row>
+									<Column ColumnSize="ColumnSize.Is2">
+										<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent)" src="icons/google-play.png" height="30px" width="30px" />
+									</Column>
+									<Column ColumnSize="ColumnSize.Is10">
+										<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Google Play!</Text>
+									</Column>
+								</Row>
 							</CardBody>
 						</Card>
 					</Div>
@@ -217,12 +237,16 @@
 				<Column ColumnSize="ColumnSize.IsThird" Padding="Padding.Is2">
 					<Link To="https://bagelo-masterson.itch.io/pizza-delivery-bagel" Target="Target.Blank">
 					<Div class="clicky-card-link">
-						<Card Margin="Margin.Is2">
+						<Card Margin="Margin.Is2" class="outlined-card">
 							<CardBody>
-								<CardText>
-									<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent); margin: 0px 5px 0px 0px;" src="icons/itchio.png" height="30px" width="30px" />
-									<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Itch.io!</Text>
-								</CardText>
+								<Row>
+									<Column ColumnSize="ColumnSize.Is2">
+										<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent)" src="icons/itchio.png" height="30px" width="30px" />
+									</Column>
+									<Column ColumnSize="ColumnSize.Is10">
+										<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Itch.io!</Text>
+									</Column>
+								</Row>
 							</CardBody>
 						</Card>
 					</Div>
@@ -236,7 +260,7 @@
 	<Container Width="Width.Is25" TextAlignment="TextAlignment.Center">
 		<Link To="projects">
 		<Div class="clicky-card-link" style="padding: 5px 0px 0px 0px">
-			<Heading Size="HeadingSize.Is6" VerticalAlignment="VerticalAlignment.Middle">
+			<Heading Size="HeadingSize.Is6" VerticalAlignment="VerticalAlignment.Middle" Padding="Padding.Is2">
 				<Icon Name="IconName.ArrowLeft" /> Back
 			</Heading>
 		</Div>

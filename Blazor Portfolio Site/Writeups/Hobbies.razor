@@ -38,12 +38,16 @@
 			</Container>
 			<Link To="https://www.tumblr.com/bagelmaster5000" Target="Target.Blank">
 			<Div class="clicky-card-link">
-				<Card Margin="Margin.Is2">
+				<Card Margin="Margin.Is2" class="outlined-card">
 					<CardBody>
-						<CardText>
-							<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent); margin: 0px 5px 0px 0px;" src="icons/tumblr.png" height="30px" width="30px" />
-							<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">My Tumblr!</Text>
-						</CardText>
+						<Row>
+							<Column ColumnSize="ColumnSize.Is2">
+								<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent)" src="icons/tumblr.png" height="30px" width="30px" />
+							</Column>
+							<Column ColumnSize="ColumnSize.Is10">
+								<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">My Tumblr!</Text>
+							</Column>
+						</Row>
 					</CardBody>
 				</Card>
 			</Div>

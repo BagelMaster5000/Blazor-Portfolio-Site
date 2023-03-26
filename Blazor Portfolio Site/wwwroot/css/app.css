@@ -192,6 +192,9 @@ a, .btn-link {
     background-color: var(--b-theme-primary);
     color: var(--b-theme-secondary);
 }
+.outlined-card {
+    border-color: var(--v-theme-secondary);
+}
 
 .close {
     color: var(--b-theme-secondary);
