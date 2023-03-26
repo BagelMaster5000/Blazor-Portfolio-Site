@@ -7,10 +7,11 @@
 	<Container TextAlignment="TextAlignment.Center" Padding="Padding.Is2">
 		<Heading Size="HeadingSize.Is3" TextAlignment="TextAlignment.Center"><u>Games</u></Heading>
 		<Row VerticalGutter="32">
+			@*Pizza Delivery Bagel Button*@
 			<Column ColumnSize="ColumnSize.IsHalf">
-				@*Pizza Delivery Bagel Button*@
-				<Div class="clicky-card">
-					<Card Padding="Padding.Is2" Margin="Margin.Is2" @onclick="ShowPizzaDeliveryBagelPopup">
+				<Link To="projects/pizzadeliverybagel">
+				<Div class="clicky-card-link">
+					<Card Padding="Padding.Is2" Margin="Margin.Is2">
 						<CardImage src="thumbnails/games/pizzadeliverybagel.gif" Alt="Pizza Delivery Bagel Thumbnail" />
 						<CardBody>
 							<CardTitle>
@@ -22,11 +23,13 @@
 						</CardBody>
 					</Card>
 				</Div>
+				</Link>
 			</Column>
 			<Column ColumnSize="ColumnSize.IsHalf">
 				@*Grombcross Button*@
-				<Div class="clicky-card">
-					<Card Padding="Padding.Is2" Margin="Margin.Is2" @onclick="ShowGrombcrossPopup">
+				<Link To="projects/grombcross">
+				<Div class="clicky-card-link">
+					<Card Padding="Padding.Is2" Margin="Margin.Is2">
 						<CardImage src="thumbnails/games/project9thmonday.gif" Alt="Grombcross Thumbnail" />
 						<CardBody>
 							<CardTitle>
@@ -38,13 +41,13 @@
 						</CardBody>
 					</Card>
 				</Div>
+				</Link>
 			</Column>
-		</Row>
-		<Row VerticalGutter="32">
 			<Column ColumnSize="ColumnSize.IsHalf">
 				@*Project 9th Monday Button*@
-				<Div class="clicky-card">
-					<Card Padding="Padding.Is2" Margin="Margin.Is2" @onclick="ShowProject9thMondayPopup">
+				<Link To="projects/project9thmonday">
+				<Div class="clicky-card-link">
+					<Card Padding="Padding.Is2" Margin="Margin.Is2">
 						<CardImage src="thumbnails/games/project9thmonday.gif" Alt="Project 9th Monday Thumbnail" />
 						<CardBody>
 							<CardTitle>
@@ -56,11 +59,13 @@
 						</CardBody>
 					</Card>
 				</Div>
+				</Link>
 			</Column>
 			<Column ColumnSize="ColumnSize.IsHalf">
 				@*Monkey Man Enclosure Button*@
-				<Div class="clicky-card">
-					<Card Padding="Padding.Is2" Margin="Margin.Is2" @onclick="ShowMonkeyManEnclosurePopup">
+				<Link To="projects/monkeymanenclosure">
+				<Div class="clicky-card-link">
+					<Card Padding="Padding.Is2" Margin="Margin.Is2">
 						<CardImage src="thumbnails/games/monkeymanenclosure.gif" Alt="Monkey Man Enclosure Thumbnail" />
 						<CardBody>
 							<CardTitle>
@@ -72,13 +77,13 @@
 						</CardBody>
 					</Card>
 				</Div>
+				</Link>
 			</Column>
-		</Row>
-		<Row VerticalGutter="32">
 			<Column ColumnSize="ColumnSize.IsHalf">
 				@*The Eaterer Button*@
-				<Div class="clicky-card">
-					<Card Padding="Padding.Is2" Margin="Margin.Is2" @onclick="ShowEatererPopup">
+				<Link To="projects/theeaterer">
+				<Div class="clicky-card-link">
+					<Card Padding="Padding.Is2" Margin="Margin.Is2">
 						<CardImage src="thumbnails/games/theeaterer.gif" Alt="The Eaterer Thumbnail" />
 						<CardBody>
 							<CardTitle>
@@ -90,6 +95,7 @@
 						</CardBody>
 					</Card>
 				</Div>
+				</Link>
 			</Column>
 		</Row>
 	</Container>
@@ -100,8 +106,9 @@
 		<Row VerticalGutter="32">
 			<Column ColumnSize="ColumnSize.IsHalf">
 				@*Continuous Glucose Monitor Nightlight*@
-				<Div class="clicky-card">
-					<Card Padding="Padding.Is2" Margin="Margin.Is2" @onclick="ShowCgmNightlightPopup">
+				<Link To="projects/cgmnightlight">
+				<Div class="clicky-card-link">
+					<Card Padding="Padding.Is2" Margin="Margin.Is2">
 						<CardImage src="images/drawing.jpg" Alt="CGM Nightlight Thumbnail" />
 						<CardBody>
 							<CardTitle>
@@ -113,11 +120,13 @@
 						</CardBody>
 					</Card>
 				</Div>
+				</Link>
 			</Column>
 			<Column ColumnSize="ColumnSize.IsHalf">
 				@*My Portfolio Site!*@
-				<Div class="clicky-card">
-					<Card Padding="Padding.Is2" Margin="Margin.Is2" @onclick="ShowMyPortfolioSitePopup">
+				<Link To="projects/portfoliosite">
+				<Div class="clicky-card-link">
+					<Card Padding="Padding.Is2" Margin="Margin.Is2">
 						<CardImage src="images/drawing.jpg" Alt="My portfolio site Thumbnail" />
 						<CardBody>
 							<CardTitle>
@@ -129,129 +138,8 @@
 						</CardBody>
 					</Card>
 				</Div>
+				</Link>
 			</Column>
 		</Row>
 	</Container>
 </Animate>
-
-@*Pizza Delivery Bagel Popup*@
-<Modal @bind-Visible="@pizzaDeliveryBagelVisible">
-	<ModalContent Size="ModalSize.ExtraLarge">
-		<ModalHeader>
-			<ModalTitle>Pizza Delivery Bagel</ModalTitle>
-			<CloseButton />
-		</ModalHeader>
-		<ModalBody>
-			<Blazor_Portfolio_Site.Writeups.PizzaDeliveryBagel />
-		</ModalBody>
-	</ModalContent>
-</Modal>
-
-@*Grombcross Popup*@
-<Modal @bind-Visible="@grombcrossVisible">
-	<ModalContent Size="ModalSize.ExtraLarge">
-		<ModalHeader>
-			<ModalTitle>Grombcross</ModalTitle>
-			<CloseButton />
-		</ModalHeader>
-		<ModalBody>
-			<Blazor_Portfolio_Site.Writeups.Grombcross />
-		</ModalBody>
-	</ModalContent>
-</Modal>
-
-@*The Eaterer Popup*@
-<Modal @bind-Visible="@eatererVisible">
-	<ModalContent Size="ModalSize.ExtraLarge">
-		<ModalHeader>
-			<ModalTitle>The Eaterer</ModalTitle>
-			<CloseButton />
-		</ModalHeader>
-		<ModalBody>
-			<Blazor_Portfolio_Site.Writeups.TheEaterer />
-		</ModalBody>
-	</ModalContent>
-</Modal>
-
-@*Project 9th Monday Popup*@
-<Modal @bind-Visible="@project9thMondayVisible">
-	<ModalContent Size="ModalSize.ExtraLarge">
-		<ModalHeader>
-			<ModalTitle>Project 9th Monday</ModalTitle>
-			<CloseButton />
-		</ModalHeader>
-		<ModalBody>
-			<Blazor_Portfolio_Site.Writeups.Project9thMonday />
-		</ModalBody>
-	</ModalContent>
-</Modal>
-
-@*Monkey Man Enclosure Popup*@
-<Modal @bind-Visible="@monkeyManEnclosureVisible">
-	<ModalContent Size="ModalSize.ExtraLarge">
-		<ModalHeader>
-			<ModalTitle>Monkey Man Enclosure</ModalTitle>
-			<CloseButton />
-		</ModalHeader>
-		<ModalBody>
-			<Blazor_Portfolio_Site.Writeups.MonkeyManEnclosure />
-		</ModalBody>
-	</ModalContent>
-</Modal>
-
-@*CGM Nightlight*@
-<Modal @bind-Visible="@cgmNightlightVisible">
-	<ModalContent Size="ModalSize.ExtraLarge">
-		<ModalHeader>
-			<ModalTitle>Continuous Glucose Monitor Nightlight</ModalTitle>
-			<CloseButton />
-		</ModalHeader>
-		<ModalBody>
-			<Blazor_Portfolio_Site.Writeups.CgmNightlight />
-		</ModalBody>
-	</ModalContent>
-</Modal>
-
-@*My Portfolio Site*@
-<Modal @bind-Visible="@myPortfolioSiteVisible">
-	<ModalContent Size="ModalSize.ExtraLarge">
-		<ModalHeader>
-			<ModalTitle>My Portfolio Site</ModalTitle>
-			<CloseButton />
-		</ModalHeader>
-		<ModalBody>
-			<Blazor_Portfolio_Site.Writeups.MyPortfolioSite />
-		</ModalBody>
-	</ModalContent>
-</Modal>
-
-@code {
-	private bool pizzaDeliveryBagelVisible;
-	private void ShowPizzaDeliveryBagelPopup() => pizzaDeliveryBagelVisible = true;
-	private void HidePizzaDeliveryBagelPopup() => pizzaDeliveryBagelVisible = false;
-
-	private bool grombcrossVisible;
-	private void ShowGrombcrossPopup() => grombcrossVisible = true;
-	private void HideGrombcrossPopup() => grombcrossVisible = false;
-
-	private bool eatererVisible;
-	private void ShowEatererPopup() => eatererVisible = true;
-	private void HideEatererPopup() => eatererVisible = false;
-
-	private bool project9thMondayVisible;
-	private void ShowProject9thMondayPopup() => project9thMondayVisible = true;
-	private void HideProject9thMondayPopup() => project9thMondayVisible = false;
-
-	private bool monkeyManEnclosureVisible;
-	private void ShowMonkeyManEnclosurePopup() => monkeyManEnclosureVisible = true;
-	private void HideMonkeyManEnclosurePopup() => monkeyManEnclosureVisible = false;
-
-
-	private bool cgmNightlightVisible;
-	private void ShowCgmNightlightPopup() => cgmNightlightVisible = true;
-	private void HideCgmNightlightPopup() => cgmNightlightVisible = false;
-
-	private bool myPortfolioSiteVisible;
-	private void ShowMyPortfolioSitePopup() => myPortfolioSiteVisible = true;
-	private void HideMyPortfolioSitePopup() => myPortfolioSiteVisible = false;
-}

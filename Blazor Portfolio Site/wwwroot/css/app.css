@@ -96,6 +96,14 @@ a, .btn-link {
 
 
 
+
+
+
+
+
+
+
+
 /*Custom*/
 
 :root {
@@ -103,12 +111,14 @@ a, .btn-link {
     --home-light: lavender;
     --home-dark: var(--b-theme-light);
     --projects-light: lightblue;
-    --projects-dark: cornflowerblue;
+    --projects-dark: var(--b-theme-light);
     --resume-light: lightsalmon;
-    --resume-dark: salmon;
+    --resume-dark: var(--b-theme-light);
     --contact-light: navajowhite;
-    --contact-dark: chocolate;
+    --contact-dark: var(--b-theme-light);
 }
+
+
 
 .clicky-card {
     transition: .2s ease-out;
@@ -151,10 +161,39 @@ a, .btn-link {
         transition: 0s;
     }
 
+
+.gallery-item {
+    position: relative;
+}
+
+.gallery-item i {
+        visibility: hidden;
+        position: absolute;
+        top: 42%;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        margin: auto;
+        text-align: center;
+    }
+    .gallery-item:hover i {
+        visibility: visible;
+    }
+
+.gallery-item img {
+    border-radius: 15px;
+    position: relative;
+}
+
+
+
 .card {
     background-color: black;
     background-color: var(--b-theme-primary);
     color: var(--b-theme-secondary);
+}
+.outlined-card {
+    border-color: var(--v-theme-secondary);
 }
 
 .close {
