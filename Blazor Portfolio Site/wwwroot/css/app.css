@@ -110,6 +110,8 @@ a, .btn-link {
     --contact-dark: chocolate;
 }
 
+
+
 .clicky-card {
     transition: .2s ease-out;
     border-width: 2px;
@@ -150,6 +152,36 @@ a, .btn-link {
         transform: scaleX(0.95) scaleY(0.98);
         transition: 0s;
     }
+
+
+.gallery-item {
+    position: relative;
+}
+
+.gallery-item i {
+        visibility: hidden;
+        position: absolute;
+        top: 42%;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        margin: auto;
+        text-align: center;
+    }
+    .gallery-item:hover i {
+        visibility: visible;
+    }
+
+.gallery-item img {
+    border-radius: 15px;
+    position: relative;
+}
+
+.rounded-image {
+    border-radius: 10px;
+}
+
+
 
 .card {
     background-color: black;

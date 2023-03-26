@@ -1,152 +1,208 @@
-﻿@inherits PageBase
+﻿@page "/projects/monkeymanenclosure"
+@inherits PageBase
 
-@*Header*@
-<Container Width="Width.Is50" TextAlignment="TextAlignment.Center">
-	<Image src="portfolioimages/monkeymanenclosure/header.jpg" Width="Width.Is100" Padding="Padding.Is2" />
-	<Heading Size="HeadingSize.Is2">
-		Monkey Man Enclosure
-	</Heading>
-	<Heading Size="HeadingSize.Is5">
-		Arcade Game About Protecting a Man Asleep in a Monkey Enclosure
-	</Heading>
-</Container>
+<Animate Auto Animation="Animations.FadeIn">
+	<Container Padding="Padding.Is2">
+		@*Back Button*@
+		<Container Width="Width.Is25" TextAlignment="TextAlignment.Center">
+			<Link To="projects">
+			<Div class="clicky-card-link" style="padding: 5px 0px 0px 0px">
+				<Heading Size="HeadingSize.Is6" VerticalAlignment="VerticalAlignment.Middle">
+					<Icon Name="IconName.ArrowLeft" /> Back
+				</Heading>
+			</Div>
+			</Link>
+		</Container>
 
-<Divider />
+		<Card Margin="Margin.Is2">
+			@*Header*@
+			<Container Width="Width.Is50" TextAlignment="TextAlignment.Center" Padding="Padding.Is2">
+				<Image src="portfolioimages/monkeymanenclosure/header.jpg" Width="Width.Is100" Padding="Padding.Is2" />
+				<Heading Size="HeadingSize.Is2">
+					Monkey Man Enclosure
+				</Heading>
+				<Heading Size="HeadingSize.Is5">
+					Arcade Game About Protecting a Man Asleep in a Monkey Enclosure
+				</Heading>
+			</Container>
 
-@*About*@
-<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">About</Heading>
-<Row Margin="Margin.Is2">
-	<Column ColumnSize="ColumnSize.Is8">
-		<Paragraph>
-			An action arcade game about a man who has sleep-walked into a monkey enclosure (wearing a monkey costume). The junior zookeeper must keep the man safe until he wakes up.
-		</Paragraph>
-		<Paragraph>
-			I organized a team of 5 to develop this game for a 10-day game jam. The team included: a 3D artist, a UI artist, a composer, and two programmers. Our game ranked 3rd out of 22 entries!
-		</Paragraph>
-		<Column ColumnSize="ColumnSize.Is8">
-			<Figure>
-				<FigureImage Source="portfolioimages/monkeymanenclosure/gif1.gif" Rounded />
-			</Figure>
-		</Column>
-	</Column>
-	<Column ColumnSize="ColumnSize.Is4">
-		<Text>Source: <Text TextWeight="TextWeight.Bold">Closed Source</Text></Text> <br />
-		<Text>Date: <Text TextWeight="TextWeight.Bold">June 2022</Text></Text> <br />
-		<Text>Team Size: <Text TextWeight="TextWeight.Bold">Solo</Text></Text> <br />
-		<Text>Languages and Technologies: <Text TextWeight="TextWeight.Bold">C#, Unity, Wwise, Visual Studio, Git</Text></Text> <br />
-		<Text>Platforms: <Text TextWeight="TextWeight.Bold">Windows, Mac, Linux, Android, Society of Play's Arcade Cabinet</Text></Text> <br />
+			<Divider />
 
-		<Link To="https://bagelo-masterson.itch.io/monkey-man-enclosure" Target="Target.Blank">
-		<Div class="clicky-card-link">
-			<Card Margin="Margin.Is2">
-				<CardBody>
-					<CardText>
-						<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent); margin: 0px 5px 0px 0px;" src="icons/itchio.png" height="30px" width="30px" />
-						<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Itch.io!</Text>
-					</CardText>
-				</CardBody>
-			</Card>
-		</Div>
-		</Link>
-		<Link To="https://github.com/BagelMaster5000/Monkey-Man-Enclosure" Target="Target.Blank">
-		<Div class="clicky-card-link">
-			<Card Margin="Margin.Is2">
-				<CardBody>
-					<CardText>
-						<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent); margin: 0px 5px 0px 0px;" src="icons/github.png" height="30px" width="30px" />
-						<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Github!</Text>
-					</CardText>
-				</CardBody>
-			</Card>
-		</Div>
-		</Link>
-	</Column>
-</Row>
+			@*About*@
+			<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">About</Heading>
+			<Row Margin="Margin.Is2">
+				<Column ColumnSize="ColumnSize.Is8">
+					<Paragraph>
+						An action arcade game about a man who has sleep-walked into a monkey enclosure (wearing a monkey costume). The junior zookeeper must keep the man safe until he wakes up.
+					</Paragraph>
+					<Paragraph>
+						I organized a team of 5 to develop this game for a 10-day game jam. The team included: a 3D artist, a UI artist, a composer, and two programmers. Our game ranked 3rd out of 22 entries!
+					</Paragraph>
+					<Column ColumnSize="ColumnSize.Is8">
+						<Figure>
+							<FigureImage Source="portfolioimages/monkeymanenclosure/gif1.gif" Rounded />
+						</Figure>
+					</Column>
+				</Column>
+				<Column ColumnSize="ColumnSize.Is4">
+					<Text>Source: <Text TextWeight="TextWeight.Bold">Open Source</Text></Text> <br />
+					<Text>Date: <Text TextWeight="TextWeight.Bold">March 2021</Text></Text> <br />
+					<Text>Team Size: <Text TextWeight="TextWeight.Bold">5</Text></Text> <br />
+					<Text>Languages and Technologies: <Text TextWeight="TextWeight.Bold">C#, Unity, Visual Studio, Git</Text></Text> <br />
+					<Text>Platforms: <Text TextWeight="TextWeight.Bold">Windows, Mac, Linux, WebGL</Text></Text> <br />
 
-<Divider />
+					<Link To="https://bagelo-masterson.itch.io/monkey-man-enclosure" Target="Target.Blank">
+					<Div class="clicky-card-link">
+						<Card Margin="Margin.Is2">
+							<CardBody>
+								<CardText>
+									<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent); margin: 0px 5px 0px 0px;" src="icons/itchio.png" height="30px" width="30px" />
+									<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Itch.io!</Text>
+								</CardText>
+							</CardBody>
+						</Card>
+					</Div>
+					</Link>
+					<Link To="https://github.com/BagelMaster5000/Monkey-Man-Enclosure" Target="Target.Blank">
+					<Div class="clicky-card-link">
+						<Card Margin="Margin.Is2">
+							<CardBody>
+								<CardText>
+									<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent); margin: 0px 5px 0px 0px;" src="icons/github.png" height="30px" width="30px" />
+									<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Github!</Text>
+								</CardText>
+							</CardBody>
+						</Card>
+					</Div>
+					</Link>
+				</Column>
+			</Row>
 
-@*Gallery*@
-<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Gallery</Heading>
-<Row Margin="Margin.Is2" Padding="Padding.Is2">
-	<Column ColumnSize="ColumnSize.IsHalf">
-		<Figure>
-			<FigureImage Source="portfolioimages/monkeymanenclosure/gif2.gif" Rounded />
-		</Figure>
-	</Column>
-	<Column ColumnSize="ColumnSize.IsHalf">
-		<Figure>
-			<FigureImage Source="portfolioimages/monkeymanenclosure/gif3.gif" Rounded />
-		</Figure>
-	</Column>
-</Row>
+			<Divider />
 
-<Divider />
+			@*Gallery*@
+			<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Gallery</Heading>
+			<Row Margin="Margin.Is2">
+				<Column ColumnSize="ColumnSize.IsHalf" Padding="Padding.Is2">
+					<Div class="clicky-card gallery-item" @onclick="() => ShowGalleryImageCloseup(galleryImageSources[0])" Padding="Padding.Is2">
+						<Image Source=@galleryImageSources[0] Width="Width.Is100" />
+						<Icon IconSize="IconSize.x3" Name="IconName.SearchPlus" />
+					</Div>
+				</Column>
+				<Column ColumnSize="ColumnSize.IsHalf" Padding="Padding.Is2">
+					<Div class="clicky-card gallery-item" @onclick="() => ShowGalleryImageCloseup(galleryImageSources[1])" Padding="Padding.Is2">
+						<Image Source=@galleryImageSources[1] Width="Width.Is100" />
+						<Icon IconSize="IconSize.x3" Name="IconName.SearchPlus" />
+					</Div>
+				</Column>
+			</Row>
 
-@*Object Pooling*@
-<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Object Pooling</Heading>
-<Row Margin="Margin.Is2">
-	<Paragraph>
-		To minimize garbage creation and collection while playing (to avoid dropping frames due to de-allocating memory), throwable objects are pooled rather than being created and destroyed. There can only be at most 6 bananas, 6 bricks, and 30 food pellets on the ground at one time.
-	</Paragraph>
-	<Container TextAlignment="TextAlignment.Center" Padding="Padding.Is2" Width="Width.Is75">
-		<Figure>
-			<FigureImage Source="portfolioimages/monkeymanenclosure/objectpooling.gif" Rounded />
-			<FigureCaption>
-				To mask the re-use of throwable objects, the objects subtly scale out of existence shortly after colliding with the ground.
-			</FigureCaption>
-		</Figure>
+			<Divider />
+
+			@*Object Pooling*@
+			<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Object Pooling</Heading>
+			<Row Margin="Margin.Is2">
+				<Paragraph>
+					To minimize garbage creation and collection while playing (to avoid dropping frames due to de-allocating memory), throwable objects are pooled rather than being created and destroyed. There can only be at most 6 bananas, 6 bricks, and 30 food pellets on the ground at one time.
+				</Paragraph>
+				<Container TextAlignment="TextAlignment.Center" Padding="Padding.Is2" Width="Width.Is75">
+					<Figure>
+						<FigureImage Source="portfolioimages/monkeymanenclosure/objectpooling.gif" Rounded />
+						<FigureCaption>
+							To mask the re-use of throwable objects, the objects subtly scale out of existence shortly after colliding with the ground.
+						</FigureCaption>
+					</Figure>
+				</Container>
+				<Row>
+					<Column ColumnSize="ColumnSize.Is4" TextAlignment="TextAlignment.Center">
+						<Figure>
+							<FigureImage Source="portfolioimages/monkeymanenclosure/objectpoolingengine1.jpg" Rounded />
+						</Figure>
+						<FigureCaption>
+							Objects included in the pool are set in the inspector via an exposed array. So, it's trivial to add or remove objects from the pool.
+						</FigureCaption>
+					</Column>
+					<Column ColumnSize="ColumnSize.Is8" TextAlignment="TextAlignment.Center">
+						<Figure>
+							<FigureImage Source="portfolioimages/monkeymanenclosure/objectpoolingengine2.jpg" Rounded />
+							<FigureCaption>
+								The throw function for each item iterates through the respective item's object pool. The oldest-accessed object is always the one that is thrown, which minimizes the possibility of a user seeing an active item disappear.
+							</FigureCaption>
+						</Figure>
+					</Column>
+				</Row>
+			</Row>
+
+			<Divider />
+
+			@*Links*@
+			<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Check Out the Game!</Heading>
+			<Row Margin="Margin.Is2">
+				<Column ColumnSize="ColumnSize.IsHalf" Padding="Padding.Is2">
+					<Link To="https://bagelo-masterson.itch.io/pizza-delivery-bagel" Target="Target.Blank">
+					<Div class="clicky-card-link">
+						<Card Margin="Margin.Is2">
+							<CardBody>
+								<CardText>
+									<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent); margin: 0px 5px 0px 0px;" src="icons/itchio.png" height="30px" width="30px" />
+									<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Itch.io!</Text>
+								</CardText>
+							</CardBody>
+						</Card>
+					</Div>
+					</Link>
+				</Column>
+				<Column ColumnSize="ColumnSize.IsHalf" Padding="Padding.Is2">
+					<Link To="https://github.com/BagelMaster5000/Monkey-Man-Enclosure" Target="Target.Blank">
+					<Div class="clicky-card-link">
+						<Card Margin="Margin.Is2">
+							<CardBody>
+								<CardText>
+									<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent); margin: 0px 5px 0px 0px;" src="icons/github.png" height="30px" width="30px" />
+									<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Github!</Text>
+								</CardText>
+							</CardBody>
+						</Card>
+					</Div>
+					</Link>
+				</Column>
+			</Row>
+		</Card>
 	</Container>
-	<Row>
-		<Column ColumnSize="ColumnSize.Is4" TextAlignment="TextAlignment.Center">
-			<Figure>
-				<FigureImage Source="portfolioimages/monkeymanenclosure/objectpoolingengine1.jpg" Rounded />
-			</Figure>
-			<FigureCaption>
-				Objects included in the pool are set in the inspector via an exposed array. So, it's trivial to add or remove objects from the pool.
-			</FigureCaption>
-		</Column>
-		<Column ColumnSize="ColumnSize.Is8" TextAlignment="TextAlignment.Center">
-			<Figure>
-				<FigureImage Source="portfolioimages/monkeymanenclosure/objectpoolingengine2.jpg" Rounded />
-				<FigureCaption>
-					The throw function for each item iterates through the respective item's object pool. The oldest-accessed object is always the one that is thrown, which minimizes the possibility of a user seeing an active item disappear.
-				</FigureCaption>
-			</Figure>
-		</Column>
-	</Row>
-</Row>
 
-<Divider />
-
-@*Links*@
-<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Check Out the Game!</Heading>
-<Row Margin="Margin.Is2">
-	<Column ColumnSize="ColumnSize.IsHalf" Padding="Padding.Is2">
-		<Link To="https://bagelo-masterson.itch.io/pizza-delivery-bagel" Target="Target.Blank">
-		<Div class="clicky-card-link">
-			<Card Margin="Margin.Is2">
-				<CardBody>
-					<CardText>
-						<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent); margin: 0px 5px 0px 0px;" src="icons/itchio.png" height="30px" width="30px" />
-						<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Itch.io!</Text>
-					</CardText>
-				</CardBody>
-			</Card>
+	@*Back Button*@
+	<Container Width="Width.Is25" TextAlignment="TextAlignment.Center">
+		<Link To="projects">
+		<Div class="clicky-card-link" style="padding: 5px 0px 0px 0px">
+			<Heading Size="HeadingSize.Is6" VerticalAlignment="VerticalAlignment.Middle">
+				<Icon Name="IconName.ArrowLeft" /> Back
+			</Heading>
 		</Div>
 		</Link>
-	</Column>
-	<Column ColumnSize="ColumnSize.IsHalf" Padding="Padding.Is2">
-		<Link To="https://github.com/BagelMaster5000/Monkey-Man-Enclosure" Target="Target.Blank">
-		<Div class="clicky-card-link">
-			<Card Margin="Margin.Is2">
-				<CardBody>
-					<CardText>
-						<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent); margin: 0px 5px 0px 0px;" src="icons/github.png" height="30px" width="30px" />
-						<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Github!</Text>
-					</CardText>
-				</CardBody>
-			</Card>
-		</Div>
-		</Link>
-	</Column>
-</Row>
+	</Container>
+</Animate>
+
+@*Gallery Image Closeup*@
+<Modal @bind-Visible="@galleryImageCloseupVisible">
+	<ModalContent Size="ModalSize.ExtraLarge">
+		<ModalHeader>
+			<CloseButton />
+		</ModalHeader>
+		<ModalBody>
+			<Image Source=@galleryImageCloseupSource Width="Width.Is100" />
+		</ModalBody>
+	</ModalContent>
+</Modal>
+
+@code {
+	private string[] galleryImageSources = {
+		"portfolioimages/monkeymanenclosure/gif2.gif",
+		"portfolioimages/monkeymanenclosure/gif3.gif" };
+
+	private bool galleryImageCloseupVisible;
+	private string galleryImageCloseupSource = "";
+	private void ShowGalleryImageCloseup(string setSource) {
+		galleryImageCloseupSource = setSource;
+		galleryImageCloseupVisible = true;
+	}
+}
