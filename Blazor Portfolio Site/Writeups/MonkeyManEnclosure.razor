@@ -1,18 +1,10 @@
 ﻿@page "/projects/monkeymanenclosure"
+@using Blazor_Portfolio_Site.Components
 @inherits PageBase
 
 <Animate Auto Animation="Animations.FadeIn">
 	<Container Padding="Padding.Is2">
-		@*Back Button*@
-		<Container Width="Width.Is25" TextAlignment="TextAlignment.Center">
-			<Link To="projects">
-			<Div class="clicky-card-link" style="padding: 5px 0px 0px 0px">
-				<Heading Size="HeadingSize.Is6" VerticalAlignment="VerticalAlignment.Middle" Padding="Padding.Is2">
-					<Icon Name="IconName.ArrowLeft" /> Back
-				</Heading>
-			</Div>
-			</Link>
-		</Container>
+		<BackToProjectsButton />
 
 		<Card Margin="Margin.Is2">
 			@*Header*@
@@ -184,19 +176,11 @@
 				</Column>
 			</Row>
 		</Card>
-	</Container>
 
-	@*Back Button*@
-	<Container Width="Width.Is25" TextAlignment="TextAlignment.Center">
-		<Link To="projects">
-		<Div class="clicky-card-link" style="padding: 5px 0px 0px 0px">
-			<Heading Size="HeadingSize.Is6" VerticalAlignment="VerticalAlignment.Middle" Padding="Padding.Is2">
-				<Icon Name="IconName.ArrowLeft" /> Back
-			</Heading>
-		</Div>
-		</Link>
+		<BackToProjectsButton />
 	</Container>
 </Animate>
+
 
 @*Gallery Image Closeup*@
 <Modal @bind-Visible="@galleryImageCloseupVisible">
