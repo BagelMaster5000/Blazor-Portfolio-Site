@@ -108,6 +108,10 @@
 			@*Puzzle Generation System*@
 			<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Puzzle Generation System</Heading>
 			<Row Margin="Margin.Is2">
+				<Paragraph>
+					An aspect of the puzzle generation system I’m very proud of is allowing the developer or player to easily add, change, or remove puzzles without touching the codebase. The puzzles are generated at runtime using the .bmp images in the exposed puzzle data folders. Puzzles can be added, changed, or removed by modifying their respective .bmp image pairs (which requires only a basic image editor).
+				</Paragraph>
+				<h6>Puzzle Generation Steps</h6>
 				<ListGroup>
 					<ListGroupItem>
 						1.	Each puzzle is generated from just a pair of bitmap images: one black+white (generation image) and one full-color (completed image).
@@ -119,9 +123,6 @@
 						3.	When a puzzle is selected by the user to play, this 2D boolean array is sent as an argument to the game view to generate a game board with the relevant line hints.
 					</ListGroupItem>
 				</ListGroup>
-				<Paragraph>
-					An aspect of the puzzle generation system I’m very proud of is allowing the developer or player to easily add, change, or remove puzzles without touching the codebase. The puzzles are generated at runtime using the .bmp images in the exposed puzzle data folders. Puzzles can be added, changed, or removed by modifying their respective .bmp image pairs (which requires only a basic image editor).
-				</Paragraph>
 			</Row>
 
 			<Divider />
@@ -133,12 +134,16 @@
 					The save data is formatted as a dictionary and saved into a json file. The dictionary’s key is the puzzle name (string) and its value is the puzzle’s completion state (boolean).
 				</Paragraph>
 				<Paragraph>
-					The save data is formatted as a dictionary and saved into a json file. The dictionary’s key is the puzzle name (string) and its value is the puzzle’s completion state (boolean).
-					<br />
-					•	When loading, any puzzle save data found in the json file without a matching puzzle in the puzzle data folder will be ignored.
-					<br />
-					•	When saving, only the puzzles currently in the puzzle data folder are saved into the json file. So, previously-saved puzzles that are no longer in the game are excluded.
+					I determined that a dictionary was the perfect data structure for saving game progress because it allows for adding, removing, or changing puzzles (either by the developer or by the user via the exposed puzzle data folders) without touching the codebase.
 				</Paragraph>
+				<ListGroup>
+					<ListGroupItem>
+						•	When loading, any puzzle save data found in the json file without a matching puzzle in the puzzle data folder will be ignored.
+					</ListGroupItem>
+					<ListGroupItem>
+						•	When saving, only the puzzles currently in the puzzle data folder are saved into the json file. So, previously-saved puzzles that are no longer in the game are excluded.
+					</ListGroupItem>
+				</ListGroup>
 			</Row>
 
 			<Divider />
@@ -152,22 +157,6 @@
 				<Paragraph>
 					I enjoy creating UMLs before starting to code because I’ve found it removes a lot of guess work that would otherwise come with programming a project from scratch and helps keeps scripts focused. I’ve been burned too many times in the past by cowboy coding and then discovering later that my project is unsustainable because of a messy codebase...
 				</Paragraph>
-				@*				<Column ColumnSize="ColumnSize.IsHalf" Padding="Padding.Is2">
-				<Figure>
-				<FigureImage Source="portfolioimages/pizzadeliverybagel/terminal.gif" Rounded />
-				<FigureCaption TextAlignment="TextAlignment.Center">
-				I implemented a terminal for executing debug commands in-game. I utilized a 3rd party terminal because it provided all the utility I needed and saved development time.
-				</FigureCaption>
-				</Figure>
-				</Column>
-				<Column ColumnSize="ColumnSize.IsHalf" Padding="Padding.Is2">
-				<Figure>
-				<FigureImage Source="portfolioimages/pizzadeliverybagel/customeditor.png" Rounded />
-				<FigureCaption TextAlignment="TextAlignment.Center">
-				I created a basic custom editor for debugging shortcuts.
-				</FigureCaption>
-				</Figure>
-				</Column>*@
 			</Row>
 
 			<Divider />

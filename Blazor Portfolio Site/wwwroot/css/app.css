@@ -188,11 +188,16 @@ a, .btn-link {
 
 
 .card {
-    background-color: black;
     background-color: var(--b-theme-primary);
     color: var(--b-theme-secondary);
 }
 .outlined-card {
+    border-color: var(--v-theme-secondary);
+}
+
+.list-group-item {
+    background-color: var(--b-theme-primary);
+    color: var(--b-theme-secondary);
     border-color: var(--v-theme-secondary);
 }
 
