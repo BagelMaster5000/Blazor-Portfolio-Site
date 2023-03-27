@@ -1,1 +1,171 @@
-﻿@inherits PageBase
+﻿@page "/projects/cgmnightlight"
+@using Blazor_Portfolio_Site.Components
+@inherits PageBase
+
+<Animate Auto Animation="Animations.FadeIn">
+	<Container Padding="Padding.Is2">
+		<BackToProjectsButton />
+
+		<Card Margin="Margin.Is2">
+			@*Header*@
+			<Container Width="Width.Is50" TextAlignment="TextAlignment.Center" Padding="Padding.Is2">
+				<Image src="portfolioimages/pizzadeliverybagel/header.jpg" Width="Width.Is100" Padding="Padding.Is2" />
+				<Heading Size="HeadingSize.Is2">
+					Continuous Glucose Monitor Nightlight
+				</Heading>
+				<Heading Size="HeadingSize.Is5">
+					A smart light that turns on in my room when my blood sugar is at a critical level
+				</Heading>
+			</Container>
+
+			<Divider />
+
+			@*About*@
+			<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">About</Heading>
+			<Row Margin="Margin.Is2">
+				<Column ColumnSize="ColumnSize.Is8">
+					<h6>Some background:</h6>
+					<Paragraph>
+						I’m a type 1 diabetic and I use a CGM (continuous glucose monitor) to monitor my blood sugar throughout the day and at night. My CGM plays an alarm on my phone whenever my blood sugar is critically high or low. At night, it’s especially important that I hear this alarm because an untreated low blood sugar can be dangerous. However, I have bad hearing! I often sleep through this alarm at night when it goes off.
+					</Paragraph>
+					<Paragraph>
+						So, I decided to set up a smart lamp to shine a light at me at night in place of the alert tone to hopefully wake me up more reliably.
+					</Paragraph>
+					<Paragraph>
+						The following is a log of the project's progress and problems I've encountered:
+					</Paragraph>
+					<Column ColumnSize="ColumnSize.Is8">
+						<Figure>
+							<FigureImage Source="portfolioimages/pizzadeliverybagel/gif1.gif" Rounded />
+						</Figure>
+					</Column>
+				</Column>
+				<Column ColumnSize="ColumnSize.Is4">
+					<Text>Source: <Text TextWeight="TextWeight.Bold">Open Source</Text></Text> <br />
+					<Text>Date: <Text TextWeight="TextWeight.Bold">Ongoing</Text></Text> <br />
+					<Text>Team Size: <Text TextWeight="TextWeight.Bold">Solo</Text></Text> <br />
+					<Text>Languages and Technologies: <Text TextWeight="TextWeight.Bold">Javascript, IFTTT</Text></Text> <br />
+
+					<Link To="https://github.com/BagelMaster5000/cgm-remote-monitor" Target="Target.Blank">
+					<Div class="clicky-card-link">
+						<Card Margin="Margin.Is2" class="outlined-card">
+							<CardBody>
+								<Row>
+									<Column ColumnSize="ColumnSize.Is2">
+										<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent)" src="icons/github.png" height="30px" width="30px" />
+									</Column>
+									<Column ColumnSize="ColumnSize.Is10">
+										<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Github!</Text>
+									</Column>
+								</Row>
+							</CardBody>
+						</Card>
+					</Div>
+					</Link>
+				</Column>
+			</Row>
+
+			<Divider />
+
+			@*Research*@
+			<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Research</Heading>
+			<Row Margin="Margin.Is2">
+				<Paragraph>
+					To start, I researched if any others online had done similar projects. I was able to find a person who had done something similar, and luckily <Link Target="Target.Blank" To="https://libbyrome.com/health/type-1-diabetes/flashing-my-lights-when-my-blood-sugar-is-too-high-or-too-low/">they published a tutorial article</Link>. It wasn’t a particularly detailed tutorial, but it helped a lot! It pointed me in the right direction regarding what technologies to use and proved to me that the project was feasible.
+				</Paragraph>
+				<Paragraph>
+					I decided to use the following tech stack recommended by the article:
+					<br />
+					•	The web app Nightscout to gather information from my CGM (Dexcom G6) via the Dexcom API.
+					<br />
+					•	Heroku to host the web app.
+					<br />
+					•	MongoDB to store my blood sugar readings.
+					<br />
+					•	IFTTT to listen for Nightscout low+high blood sugar events and then invoke a smart light to turn on.
+				</Paragraph>
+			</Row>
+
+			<Divider />
+
+			@*Setting Up Smart Lamp*@
+			<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Setting Up Smart Lamp</Heading>
+			<Row Margin="Margin.Is2">
+				<Paragraph>
+					Next, I had to find a smart lamp that was both compatible with IFTTT and bright enough to wake me up. After a few purchases+returns, I found a nice one!
+				</Paragraph>
+				<Figure>
+					<FigureImage Source="portfolioimages/pizzadeliverybagel/maxchaos.gif" Rounded />
+				</Figure>
+			</Row>
+
+			<Divider />
+
+			@*Setting Up Raspberry Pi*@
+			<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Raspberry Pi</Heading>
+			<Row Margin="Margin.Is2">
+				<Paragraph>
+					I installed Raspberry Pi OS onto my Raspberry Pi 3 and set up the Nightscout web app on it. I edited the Pi’s startup script so that it opens the web app in as soon as the device turns on.
+				</Paragraph>
+				<Paragraph>
+					I initially set this up with a screen so I could see at-a-glance if the app was running, but later I decided to remove the screen because it was too bright and I noticed I never found a need to look at it since my phone displays the same information.
+				</Paragraph>
+			</Row>
+
+			<Divider />
+
+			@*Problem: I sometimes forget to turn on or off my Pi*@
+			<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Problem #1: I sometimes forget to turn on or off my Pi</Heading>
+			<Row Margin="Margin.Is2">
+				<Paragraph>
+					Because I didn’t want my lamp turning on in the middle of the day in the event of a critical blood sugar reading, I would turn my Pi on at night and off in the morning.
+				</Paragraph>
+				<Paragraph>
+					After several months, I realized I had trouble making this a routine and I would often forget to turn it on or off. So, my solution was to leave the Pi running continuously but only allow it to turn on my smart light within set hours (11pm – 7am). I was forced to upgrade to a subscription tier of IFTTT, but I felt it was a worthwhile price for this peace of mind.
+				</Paragraph>
+			</Row>
+
+			<Divider />
+
+			@*Problem: The light doesn't wake me up sometimes*@
+			<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Problem #2: The light doesn't wake me up sometimes</Heading>
+			<Row Margin="Margin.Is2">
+				<Paragraph>
+					After a few months I noticed that the smart lamp, regardless of light strength, was small enough that I could ignore it sometimes by turning over in my bed.
+				</Paragraph>
+				<Paragraph>
+					So, I figured it would be better to instead turn my room’s lights on. I bought and am currently using LIFX smart bulbs and have never once slept through the lights in my room turning off.
+				</Paragraph>
+			</Row>
+		</Card>
+
+		<BackToProjectsButton />
+	</Container>
+</Animate>
+
+
+@*Gallery Image Closeup*@
+<Modal @bind-Visible="@galleryImageCloseupVisible">
+	<ModalContent Size="ModalSize.ExtraLarge">
+		<ModalHeader>
+			<CloseButton />
+		</ModalHeader>
+		<ModalBody>
+			<Image Source=@galleryImageCloseupSource Width="Width.Is100" />
+		</ModalBody>
+	</ModalContent>
+</Modal>
+
+@code {
+	private string[] galleryImageSources = {
+		"portfolioimages/pizzadeliverybagel/gif1.gif",
+		"portfolioimages/pizzadeliverybagel/gif2.gif",
+		"portfolioimages/pizzadeliverybagel/gif3.gif" };
+
+	private bool galleryImageCloseupVisible;
+	private string galleryImageCloseupSource = "";
+	private void ShowGalleryImageCloseup(string setSource) {
+		galleryImageCloseupSource = setSource;
+		galleryImageCloseupVisible = true;
+	}
+}
