@@ -7,226 +7,228 @@
 		<BackToProjectsButton />
 
 		<Card Margin="Margin.Is2">
-			@*Header*@
-			<Container Width="Width.Is50" TextAlignment="TextAlignment.Center" Padding="Padding.Is2">
-				<Image src="portfolioimages/project9thmonday/header.png" Width="Width.Is100" Padding="Padding.Is2" />
-				<Heading Size="HeadingSize.Is2">
-					Project 9th Monday
-				</Heading>
-				<Heading Size="HeadingSize.Is5">
-					Audio-Only Horror Narrative Game
-				</Heading>
-			</Container>
+			<Container>
+				@*Header*@
+				<Container Width="Width.Is100" TextAlignment="TextAlignment.Center" Padding="Padding.Is2">
+					<Image src="portfolioimages/project9thmonday/header.png" Width="Width.Is50" Padding="Padding.Is2" />
+					<Heading Size="HeadingSize.Is2">
+						Project 9th Monday
+					</Heading>
+					<Heading Size="HeadingSize.Is5">
+						Audio-Only Horror Narrative Game
+					</Heading>
+				</Container>
 
-			<Divider />
+				<Divider />
 
-			@*About*@
-			<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">About</Heading>
-			<Row Margin="Margin.Is2">
-				<Column ColumnSize="ColumnSize.Is8">
-					<Paragraph>
-						An audio-only horror narrative game following a group of kids on Halloween night looking to raid a haunted house for jewels to fund a video game console purchase.
-					</Paragraph>
-					<Paragraph>
-						I organized and led a team of 8 for a 10-day game jam. The team composed of two programmers, three voice actors, two writers, and an audio engineer. Game utilized the Wwise audio engine to handle audio clip+pitch randomization and to handle sequencing for ambience tracks and dialog lines. Our game ranked 15th out of 92 total entries.
-					</Paragraph>
+				@*About*@
+				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">About</Heading>
+				<Row Margin="Margin.Is2">
 					<Column ColumnSize="ColumnSize.Is8">
-						<Figure>
-							<FigureImage Source="portfolioimages/project9thmonday/gif1.gif" Rounded />
-						</Figure>
+						<Paragraph>
+							An audio-only horror narrative game following a group of kids on Halloween night looking to raid a haunted house for jewels to fund a video game console purchase.
+						</Paragraph>
+						<Paragraph>
+							I organized and led a team of 8 for a 10-day game jam. The team composed of two programmers, three voice actors, two writers, and an audio engineer. Game utilized the Wwise audio engine to handle audio clip+pitch randomization and to handle sequencing for ambience tracks and dialog lines. Our game ranked 15th out of 92 total entries.
+						</Paragraph>
+						<Column ColumnSize="ColumnSize.Is8">
+							<Figure>
+								<FigureImage Source="portfolioimages/project9thmonday/gif1.gif" Rounded />
+							</Figure>
+						</Column>
 					</Column>
-				</Column>
-				<Column ColumnSize="ColumnSize.Is4">
-					<Text>Source: <Text TextWeight="TextWeight.Bold">Open Source</Text></Text> <br />
-					<Text>Date: <Text TextWeight="TextWeight.Bold">October 2021</Text></Text> <br />
-					<Text>Team Size: <Text TextWeight="TextWeight.Bold">8</Text></Text> <br />
-					<Text>Languages and Technologies: <Text TextWeight="TextWeight.Bold">C#, Unity, Wwise, Visual Studio, Git</Text></Text> <br />
-					<Text>Platforms: <Text TextWeight="TextWeight.Bold">Windows</Text></Text> <br />
+					<Column ColumnSize="ColumnSize.Is4">
+						<Text>Source: <Text TextWeight="TextWeight.Bold">Open Source</Text></Text> <br />
+						<Text>Date: <Text TextWeight="TextWeight.Bold">October 2021</Text></Text> <br />
+						<Text>Team Size: <Text TextWeight="TextWeight.Bold">8</Text></Text> <br />
+						<Text>Languages and Technologies: <Text TextWeight="TextWeight.Bold">C#, Unity, Wwise, Visual Studio, Git</Text></Text> <br />
+						<Text>Platforms: <Text TextWeight="TextWeight.Bold">Windows</Text></Text> <br />
 
-					<Link To="https://bagelo-masterson.itch.io/project-9th-monday" Target="Target.Blank">
-					<Div class="clicky-card-link">
-						<Card Margin="Margin.Is2" class="outlined-card">
-							<CardBody>
-								<Row>
-									<Column ColumnSize="ColumnSize.Is2">
-										<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent)" src="icons/itchio.png" height="30px" width="30px" />
-									</Column>
-									<Column ColumnSize="ColumnSize.Is10">
-										<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Itch.io!</Text>
-									</Column>
-								</Row>
-							</CardBody>
-						</Card>
-					</Div>
-					</Link>
-					<Link To="https://github.com/BagelMaster5000/Project9thMonday" Target="Target.Blank">
-					<Div class="clicky-card-link">
-						<Card Margin="Margin.Is2" class="outlined-card">
-							<CardBody>
-								<Row>
-									<Column ColumnSize="ColumnSize.Is2">
-										<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent)" src="icons/github.png" height="30px" width="30px" />
-									</Column>
-									<Column ColumnSize="ColumnSize.Is10">
-										<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Github!</Text>
-									</Column>
-								</Row>
-							</CardBody>
-						</Card>
-					</Div>
-					</Link>
-				</Column>
-			</Row>
-
-			<Divider />
-
-			@*Choosing a Speech-to-Text API*@
-			<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Choosing a Speech-to-Text API</Heading>
-			<Row Margin="Margin.Is2">
-				<Paragraph>
-					In this game, players interact with the world by speaking into a microphone with natural speech. We wanted the player to talk as they would normally and then have our systems parse their speech for keywords to determine what action to take.
-				</Paragraph>
-				<Paragraph>
-					We looked into a few different speech-to-text APIs to determine what would work best:
-				</Paragraph>
-				<ListGroup>
-					<ListGroupItem>
-						<h6>1. Machine Learning Speech-to-Text</h6>
-						First, we researched a variety of machine learning speech-to-text APIs. All of the ones we could find on the Unity asset store and elsewhere were paid assets, so we instantly ruled this out as an option because the spirit of the game jam contest involved developing and publishing games entirely for free.
-					</ListGroupItem>
-					<ListGroupItem>
-						<h6>2. Windows Keyword Recognizer</h6>
-						The second option we looked at was a built-in Windows API called Windows Keyword Recognizer. This API was free and incredibly fast, but had a deal-breaking issue that it could only detect keywords (rather than full sentences). For example, if one of our keywords was “blue” and a player spoke the phrase “blue car,” everything the player said would have been ignored. Because we were trying to simulate natural dialog in our game, we had to rule this option out as well.
-					</ListGroupItem>
-					<ListGroupItem>
-						<h6>3. Windows Dictation Recognizer</h6>
-						The third option we looked into was another built-in Windows API called Windows Dictation Recognizer. This API would register everything said by the player and send it to a script for our system to parse for keywords—exactly what we were looking for! The only downsides to this API were that the processing time was slower than the Windows Keyword Recognizer and the use of it required the user to enable a speech recognition setting in Windows; but, we considered those acceptable drawbacks considering everything else worked perfectly and we decided to use it!
-					</ListGroupItem>
-				</ListGroup>
-			</Row>
-
-			<Divider />
-
-			@*Organizing a Multi-Talented Team*@
-			<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Organizing a Multi-Talented Team</Heading>
-			<Row Margin="Margin.Is2">
-				<Paragraph>
-					As the team lead for this game project, there was a lot of communication and organization required from me for us to complete such a unique game in only 10 days!
-				</Paragraph>
-				<Paragraph>
-					I created asset lists and a gantt chart for the team to clearly communicate the assets required from each team member and the production timeline. This was actively followed and updated by team members and it proved useful as our game was completed on-time.
-				</Paragraph>
-				<Figure>
-					<FigureImage Source="portfolioimages/project9thmonday/ganttchart.jpg" Rounded />
-					<FigureCaption TextAlignment="TextAlignment.Center">
-						Gantt chart detailing the timeline for entire project.
-					</FigureCaption>
-				</Figure>
-				<Row>
-					<Column ColumnSize="ColumnSize.IsHalf" Padding="Padding.Is2">
-						<Figure>
-							<FigureImage Source="portfolioimages/project9thmonday/assetlist1.jpg" Rounded />
-							<FigureCaption TextAlignment="TextAlignment.Center">
-								Asset list for our story writer.
-							</FigureCaption>
-						</Figure>
-					</Column>
-					<Column ColumnSize="ColumnSize.IsHalf" Padding="Padding.Is2">
-						<Figure>
-							<FigureImage Source="portfolioimages/project9thmonday/assetlist2.jpg" Rounded />
-							<FigureCaption TextAlignment="TextAlignment.Center">
-								Asset list for the programming team.
-							</FigureCaption>
-						</Figure>
+						<Link To="https://bagelo-masterson.itch.io/project-9th-monday" Target="Target.Blank">
+						<Div class="clicky-card-link">
+							<Card Margin="Margin.Is2" class="outlined-card">
+								<CardBody>
+									<Row>
+										<Column ColumnSize="ColumnSize.Is2">
+											<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent)" src="icons/itchio.png" height="30px" width="30px" />
+										</Column>
+										<Column ColumnSize="ColumnSize.Is10">
+											<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Itch.io!</Text>
+										</Column>
+									</Row>
+								</CardBody>
+							</Card>
+						</Div>
+						</Link>
+						<Link To="https://github.com/BagelMaster5000/Project9thMonday" Target="Target.Blank">
+						<Div class="clicky-card-link">
+							<Card Margin="Margin.Is2" class="outlined-card">
+								<CardBody>
+									<Row>
+										<Column ColumnSize="ColumnSize.Is2">
+											<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent)" src="icons/github.png" height="30px" width="30px" />
+										</Column>
+										<Column ColumnSize="ColumnSize.Is10">
+											<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Github!</Text>
+										</Column>
+									</Row>
+								</CardBody>
+							</Card>
+						</Div>
+						</Link>
 					</Column>
 				</Row>
-				<Figure>
-					<FigureImage Source="portfolioimages/project9thmonday/assetlist3.png" Rounded />
-					<FigureCaption TextAlignment="TextAlignment.Center">
-						Asset list for audio team (including voice actors and sound designers).
-					</FigureCaption>
-				</Figure>
-				<h6>Communication with the Writing Team</h6>
-				<Paragraph>
-					I had multiple meetings with our two writers to determine what type of story would be feasible to do in jam time and also what would be possible given our unconventional game format of no visuals and player interaction done through speech. There were a lot of unique writing challenges with our format, such as making it obvious what choices the player had available at any given time and also making it clear when a player’s choice wasn't valid. As the one who knew the limitations of our technology, I had to constantly communicate with the writers and review their work to ensure the interactions would be possible with our format.
-				</Paragraph>
-				<h6>Communication with the Audio Team</h6>
-				<Paragraph>
-					I had a few meetings with our audio engineer to teach him how to use the Wwise audio engine (I had previously used it for another game project). I showed him how to import audio assets, apply effects, create sequences, and expose audio events for invocation via Unity scripts. The audio in our game was more important than in most games since it was the sole source of feedback the player got from game world. In the end, everything audio-related came out great!
-				</Paragraph>
-			</Row>
 
-			<Divider />
+				<Divider />
 
-			@*Source Control*@
-			<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Source Control</Heading>
-			<Row Margin="Margin.Is2">
-				<Paragraph>
-					The three team members with access to the Github repo were myself, the co-programmer, and the audio engineer. We used feature branches to work on our respective tasks and would merge our changes into main once we were done.
-				</Paragraph>
-				<FigureImage Source="portfolioimages/project9thmonday/sourcecontrol.jpg" Rounded />
-			</Row>
+				@*Choosing a Speech-to-Text API*@
+				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Choosing a Speech-to-Text API</Heading>
+				<Row Margin="Margin.Is2">
+					<Paragraph>
+						In this game, players interact with the world by speaking into a microphone with natural speech. We wanted the player to talk as they would normally and then have our systems parse their speech for keywords to determine what action to take.
+					</Paragraph>
+					<Paragraph>
+						We looked into a few different speech-to-text APIs to determine what would work best:
+					</Paragraph>
+					<ListGroup>
+						<ListGroupItem>
+							<h6>1. Machine Learning Speech-to-Text</h6>
+							First, we researched a variety of machine learning speech-to-text APIs. All of the ones we could find on the Unity asset store and elsewhere were paid assets, so we instantly ruled this out as an option because the spirit of the game jam contest involved developing and publishing games entirely for free.
+						</ListGroupItem>
+						<ListGroupItem>
+							<h6>2. Windows Keyword Recognizer</h6>
+							The second option we looked at was a built-in Windows API called Windows Keyword Recognizer. This API was free and incredibly fast, but had a deal-breaking issue that it could only detect keywords (rather than full sentences). For example, if one of our keywords was “blue” and a player spoke the phrase “blue car,” everything the player said would have been ignored. Because we were trying to simulate natural dialog in our game, we had to rule this option out as well.
+						</ListGroupItem>
+						<ListGroupItem>
+							<h6>3. Windows Dictation Recognizer</h6>
+							The third option we looked into was another built-in Windows API called Windows Dictation Recognizer. This API would register everything said by the player and send it to a script for our system to parse for keywords—exactly what we were looking for! The only downsides to this API were that the processing time was slower than the Windows Keyword Recognizer and the use of it required the user to enable a speech recognition setting in Windows; but, we considered those acceptable drawbacks considering everything else worked perfectly and we decided to use it!
+						</ListGroupItem>
+					</ListGroup>
+				</Row>
 
-			<Divider />
+				<Divider />
 
-			@*Bottom Links*@
-			<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Check Out the Game!</Heading>
-			<Row Margin="Margin.Is2">
-				<Column ColumnSize="ColumnSize.IsThird" Padding="Padding.Is2">
-					<Link To="https://store.steampowered.com/app/1996780/Pizza_Delivery_Bagel/" Target="Target.Blank">
-					<Div class="clicky-card-link">
-						<Card Margin="Margin.Is2" class="outlined-card">
-							<CardBody>
-								<Row>
-									<Column ColumnSize="ColumnSize.Is2">
-										<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent)" src="icons/steam.png" height="30px" width="30px" />
-									</Column>
-									<Column ColumnSize="ColumnSize.Is10">
-										<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Steam!</Text>
-									</Column>
-								</Row>
-							</CardBody>
-						</Card>
-					</Div>
-					</Link>
-				</Column>
-				<Column ColumnSize="ColumnSize.IsThird" Padding="Padding.Is2">
-					<Link To="https://play.google.com/store/apps/details?id=com.BagelmasterCo.PizzaDeliveryBagel&hl=en_US&gl=US" Target="Target.Blank">
-					<Div class="clicky-card-link">
-						<Card Margin="Margin.Is2" class="outlined-card">
-							<CardBody>
-								<Row>
-									<Column ColumnSize="ColumnSize.Is2">
-										<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent)" src="icons/google-play.png" height="30px" width="30px" />
-									</Column>
-									<Column ColumnSize="ColumnSize.Is10">
-										<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Google Play!</Text>
-									</Column>
-								</Row>
-							</CardBody>
-						</Card>
-					</Div>
-					</Link>
-				</Column>
-				<Column ColumnSize="ColumnSize.IsThird" Padding="Padding.Is2">
-					<Link To="https://bagelo-masterson.itch.io/pizza-delivery-bagel" Target="Target.Blank">
-					<Div class="clicky-card-link">
-						<Card Margin="Margin.Is2" class="outlined-card">
-							<CardBody>
-								<Row>
-									<Column ColumnSize="ColumnSize.Is2">
-										<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent)" src="icons/itchio.png" height="30px" width="30px" />
-									</Column>
-									<Column ColumnSize="ColumnSize.Is10">
-										<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Itch.io!</Text>
-									</Column>
-								</Row>
-							</CardBody>
-						</Card>
-					</Div>
-					</Link>
-				</Column>
-			</Row>
+				@*Organizing a Multi-Talented Team*@
+				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Organizing a Multi-Talented Team</Heading>
+				<Row Margin="Margin.Is2">
+					<Paragraph>
+						As the team lead for this game project, there was a lot of communication and organization required from me for us to complete such a unique game in only 10 days!
+					</Paragraph>
+					<Paragraph>
+						I created asset lists and a gantt chart for the team to clearly communicate the assets required from each team member and the production timeline. This was actively followed and updated by team members and it proved useful as our game was completed on-time.
+					</Paragraph>
+					<Figure>
+						<FigureImage Source="portfolioimages/project9thmonday/ganttchart.jpg" Rounded />
+						<FigureCaption TextAlignment="TextAlignment.Center">
+							Gantt chart detailing the timeline for entire project.
+						</FigureCaption>
+					</Figure>
+					<Row>
+						<Column ColumnSize="ColumnSize.IsHalf" Padding="Padding.Is2">
+							<Figure>
+								<FigureImage Source="portfolioimages/project9thmonday/assetlist1.jpg" Rounded />
+								<FigureCaption TextAlignment="TextAlignment.Center">
+									Asset list for our story writer.
+								</FigureCaption>
+							</Figure>
+						</Column>
+						<Column ColumnSize="ColumnSize.IsHalf" Padding="Padding.Is2">
+							<Figure>
+								<FigureImage Source="portfolioimages/project9thmonday/assetlist2.jpg" Rounded />
+								<FigureCaption TextAlignment="TextAlignment.Center">
+									Asset list for the programming team.
+								</FigureCaption>
+							</Figure>
+						</Column>
+					</Row>
+					<Figure>
+						<FigureImage Source="portfolioimages/project9thmonday/assetlist3.png" Rounded />
+						<FigureCaption TextAlignment="TextAlignment.Center">
+							Asset list for audio team (including voice actors and sound designers).
+						</FigureCaption>
+					</Figure>
+					<h6>Communication with the Writing Team</h6>
+					<Paragraph>
+						I had multiple meetings with our two writers to determine what type of story would be feasible to do in jam time and also what would be possible given our unconventional game format of no visuals and player interaction done through speech. There were a lot of unique writing challenges with our format, such as making it obvious what choices the player had available at any given time and also making it clear when a player’s choice wasn't valid. As the one who knew the limitations of our technology, I had to constantly communicate with the writers and review their work to ensure the interactions would be possible with our format.
+					</Paragraph>
+					<h6>Communication with the Audio Team</h6>
+					<Paragraph>
+						I had a few meetings with our audio engineer to teach him how to use the Wwise audio engine (I had previously used it for another game project). I showed him how to import audio assets, apply effects, create sequences, and expose audio events for invocation via Unity scripts. The audio in our game was more important than in most games since it was the sole source of feedback the player got from game world. In the end, everything audio-related came out great!
+					</Paragraph>
+				</Row>
+
+				<Divider />
+
+				@*Source Control*@
+				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Source Control</Heading>
+				<Row Margin="Margin.Is2">
+					<Paragraph>
+						The three team members with access to the Github repo were myself, the co-programmer, and the audio engineer. We used feature branches to work on our respective tasks and would merge our changes into main once we were done.
+					</Paragraph>
+					<FigureImage Source="portfolioimages/project9thmonday/sourcecontrol.jpg" Rounded />
+				</Row>
+
+				<Divider />
+
+				@*Bottom Links*@
+				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Check Out the Game!</Heading>
+				<Row Margin="Margin.Is2">
+					<Column ColumnSize="ColumnSize.IsThird" Padding="Padding.Is2">
+						<Link To="https://store.steampowered.com/app/1996780/Pizza_Delivery_Bagel/" Target="Target.Blank">
+						<Div class="clicky-card-link">
+							<Card Margin="Margin.Is2" class="outlined-card">
+								<CardBody>
+									<Row>
+										<Column ColumnSize="ColumnSize.Is2">
+											<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent)" src="icons/steam.png" height="30px" width="30px" />
+										</Column>
+										<Column ColumnSize="ColumnSize.Is10">
+											<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Steam!</Text>
+										</Column>
+									</Row>
+								</CardBody>
+							</Card>
+						</Div>
+						</Link>
+					</Column>
+					<Column ColumnSize="ColumnSize.IsThird" Padding="Padding.Is2">
+						<Link To="https://play.google.com/store/apps/details?id=com.BagelmasterCo.PizzaDeliveryBagel&hl=en_US&gl=US" Target="Target.Blank">
+						<Div class="clicky-card-link">
+							<Card Margin="Margin.Is2" class="outlined-card">
+								<CardBody>
+									<Row>
+										<Column ColumnSize="ColumnSize.Is2">
+											<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent)" src="icons/google-play.png" height="30px" width="30px" />
+										</Column>
+										<Column ColumnSize="ColumnSize.Is10">
+											<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Google Play!</Text>
+										</Column>
+									</Row>
+								</CardBody>
+							</Card>
+						</Div>
+						</Link>
+					</Column>
+					<Column ColumnSize="ColumnSize.IsThird" Padding="Padding.Is2">
+						<Link To="https://bagelo-masterson.itch.io/pizza-delivery-bagel" Target="Target.Blank">
+						<Div class="clicky-card-link">
+							<Card Margin="Margin.Is2" class="outlined-card">
+								<CardBody>
+									<Row>
+										<Column ColumnSize="ColumnSize.Is2">
+											<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent)" src="icons/itchio.png" height="30px" width="30px" />
+										</Column>
+										<Column ColumnSize="ColumnSize.Is10">
+											<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Itch.io!</Text>
+										</Column>
+									</Row>
+								</CardBody>
+							</Card>
+						</Div>
+						</Link>
+					</Column>
+				</Row>
+			</Container>
 		</Card>
 
 		<BackToProjectsButton />

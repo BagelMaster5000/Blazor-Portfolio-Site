@@ -7,177 +7,179 @@
 		<BackToProjectsButton />
 
 		<Card Margin="Margin.Is2">
-			@*Header*@
-			<Container Width="Width.Is50" TextAlignment="TextAlignment.Center" Padding="Padding.Is2">
-				<Image src="portfolioimages/theeaterer/header.png" Width="Width.Is100" Padding="Padding.Is2" />
-				<Heading Size="HeadingSize.Is2">
-					The Eaterer
-				</Heading>
-				<Heading Size="HeadingSize.Is5">
-					3D Horror Action Game About Unhealthy Habits
-				</Heading>
-			</Container>
+			<Container>
+				@*Header*@
+				<Container Width="Width.Is100" TextAlignment="TextAlignment.Center" Padding="Padding.Is2">
+					<Image src="portfolioimages/theeaterer/header.png" Width="Width.Is50" Padding="Padding.Is2" />
+					<Heading Size="HeadingSize.Is2">
+						The Eaterer
+					</Heading>
+					<Heading Size="HeadingSize.Is5">
+						3D Horror Action Game About Unhealthy Habits
+					</Heading>
+				</Container>
 
-			<Divider />
+				<Divider />
 
-			@*About*@
-			<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">About</Heading>
-			<Row Margin="Margin.Is2">
-				<Column ColumnSize="ColumnSize.Is8">
-					<Paragraph>
-						A first-person horror action game about avoiding unhealthy habits. The player is chased by a fat blob—known as The Eaterer—through a series of pizza box mazes. If the player isn’t able to make the correct lifestyle choices, they become an “Eaterer” themselves…
-					</Paragraph>
-					<Paragraph>
-						I developed this game during the start of quarantine in 2020 with a classmate. This was my first Unity 3D game and my first non-solo programming project. Us two had originally planned to publish the game onto the Steam marketplace, but design disagreements between us eventually cut the development short. We were able to compromise on a scaled-back idea for the game and eventually released it for free on Itch.io.
-					</Paragraph>
-					<Paragraph>
-						This project taught me a lot about game development, programming, and collaborating in a team.
-					</Paragraph>
+				@*About*@
+				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">About</Heading>
+				<Row Margin="Margin.Is2">
 					<Column ColumnSize="ColumnSize.Is8">
-						<Figure>
-							<FigureImage Source="portfolioimages/theeaterer/gif4.gif" Rounded />
-						</Figure>
+						<Paragraph>
+							A first-person horror action game about avoiding unhealthy habits. The player is chased by a fat blob—known as The Eaterer—through a series of pizza box mazes. If the player isn’t able to make the correct lifestyle choices, they become an “Eaterer” themselves…
+						</Paragraph>
+						<Paragraph>
+							I developed this game during the start of quarantine in 2020 with a classmate. This was my first Unity 3D game and my first non-solo programming project. Us two had originally planned to publish the game onto the Steam marketplace, but design disagreements between us eventually cut the development short. We were able to compromise on a scaled-back idea for the game and eventually released it for free on Itch.io.
+						</Paragraph>
+						<Paragraph>
+							This project taught me a lot about game development, programming, and collaborating in a team.
+						</Paragraph>
+						<Column ColumnSize="ColumnSize.Is8">
+							<Figure>
+								<FigureImage Source="portfolioimages/theeaterer/gif4.gif" Rounded />
+							</Figure>
+						</Column>
 					</Column>
-				</Column>
-				<Column ColumnSize="ColumnSize.Is4">
-					<Text>Source: <Text TextWeight="TextWeight.Bold">Closed Source</Text></Text> <br />
-					<Text>Date: <Text TextWeight="TextWeight.Bold">June 2020</Text></Text> <br />
-					<Text>Team Size: <Text TextWeight="TextWeight.Bold">2</Text></Text> <br />
-					<Text>Languages and Technologies: <Text TextWeight="TextWeight.Bold">C#, Unity, Visual Studio, Git</Text></Text> <br />
-					<Text>Platforms: <Text TextWeight="TextWeight.Bold">Windows, Mac, Linux, WebGL</Text></Text> <br />
+					<Column ColumnSize="ColumnSize.Is4">
+						<Text>Source: <Text TextWeight="TextWeight.Bold">Closed Source</Text></Text> <br />
+						<Text>Date: <Text TextWeight="TextWeight.Bold">June 2020</Text></Text> <br />
+						<Text>Team Size: <Text TextWeight="TextWeight.Bold">2</Text></Text> <br />
+						<Text>Languages and Technologies: <Text TextWeight="TextWeight.Bold">C#, Unity, Visual Studio, Git</Text></Text> <br />
+						<Text>Platforms: <Text TextWeight="TextWeight.Bold">Windows, Mac, Linux, WebGL</Text></Text> <br />
 
-					<Link To="https://bagelo-masterson.itch.io/monkey-man-enclosure" Target="Target.Blank">
-					<Div class="clicky-card-link">
-						<Card Margin="Margin.Is2" class="outlined-card">
-							<CardBody>
-								<Row>
-									<Column ColumnSize="ColumnSize.Is2">
-										<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent)" src="icons/itchio.png" height="30px" width="30px" />
-									</Column>
-									<Column ColumnSize="ColumnSize.Is10">
-										<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Itch.io!</Text>
-									</Column>
-								</Row>
-							</CardBody>
-						</Card>
-					</Div>
-					</Link>
-				</Column>
-			</Row>
-
-			<Divider />
-
-			@*Gallery*@
-			<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Gallery</Heading>
-			<Row Margin="Margin.Is2">
-				<Column ColumnSize="ColumnSize.IsHalf" Padding="Padding.Is2">
-					<Div class="clicky-card gallery-item" @onclick="() => ShowGalleryImageCloseup(galleryImageSources[0])" Padding="Padding.Is2">
-						<Image Source=@galleryImageSources[0] Width="Width.Is100" />
-						<Icon IconSize="IconSize.x3" Name="IconName.SearchPlus" />
-					</Div>
-				</Column>
-				<Column ColumnSize="ColumnSize.IsHalf" Padding="Padding.Is2">
-					<Div class="clicky-card gallery-item" @onclick="() => ShowGalleryImageCloseup(galleryImageSources[1])" Padding="Padding.Is2">
-						<Image Source=@galleryImageSources[1] Width="Width.Is100" />
-						<Icon IconSize="IconSize.x3" Name="IconName.SearchPlus" />
-					</Div>
-				</Column>
-				<Column ColumnSize="ColumnSize.IsHalf" Padding="Padding.Is2">
-					<Div class="clicky-card gallery-item" @onclick="() => ShowGalleryImageCloseup(galleryImageSources[2])" Padding="Padding.Is2">
-						<Image Source=@galleryImageSources[2] Width="Width.Is100" />
-						<Icon IconSize="IconSize.x3" Name="IconName.SearchPlus" />
-					</Div>
-				</Column>
-			</Row>
-
-			<Divider />
-
-			@*Reading Excel Spreadsheet*@
-			<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Reading Item Data From Excel Spreadsheet</Heading>
-			<Row Margin="Margin.Is2">
-				<Paragraph>
-					I decided to store item name and type data within an Excel spreadsheet for this game. The two reasons for this were to be able to adjust item information without touching the codebase and to clearly visualize the ratio of good:bad items throughout development.
-				</Paragraph>
-				<Row>
-					<Column ColumnSize="ColumnSize.Is4" TextAlignment="TextAlignment.Center">
-						<Figure>
-							<FigureImage Source="portfolioimages/theeaterer/excel1.png" Rounded />
-						</Figure>
-						<FigureCaption>
-							The spreadsheet has two data columns: item name and item type.
-						</FigureCaption>
-					</Column>
-					<Column ColumnSize="ColumnSize.Is8" TextAlignment="TextAlignment.Center">
-						<Figure>
-							<FigureImage Source="portfolioimages/theeaterer/excel2.jpg" Rounded />
-							<FigureCaption>
-								A C# script reads the spreadsheet and uses the data to generate items throughout the map.
-							</FigureCaption>
-						</Figure>
+						<Link To="https://bagelo-masterson.itch.io/monkey-man-enclosure" Target="Target.Blank">
+						<Div class="clicky-card-link">
+							<Card Margin="Margin.Is2" class="outlined-card">
+								<CardBody>
+									<Row>
+										<Column ColumnSize="ColumnSize.Is2">
+											<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent)" src="icons/itchio.png" height="30px" width="30px" />
+										</Column>
+										<Column ColumnSize="ColumnSize.Is10">
+											<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Itch.io!</Text>
+										</Column>
+									</Row>
+								</CardBody>
+							</Card>
+						</Div>
+						</Link>
 					</Column>
 				</Row>
-			</Row>
 
-			<Divider />
+				<Divider />
 
-			@*Save Data*@
-			<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Auto-Saving and Auto-Loading</Heading>
-			<Row Margin="Margin.Is2">
-				<Paragraph>
-					The game auto-saves when a level has been completed or a setting has been adjusted and auto-loads on-launch.
-				</Paragraph>
-				<Paragraph>
-					When the game saves, a save data object is created and initialized with data that reflects the current game state. This object is serialized using a binary formatter and saved as a file in the build directory.
-				</Paragraph>
-				<Paragraph>
-					When the game loads, this save file is deserialized and the now-exposed save data object variables are used to restore the last-saved game state.
-				</Paragraph>
-				<Row>
-					<Column ColumnSize="ColumnSize.Is6" TextAlignment="TextAlignment.Center">
-						<Figure>
-							<FigureImage Source="portfolioimages/theeaterer/savedataobject.jpg" Rounded />
-						</Figure>
-						<FigureCaption>
-							The save data object.
-						</FigureCaption>
+				@*Gallery*@
+				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Gallery</Heading>
+				<Row Margin="Margin.Is2">
+					<Column ColumnSize="ColumnSize.IsHalf" Padding="Padding.Is2">
+						<Div class="clicky-card gallery-item" @onclick="() => ShowGalleryImageCloseup(galleryImageSources[0])" Padding="Padding.Is2">
+							<Image Source=@galleryImageSources[0] Width="Width.Is100" />
+							<Icon IconSize="IconSize.x3" Name="IconName.SearchPlus" />
+						</Div>
 					</Column>
-					<Column ColumnSize="ColumnSize.Is6" TextAlignment="TextAlignment.Center">
-						<Figure>
-							<FigureImage Source="portfolioimages/theeaterer/saveandloadfunctions.jpg" Rounded />
-							<FigureCaption>
-								The save and load functions.
-							</FigureCaption>
-						</Figure>
+					<Column ColumnSize="ColumnSize.IsHalf" Padding="Padding.Is2">
+						<Div class="clicky-card gallery-item" @onclick="() => ShowGalleryImageCloseup(galleryImageSources[1])" Padding="Padding.Is2">
+							<Image Source=@galleryImageSources[1] Width="Width.Is100" />
+							<Icon IconSize="IconSize.x3" Name="IconName.SearchPlus" />
+						</Div>
+					</Column>
+					<Column ColumnSize="ColumnSize.IsHalf" Padding="Padding.Is2">
+						<Div class="clicky-card gallery-item" @onclick="() => ShowGalleryImageCloseup(galleryImageSources[2])" Padding="Padding.Is2">
+							<Image Source=@galleryImageSources[2] Width="Width.Is100" />
+							<Icon IconSize="IconSize.x3" Name="IconName.SearchPlus" />
+						</Div>
 					</Column>
 				</Row>
-			</Row>
 
-			<Divider />
+				<Divider />
 
-			@*Bottom Links*@
-			<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Check Out the Game!</Heading>
-			<Row Margin="Margin.Is2">
-				<Column ColumnSize="ColumnSize.IsQuarter" Padding="Padding.Is2" />
-				<Column ColumnSize="ColumnSize.IsHalf" Padding="Padding.Is2">
-					<Link To="https://bagelo-masterson.itch.io/the-eaterer" Target="Target.Blank">
-					<Div class="clicky-card-link">
-						<Card Margin="Margin.Is2" class="outlined-card">
-							<CardBody>
-								<Row>
-									<Column ColumnSize="ColumnSize.Is2">
-										<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent)" src="icons/itchio.png" height="30px" width="30px" />
-									</Column>
-									<Column ColumnSize="ColumnSize.Is10">
-										<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Itch.io!</Text>
-									</Column>
-								</Row>
-							</CardBody>
-						</Card>
-					</Div>
-					</Link>
-				</Column>
-				<Column ColumnSize="ColumnSize.IsQuarter" Padding="Padding.Is2" />
-			</Row>
+				@*Reading Excel Spreadsheet*@
+				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Reading Item Data From Excel Spreadsheet</Heading>
+				<Row Margin="Margin.Is2">
+					<Paragraph>
+						I decided to store item name and type data within an Excel spreadsheet for this game. The two reasons for this were to be able to adjust item information without touching the codebase and to clearly visualize the ratio of good:bad items throughout development.
+					</Paragraph>
+					<Row>
+						<Column ColumnSize="ColumnSize.Is4" TextAlignment="TextAlignment.Center">
+							<Figure>
+								<FigureImage Source="portfolioimages/theeaterer/excel1.png" Rounded />
+							</Figure>
+							<FigureCaption>
+								The spreadsheet has two data columns: item name and item type.
+							</FigureCaption>
+						</Column>
+						<Column ColumnSize="ColumnSize.Is8" TextAlignment="TextAlignment.Center">
+							<Figure>
+								<FigureImage Source="portfolioimages/theeaterer/excel2.jpg" Rounded />
+								<FigureCaption>
+									A C# script reads the spreadsheet and uses the data to generate items throughout the map.
+								</FigureCaption>
+							</Figure>
+						</Column>
+					</Row>
+				</Row>
+
+				<Divider />
+
+				@*Save Data*@
+				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Auto-Saving and Auto-Loading</Heading>
+				<Row Margin="Margin.Is2">
+					<Paragraph>
+						The game auto-saves when a level has been completed or a setting has been adjusted and auto-loads on-launch.
+					</Paragraph>
+					<Paragraph>
+						When the game saves, a save data object is created and initialized with data that reflects the current game state. This object is serialized using a binary formatter and saved as a file in the build directory.
+					</Paragraph>
+					<Paragraph>
+						When the game loads, this save file is deserialized and the now-exposed save data object variables are used to restore the last-saved game state.
+					</Paragraph>
+					<Row>
+						<Column ColumnSize="ColumnSize.Is6" TextAlignment="TextAlignment.Center">
+							<Figure>
+								<FigureImage Source="portfolioimages/theeaterer/savedataobject.jpg" Rounded />
+							</Figure>
+							<FigureCaption>
+								The save data object.
+							</FigureCaption>
+						</Column>
+						<Column ColumnSize="ColumnSize.Is6" TextAlignment="TextAlignment.Center">
+							<Figure>
+								<FigureImage Source="portfolioimages/theeaterer/saveandloadfunctions.jpg" Rounded />
+								<FigureCaption>
+									The save and load functions.
+								</FigureCaption>
+							</Figure>
+						</Column>
+					</Row>
+				</Row>
+
+				<Divider />
+
+				@*Bottom Links*@
+				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Check Out the Game!</Heading>
+				<Row Margin="Margin.Is2">
+					<Column ColumnSize="ColumnSize.IsQuarter" Padding="Padding.Is2" />
+					<Column ColumnSize="ColumnSize.IsHalf" Padding="Padding.Is2">
+						<Link To="https://bagelo-masterson.itch.io/the-eaterer" Target="Target.Blank">
+						<Div class="clicky-card-link">
+							<Card Margin="Margin.Is2" class="outlined-card">
+								<CardBody>
+									<Row>
+										<Column ColumnSize="ColumnSize.Is2">
+											<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent)" src="icons/itchio.png" height="30px" width="30px" />
+										</Column>
+										<Column ColumnSize="ColumnSize.Is10">
+											<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Itch.io!</Text>
+										</Column>
+									</Row>
+								</CardBody>
+							</Card>
+						</Div>
+						</Link>
+					</Column>
+					<Column ColumnSize="ColumnSize.IsQuarter" Padding="Padding.Is2" />
+				</Row>
+			</Container>
 		</Card>
 
 		<BackToProjectsButton />
