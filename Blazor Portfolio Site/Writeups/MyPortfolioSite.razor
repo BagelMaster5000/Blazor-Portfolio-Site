@@ -1,1 +1,124 @@
-﻿@inherits PageBase
+﻿@page "/projects/myportfoliosite"
+@using Blazor_Portfolio_Site.Components
+@inherits PageBase
+
+<Animate Auto Animation="Animations.FadeIn">
+	<Container Padding="Padding.Is2">
+		<BackToProjectsButton />
+
+		<Card Margin="Margin.Is2">
+			<Container>
+				@*Header*@
+				<Container Width="Width.Is100" TextAlignment="TextAlignment.Center" Padding="Padding.Is2">
+					<Image src="portfolioimages/pizzadeliverybagel/header.jpg" Width="Width.Is50" Padding="Padding.Is2" />
+					<Heading Size="HeadingSize.Is2">
+						My Portfolio Site
+					</Heading>
+					<Heading Size="HeadingSize.Is5">
+						Custom Portfolio Site Created Using MS Blazor and C#
+					</Heading>
+				</Container>
+
+				<Divider />
+
+				@*About*@
+				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">About</Heading>
+				<Row Margin="Margin.Is2">
+					<Column ColumnSize="ColumnSize.Is8">
+						<Paragraph>
+							I decided to create this portfolio site motivated by a combination of wanting to learn Microsoft Blazor, wanting to program my own portfolio site from scratch, and wanting to stop paying Weebly for my old website!
+						</Paragraph>
+						<Paragraph>
+							I’m very happy with how it turned out! I programmed this all using Microsoft Blazor and C#, utilized a UI component library Blazorise to make everything look nice, and hosted the site on Netlify.
+						</Paragraph>
+					</Column>
+					<Column ColumnSize="ColumnSize.Is4">
+						<Text>Source: <Text TextWeight="TextWeight.Bold">Open Source</Text></Text> <br />
+						<Text>Date: <Text TextWeight="TextWeight.Bold">Ongoing</Text></Text> <br />
+						<Text>Team Size: <Text TextWeight="TextWeight.Bold">Solo</Text></Text> <br />
+						<Text>Languages and Technologies: <Text TextWeight="TextWeight.Bold">Blazor, C#, Visual Studio, Git</Text></Text> <br />
+
+						<Link To="https://github.com/BagelMaster5000/Blazor-Portfolio-Site" Target="Target.Blank">
+						<Div class="clicky-card-link">
+							<Card Margin="Margin.Is2" class="outlined-card">
+								<CardBody>
+									<Row>
+										<Column ColumnSize="ColumnSize.Is2">
+											<img style="filter:invert(@GlobalVariables.DarkModeColorInvertPercent)" src="icons/github.png" height="30px" width="30px" />
+										</Column>
+										<Column ColumnSize="ColumnSize.Is10">
+											<Text TextWeight="TextWeight.Bold" VerticalAlignment="VerticalAlignment.Middle">Github!</Text>
+										</Column>
+									</Row>
+								</CardBody>
+							</Card>
+						</Div>
+						</Link>
+					</Column>
+				</Row>
+
+				<Divider />
+
+				@*Using Blazor*@
+				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Using Blazor</Heading>
+				<Row Margin="Margin.Is2">
+					<Paragraph>
+						Microsoft Blazor has been very fun to learn! For those that don’t know, the quirk with Blazor is that all of the logic programming can be written in C# and executed natively on the .NET runtime. As someone who doesn’t enjoy javascript programming and has a lot of experience with C# development, I love it 😁
+					</Paragraph>
+					<Paragraph>
+						Because of how new Blazor is, there aren’t many resources online like forum posts or how-to articles. For the most part, I was stuck with Microsoft’s and Blazorise’s documentation. This made debugging niche issues very annoying. Luckily, Blazor does also support javascript logic programming as a fallback! For difficult issues it’s possible to ignore C# and .NET entirely and solve your problems using javascript resources.
+					</Paragraph>
+				</Row>
+
+				<Divider />
+
+				@*Animations*@
+				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Animations</Heading>
+				<Row Margin="Margin.Is2">
+					<Paragraph>
+						I utilized animations built into the Blazorise UI component library across my entire site.
+					</Paragraph>
+					<Row>
+						<Column ColumnSize="ColumnSize.Is6" TextAlignment="TextAlignment.Center">
+							<Figure>
+								<FigureImage Source="portfolioimages/theeaterer/excel1.png" Rounded />
+							</Figure>
+							<FigureCaption>
+								For buttons.
+							</FigureCaption>
+						</Column>
+						<Column ColumnSize="ColumnSize.Is6" TextAlignment="TextAlignment.Center">
+							<Figure>
+								<FigureImage Source="portfolioimages/theeaterer/excel2.jpg" Rounded />
+								<FigureCaption>
+									For switching pages.
+								</FigureCaption>
+							</Figure>
+						</Column>
+					</Row>
+					<Paragraph>
+						If you’ve noticed, the page switching in my site is directional. The page change animation will play a “slide left” or a “slide right” depending on which direction the destination tab is from the current tab. When a page tab is clicked, a function is called that will set the direction of the animation based on what page the user is currently on.
+					</Paragraph>
+				</Row>
+
+				<Divider />
+
+				@*Dark Mode*@
+				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Dark Mode</Heading>
+				<Row Margin="Margin.Is2">
+					<Paragraph>
+						Dark mode switching luckily wasn’t too tricky to implement using the Blazorise UI component library.
+					</Paragraph>
+					<Paragraph>
+						I created custom themes for the light and dark modes and utilized Blazorise's built-in theme-switching system for toggling the theme at runtime. I ran into an issue that some Blazorise components—such as Cards and List Groups—weren't affected by theme-switching for some reason. So, for those I had to manually adjust their css properties for them to sync correctly with the current theme colors. I also added some unique functionality to the page tabs for them to share the color of their respective pages (different colors depending on if dark mode was on/off).
+					</Paragraph>
+					<Paragraph>
+						I wanted the dark mode state of the website to be auto-set using the browser’s dark mode state (light mode users see the light mode site by default, dark mode users see the dark mode site by default). Sadly, this issue was unsolvable using C# and ASP.NET… I had to implement a small javascript function to detect the browser’s dark mode state and then call that from a C# method as soon as the site loads.
+					</Paragraph>
+				</Row>
+			</Container>
+		</Card>
+
+		<BackToProjectsButton />
+	</Container>
+</Animate>
