@@ -231,3 +231,29 @@ a, .btn-link {
 .custom-control-label:focus {
     outline: none;
 }
+
+body {
+    overflow: overlay;
+}
+
+*::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+}
+
+*::-webkit-scrollbar-button {
+    display: none;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #00000040;
+    border-radius: 24px;
+}
