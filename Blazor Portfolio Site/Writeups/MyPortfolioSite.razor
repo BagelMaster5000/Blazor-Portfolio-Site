@@ -10,7 +10,7 @@
 			<Container>
 				@*Header*@
 				<Container Width="Width.Is100" TextAlignment="TextAlignment.Center" Padding="Padding.Is2">
-					<Image src="portfolioimages/pizzadeliverybagel/header.jpg" Width="Width.Is50" Padding="Padding.Is2" />
+					<Image src="portfolioimages/myportfoliosite/header.png" Width="Width.Is50" Padding="Padding.Is2" />
 					<Heading Size="HeadingSize.Is2">
 						My Portfolio Site
 					</Heading>
@@ -76,29 +76,37 @@
 				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Animations</Heading>
 				<Row Margin="Margin.Is2">
 					<Paragraph>
-						I utilized animations built into the Blazorise UI component library across my entire site.
+						I utilized animations from the Blazorise UI component library across my entire site.
 					</Paragraph>
 					<Row>
-						<Column ColumnSize="ColumnSize.Is6" TextAlignment="TextAlignment.Center">
+						<Column ColumnSize="ColumnSize.Is5" TextAlignment="TextAlignment.Center">
 							<Figure>
-								<FigureImage Source="portfolioimages/theeaterer/excel1.png" Rounded />
-							</Figure>
-							<FigureCaption>
-								For buttons.
-							</FigureCaption>
-						</Column>
-						<Column ColumnSize="ColumnSize.Is6" TextAlignment="TextAlignment.Center">
-							<Figure>
-								<FigureImage Source="portfolioimages/theeaterer/excel2.jpg" Rounded />
+								<FigureImage Source="portfolioimages/myportfoliosite/buttonanimation.gif" Rounded />
 								<FigureCaption>
-									For switching pages.
+									Animation for buttons.
+								</FigureCaption>
+							</Figure>
+						</Column>
+						<Column ColumnSize="ColumnSize.Is7" TextAlignment="TextAlignment.Center">
+							<Figure>
+								<FigureImage Source="portfolioimages/myportfoliosite/pageanimation.gif" Rounded />
+								<FigureCaption>
+									Animation for page switching.
 								</FigureCaption>
 							</Figure>
 						</Column>
 					</Row>
 					<Paragraph>
-						If you’ve noticed, the page switching in my site is directional. The page change animation will play a “slide left” or a “slide right” depending on which direction the destination tab is from the current tab. When a page tab is clicked, a function is called that will set the direction of the animation based on what page the user is currently on.
+						If you’ve noticed, the page switching animation in my site is directional. The page will do a “slide left” or a “slide right” animation depending on which direction left/right the destination tab is from the current tab.
 					</Paragraph>
+					<Container TextAlignment="TextAlignment.Center">
+						<Figure Width="Width.Is75">
+							<FigureImage Source="portfolioimages/myportfoliosite/animationdirections.jpg" Rounded />
+							<FigureCaption>
+								When a page tab is clicked, a function is called that will set the direction of the animation based on what page the user is currently on.
+							</FigureCaption>
+						</Figure>
+					</Container>
 				</Row>
 
 				<Divider />
@@ -106,14 +114,19 @@
 				@*Dark Mode*@
 				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Dark Mode</Heading>
 				<Row Margin="Margin.Is2">
-					<Paragraph>
-						Dark mode switching luckily wasn’t too tricky to implement using the Blazorise UI component library.
-					</Paragraph>
-					<Paragraph>
-						I created custom themes for the light and dark modes and utilized Blazorise's built-in theme-switching system for toggling the theme at runtime. I ran into an issue that some Blazorise components—such as Cards and List Groups—weren't affected by theme-switching for some reason. So, for those I had to manually adjust their css properties for them to sync correctly with the current theme colors. I also added some unique functionality to the page tabs for them to share the color of their respective pages (different colors depending on if dark mode was on/off).
-					</Paragraph>
+					<Container TextAlignment="TextAlignment.Center">
+						<Figure Width="Width.Is75">
+							<FigureImage Source="portfolioimages/myportfoliosite/darkmode.gif" Rounded />
+						<FigureCaption>
+								I created custom themes for the light and dark modes and utilized Blazorise's built-in theme switching system to allow toggling dark mode at runtime.
+						</FigureCaption>
+						</Figure>
+					</Container>
 					<Paragraph>
 						I wanted the dark mode state of the website to be auto-set using the browser’s dark mode state (light mode users see the light mode site by default, dark mode users see the dark mode site by default). Sadly, this issue was unsolvable using C# and ASP.NET… I had to implement a small javascript function to detect the browser’s dark mode state and then call that from a C# method as soon as the site loads.
+					</Paragraph>
+					<Paragraph>
+						I ran into an issue that some Blazorise components—such as Cards and List Groups—weren't affected by theme-switching for some reason. So, for those I had to manually adjust their css properties for them to sync correctly with the current theme colors. I also added some unique functionality to the page tabs to make them share the color of their respective page backgrounds (which were different colors depending on if dark mode was on/off).
 					</Paragraph>
 				</Row>
 			</Container>
