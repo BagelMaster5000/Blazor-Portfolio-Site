@@ -29,7 +29,7 @@
 							An audio-only horror narrative game following a group of kids on Halloween night looking to raid a haunted house for jewels to fund a video game console purchase.
 						</Paragraph>
 						<Paragraph>
-							I organized and led a team of 8 for a 10-day game jam. The team composed of two programmers, three voice actors, two writers, and an audio engineer. Game utilized the Wwise audio engine to handle audio clip+pitch randomization and to handle sequencing for ambience tracks and dialog lines. Our game ranked 15th out of 92 total entries.
+							I organized and led a team of 8 for a 10-day game jam. The team composed of two programmers, three voice actors, two writers, and an audio engineer. The game utilized the Wwise audio engine to handle audio clip+pitch randomization and to handle sequencing for ambience tracks and dialog lines. Our game ranked 15th out of 92 total entries.
 						</Paragraph>
 						<Column ColumnSize="ColumnSize.Is8">
 							<Figure>
@@ -97,11 +97,11 @@
 						</ListGroupItem>
 						<ListGroupItem>
 							<h6>2. Windows Keyword Recognizer</h6>
-							The second option we looked at was a built-in Windows API called Windows Keyword Recognizer. This API was free and incredibly fast, but had a deal-breaking issue that it could only detect keywords (rather than full sentences). For example, if one of our keywords was “blue” and a player spoke the phrase “blue car,” everything the player said would have been ignored. Because we were trying to simulate natural dialog in our game, we had to rule this option out as well.
+							The second option we looked at was a built-in Windows API called Windows Keyword Recognizer. This API was free and incredibly fast, but had a deal-breaking issue that it could only detect keywords (rather than full sentences). For example, if one of our keywords was “blue” and a player spoke the phrase “blue car,” the entire phrase would have been ignored. Because we were trying to simulate natural dialog in our game, we had to rule this option out as well.
 						</ListGroupItem>
 						<ListGroupItem>
 							<h6>3. Windows Dictation Recognizer</h6>
-							The third option we looked into was another built-in Windows API called Windows Dictation Recognizer. This API would register everything said by the player and send it to a script for our system to parse for keywords—exactly what we were looking for! The only downsides to this API were that the processing time was slower than the Windows Keyword Recognizer and the use of it required the user to enable a speech recognition setting in Windows; but, we considered those acceptable drawbacks considering everything else worked perfectly and we decided to use it!
+							The third option we looked into was another built-in Windows API called Windows Dictation Recognizer. This API would register everything said by the player and send it to a script for our system to parse for keywords—exactly what we were looking for! The only downsides of this API were that the processing time was slower than the Windows Keyword Recognizer and the use of it required the player to enable a speech recognition setting in Windows; but, we considered those acceptable drawbacks considering everything else worked perfectly and we decided to use it!
 						</ListGroupItem>
 					</ListGroup>
 				</Row>
@@ -149,7 +149,7 @@
 					</Figure>
 					<h6>Communication with the Writing Team</h6>
 					<Paragraph>
-						I had multiple meetings with our two writers to determine what type of story would be feasible to do in jam time and also what would be possible given our unconventional game format of no visuals and player interaction done through speech. There were a lot of unique writing challenges with our format, such as making it obvious what choices the player had available at any given time and also making it clear when a player’s choice wasn't valid. As the one who knew the limitations of our technology, I had to constantly communicate with the writers and review their work to ensure the interactions would be possible with our format.
+						I had multiple meetings with our two writers to determine what type of story would be feasible to do within the 10-day time constraint and also what would be possible given our unconventional game format of no visuals and player interaction done through speech. There were a lot of unique writing challenges with our format, such as making it obvious what choices the player had available at any given time and also making it clear when a player’s choice wasn't valid. As the one who knew the limitations of our technology, I had to constantly communicate with the writers and review their work to ensure that interactions would be possible with our format.
 					</Paragraph>
 					<h6>Communication with the Audio Team</h6>
 					<Paragraph>

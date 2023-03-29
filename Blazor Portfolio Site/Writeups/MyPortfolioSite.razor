@@ -15,7 +15,7 @@
 						My Portfolio Site
 					</Heading>
 					<Heading Size="HeadingSize.Is5">
-						Custom Portfolio Site Created Using MS Blazor and C#
+						Custom Portfolio Site Created Using MS Blazor, C#, and ASP.NET
 					</Heading>
 				</Container>
 
@@ -26,17 +26,17 @@
 				<Row Margin="Margin.Is2">
 					<Column ColumnSize="ColumnSize.Is8">
 						<Paragraph>
-							I decided to create this portfolio site motivated by a combination of wanting to learn Microsoft Blazor, wanting to program my own portfolio site from scratch, and wanting to stop paying Weebly for my old website!
+							I decided to create this portfolio site as a motivator to learn Microsoft Blazor!
 						</Paragraph>
 						<Paragraph>
-							I’m very happy with how it turned out! I programmed this all using Microsoft Blazor and C#, utilized a UI component library Blazorise to make everything look nice, and hosted the site on Netlify.
+							I’m very happy with how it turned out. It came out much nicer than my previous website (made using a website builder service) and I'm proud to have programmed all of it this time 😁
 						</Paragraph>
 					</Column>
 					<Column ColumnSize="ColumnSize.Is4">
 						<Text>Source: <Text TextWeight="TextWeight.Bold">Open Source</Text></Text> <br />
 						<Text>Date: <Text TextWeight="TextWeight.Bold">Ongoing</Text></Text> <br />
 						<Text>Team Size: <Text TextWeight="TextWeight.Bold">Solo</Text></Text> <br />
-						<Text>Languages and Technologies: <Text TextWeight="TextWeight.Bold">Blazor, C#, Visual Studio, Git</Text></Text> <br />
+						<Text>Languages and Technologies: <Text TextWeight="TextWeight.Bold">Blazor, C#, ASP.NET, Visual Studio, Git</Text></Text> <br />
 
 						<Link To="https://github.com/BagelMaster5000/Blazor-Portfolio-Site" Target="Target.Blank">
 						<Div class="clicky-card-link">
@@ -62,11 +62,16 @@
 				@*Using Blazor*@
 				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Using Blazor</Heading>
 				<Row Margin="Margin.Is2">
+					<Container TextAlignment="TextAlignment.Center">
+						<Figure Width="Width.Is50">
+							<FigureImage Source="portfolioimages/myportfoliosite/blazor.png" Rounded />
+						</Figure>
+					</Container>
 					<Paragraph>
-						Microsoft Blazor has been very fun to learn! For those that don’t know, the quirk with Blazor is that all of the logic programming can be written in C# and executed natively on the .NET runtime. As someone who doesn’t enjoy javascript programming and has a lot of experience with C# development, I love it 😁
+						Microsoft Blazor has been very fun to learn! For those that don’t know, the quirk with the Blazor web framework is that all of the logic programming can be written in C# and executed natively on the .NET runtime. As someone who doesn’t particularly enjoy javascript programming and has a lot of experience with C# development, I love it!
 					</Paragraph>
 					<Paragraph>
-						Because of how new Blazor is, there aren’t many resources online like forum posts or how-to articles. For the most part, I was stuck with Microsoft’s and Blazorise’s documentation. This made debugging niche issues very annoying. Luckily, Blazor does also support javascript logic programming as a fallback! For difficult issues it’s possible to ignore C# and .NET entirely and solve your problems using javascript resources.
+						Because of how new Blazor is, there aren’t many resources online like forum posts or how-to articles. For the most part, I was stuck with Microsoft’s and Blazorise’s documentation. This made debugging niche issues very annoying. Luckily, Blazor does also support javascript logic programming as a fallback. Meaning, for difficult issues it’s possible to ignore C# and .NET entirely and solve your problems using the plentiful online javascript resources.
 					</Paragraph>
 				</Row>
 
@@ -123,7 +128,7 @@
 						</Figure>
 					</Container>
 					<Paragraph>
-						I wanted the dark mode state of the website to be auto-set using the browser’s dark mode state (light mode users see the light mode site by default, dark mode users see the dark mode site by default). Sadly, this issue was unsolvable using C# and ASP.NET… I had to implement a small javascript function to detect the browser’s dark mode state and then call that from a C# method as soon as the site loads.
+						I wanted the dark mode state of the website to be auto-set using the browser’s dark mode state (light mode users see the light mode site by default, dark mode users see the dark mode site by default). Sadly, this issue was unsolvable using C# and ASP.NET… I had to implement a small javascript function to detect the browser’s dark mode state and then call that from a C# function as soon as the site loaded.
 					</Paragraph>
 					<Paragraph>
 						I ran into an issue that some Blazorise components—such as Cards and List Groups—weren't affected by theme-switching for some reason. So, for those I had to manually adjust their css properties for them to sync correctly with the current theme colors. I also added some unique functionality to the page tabs to make them share the color of their respective page backgrounds (which were different colors depending on if dark mode was on/off).

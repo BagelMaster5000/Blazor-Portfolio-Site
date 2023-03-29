@@ -80,7 +80,7 @@
 							• Heroku to host the web app.
 						</ListGroupItem>
 						<ListGroupItem>
-							• The web app Nightscout to gather information from my CGM (Dexcom G6) via the Dexcom API.
+							• MongoDB to remotely store blood sugar readings.
 						</ListGroupItem>
 						<ListGroupItem>
 							• IFTTT to listen for Nightscout low+high blood sugar events and then invoke a smart light to turn on.
@@ -109,7 +109,7 @@
 				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Raspberry Pi Setup</Heading>
 				<Row Margin="Margin.Is2">
 					<Paragraph>
-						I installed Raspberry Pi OS onto my Raspberry Pi 3 and set up the Nightscout web app on it. I edited the Pi’s startup script so that it opened the web app in as soon as the device turns on.
+						I installed Raspberry Pi OS onto my Raspberry Pi 3 and set up the Nightscout web app on it. I edited the Pi’s startup script so that it opened the web app in as soon as the device turned on.
 					</Paragraph>
 					<Container TextAlignment="TextAlignment.Center">
 						<Figure Width="Width.Is75">
@@ -127,7 +127,7 @@
 				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Problem #1: I sometimes forgot to turn my Pi on or off</Heading>
 				<Row Margin="Margin.Is2">
 					<Paragraph>
-						The smart light only worked if the web app was actively running; so, every night I needed to remember to turn the Pi on. I also needed to turn the Pi off in the morning so the light wouldn't turn on while I was out of the house.
+						The smart light only worked if the web app was actively running; so, every night I needed to remember to turn the Pi on. I also needed to remember to turn the Pi off in the morning so the light wouldn't turn on while I was out of the house.
 					</Paragraph>
 					<Paragraph>
 						After several months, I realized that I had trouble making the on-and-off switching a routine and I would often forget about it. So, my solution was to leave the Pi running continuously but only allow it to turn on my smart light within set hours (11pm – 7am). This required an upgrade to my IFTTT subscription, but the peace of mind was worth the extra cost.
@@ -145,7 +145,7 @@
 							<Figure>
 								<FigureImage Source="portfolioimages/cgmnightlight/timerangecode.png" Rounded />
 								<FigureCaption>
-									A snippet of javascript code in my IFTTT applet ignores blood sugar alerts outside of nighttime hours.
+									A snippet of javascript code in my IFTTT applet would ignore blood sugar alerts outside of nighttime hours.
 								</FigureCaption>
 							</Figure>
 						</Column>
@@ -155,13 +155,13 @@
 				<Divider />
 
 				@*Problem: The light doesn't wake me up sometimes*@
-				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Problem #2: The light couldn't wake me up sometimes</Heading>
+				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Problem #2: The light wouldn't wake me up sometimes</Heading>
 				<Row Margin="Margin.Is2">
 					<Paragraph>
-						After a few months, I noticed that the smart lamp—regardless of light strength—was small enough that I could ignore it sometimes by turning over in my bed.
+						After a few months, I noticed that the smart lamp—regardless of light strength—was small enough that I could ignore it sometimes by turning over in my bed. So, I figured it would be better to instead turn my room’s lights on.
 					</Paragraph>
 					<Paragraph>
-						So, I figured it would be better to instead turn my room’s lights on. I bought and am currently using LIFX smart bulbs and have never once slept through the lights in my room turning off!
+						I bought and am currently using LIFX smart bulbs and have never once slept through the lights in my room turning off!
 					</Paragraph>
 					<Container TextAlignment="TextAlignment.Center">
 						<Figure Width="Width.Is75">

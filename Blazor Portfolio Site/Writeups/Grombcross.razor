@@ -29,7 +29,7 @@
 							A picross puzzle game made by myself and several Society of Play members themed around Society of Play original characters and inside jokes.
 						</Paragraph>
 						<Paragraph>
-							I organized a team of 8 to develop a picross puzzle game for a game jam. I worked on this game after work hours during my internship at the time, using the same tech stack and design patterns as my internship project.
+							I worked on this game after work hours throughout my internship at the time, using the same tech stack and design patterns as my internship project to help better learn the technology.
 						</Paragraph>
 						<Column ColumnSize="ColumnSize.Is8">
 							<Figure>
@@ -122,17 +122,17 @@
 						<Figure Width="Width.Is75">
 							<FigureImage Source="portfolioimages/grombcross/puzzlesfolder.png" Rounded />
 							<FigureCaption>
-								The puzzle .bmp image pairs follow a simple naming convention that must be followed in order to add additional puzzles
+								The puzzle .bmp image pairs follow a simple naming convention that must be followed in order to add additional puzzles.
 							</FigureCaption>
 						</Figure>
 					</Container>
-					<h6>Puzzle Generation Steps</h6>
+					<h6>Puzzle Generation Algorithm</h6>
 					<ListGroup>
 						<ListGroupItem>
 							1.	Each puzzle is generated from just a pair of bitmap images: one black+white (generation image) and one full-color (completed image).
 						</ListGroupItem>
 						<ListGroupItem>
-							2.	The puzzle generation script parses the filenames of these bitmap images for information—such as puzzle name and id number—and then iterates through the pixels of the black+white generation image to create a 2D boolean array representing the puzzle’s solution state.
+							2.	The puzzle generation script parses the filenames of these bitmap images for information—such as puzzle name and its id number—and then iterates through the pixels of the black+white generation image to create a 2D boolean array representing the puzzle’s solution state.
 						</ListGroupItem>
 						<ListGroupItem>
 							3.	When a puzzle is selected by the user to play, this 2D boolean array is sent as an argument to the game view to generate a game board with the relevant line hints.
@@ -154,7 +154,7 @@
 						</Figure>
 					</Container>
 					<Paragraph>
-						I determined that a dictionary was the perfect data structure for saving game progress because of its simplicity and it allowing adding, removing, or changing puzzles (either by the developer or by the user via the exposed puzzle data folders) without touching the codebase.
+						I determined that a dictionary was the perfect data structure for saving game progress because of its simplicity and it allowing adding, removing, and changing puzzles without touching the codebase.
 					</Paragraph>
 					<ListGroup>
 						<ListGroupItem>
@@ -172,7 +172,7 @@
 				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">UML Diagram</Heading>
 				<Row Margin="Margin.Is2">
 					<Paragraph>
-						I enjoy creating UMLs before starting to code because I’ve found it removes a lot of guess work that would otherwise come with programming a project from scratch and helps keeps scripts focused. I’ve been burned too many times in the past by cowboy coding and then discovering later that my project is unsustainable because of a messy codebase...
+						I enjoy creating UMLs before starting to code because I’ve found it removes a lot of guess work that would otherwise come with programming a project from scratch and helps keeps scripts focused. I’ve been burned many times in the past by cowboy coding and then discovering later that my project is unsustainable because of a messy codebase...
 					</Paragraph>
 					<Container TextAlignment="TextAlignment.Center">
 						<Figure Width="Width.Is75">

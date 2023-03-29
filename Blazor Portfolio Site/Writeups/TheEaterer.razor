@@ -97,22 +97,22 @@
 				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Reading Item Data From Excel Spreadsheet</Heading>
 				<Row Margin="Margin.Is2">
 					<Paragraph>
-						I decided to store item name and type data within an Excel spreadsheet for this game. The two reasons for this were to be able to adjust item information without touching the codebase and to clearly visualize the ratio of good:bad items throughout development.
+						I decided to store item name and item type data within an Excel spreadsheet for this game. The two reasons for this were to be able to adjust item information without touching the codebase and to clearly visualize the ratio of good:bad items throughout development.
 					</Paragraph>
 					<Row>
 						<Column ColumnSize="ColumnSize.Is4" TextAlignment="TextAlignment.Center">
 							<Figure>
 								<FigureImage Source="portfolioimages/theeaterer/excel1.png" Rounded />
+								<FigureCaption>
+									The spreadsheet had two data columns: item name and item type.
+								</FigureCaption>
 							</Figure>
-							<FigureCaption>
-								The spreadsheet has two data columns: item name and item type.
-							</FigureCaption>
 						</Column>
 						<Column ColumnSize="ColumnSize.Is8" TextAlignment="TextAlignment.Center">
 							<Figure>
 								<FigureImage Source="portfolioimages/theeaterer/excel2.jpg" Rounded />
 								<FigureCaption>
-									A C# script reads the spreadsheet and uses the data to generate items throughout the map.
+									A C# script would read the spreadsheet and use the data to generate items throughout the map.
 								</FigureCaption>
 							</Figure>
 						</Column>
@@ -125,22 +125,22 @@
 				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Auto-Saving and Auto-Loading</Heading>
 				<Row Margin="Margin.Is2">
 					<Paragraph>
-						The game auto-saves when a level has been completed or a setting has been adjusted and auto-loads on-launch.
+						The game auto-saved when a level was completed or a setting had been adjusted and would auto-load on-launch.
 					</Paragraph>
 					<Paragraph>
-						When the game saves, a save data object is created and initialized with data that reflects the current game state. This object is serialized using a binary formatter and saved as a file in the build directory.
+						When the game saved, a save data object was created and initialized with data that reflected the current game state. This object was serialized using a binary formatter and saved as a file in the build directory.
 					</Paragraph>
 					<Paragraph>
-						When the game loads, this save file is deserialized and the now-exposed save data object variables are used to restore the last-saved game state.
+						When the game loaded, the save file was deserialized and the now-exposed save data object variables were used to restore the last-saved game state.
 					</Paragraph>
 					<Row>
 						<Column ColumnSize="ColumnSize.Is6" TextAlignment="TextAlignment.Center">
 							<Figure>
 								<FigureImage Source="portfolioimages/theeaterer/savedataobject.jpg" Rounded />
+								<FigureCaption>
+									The save data object.
+								</FigureCaption>
 							</Figure>
-							<FigureCaption>
-								The save data object.
-							</FigureCaption>
 						</Column>
 						<Column ColumnSize="ColumnSize.Is6" TextAlignment="TextAlignment.Center">
 							<Figure>
@@ -203,10 +203,10 @@
 	private string[] galleryImageSources = {
 		"portfolioimages/theeaterer/gif1.gif",
 		"portfolioimages/theeaterer/gif2.gif",
-	"portfolioimages/theeaterer/gif3.gif",
-	"portfolioimages/theeaterer/gif4.gif",
-	"portfolioimages/theeaterer/gif5.gif",
-	"portfolioimages/theeaterer/gif6.gif"};
+		"portfolioimages/theeaterer/gif3.gif",
+		"portfolioimages/theeaterer/gif4.gif",
+		"portfolioimages/theeaterer/gif5.gif",
+		"portfolioimages/theeaterer/gif6.gif"};
 
 	private bool galleryImageCloseupVisible;
 	private string galleryImageCloseupSource = "";

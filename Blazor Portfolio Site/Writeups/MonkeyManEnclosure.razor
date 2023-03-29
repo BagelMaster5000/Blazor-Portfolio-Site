@@ -104,7 +104,7 @@
 				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Object Pooling</Heading>
 				<Row Margin="Margin.Is2">
 					<Paragraph>
-						To minimize garbage creation and collection while playing (to avoid dropping frames due to de-allocating memory), throwable objects are pooled rather than being created and destroyed. There can only be at most 6 bananas, 6 bricks, and 30 food pellets on the ground at one time.
+						To minimize garbage creation and collection while playing (to avoid dropping frames due to de-allocating memory), throwable objects were pooled rather than being created and destroyed. We chose an arbitrary pool size of 6 bananas, 6 bricks, and 30 food pellets.
 					</Paragraph>
 					<Container TextAlignment="TextAlignment.Center" Padding="Padding.Is2" Width="Width.Is75">
 						<Figure>
@@ -120,14 +120,14 @@
 								<FigureImage Source="portfolioimages/monkeymanenclosure/objectpoolingengine1.jpg" Rounded />
 							</Figure>
 							<FigureCaption>
-								Objects included in the pool are set in the inspector via an exposed array. So, it's trivial to add or remove objects from the pool.
+								Objects included in the pool were set in the inspector via an exposed array. So, it was trivial to add or remove objects from the pool.
 							</FigureCaption>
 						</Column>
 						<Column ColumnSize="ColumnSize.Is8" TextAlignment="TextAlignment.Center">
 							<Figure>
 								<FigureImage Source="portfolioimages/monkeymanenclosure/objectpoolingengine2.jpg" Rounded />
 								<FigureCaption>
-									The throw function for each item iterates through the respective item's object pool. The oldest-accessed object is always the one that is thrown, which minimizes the possibility of a user seeing an active item disappear.
+									The throw function for each item iterated through the respective item's object pool. The oldest-accessed object was always the one that was thrown, which minimized the possibility of a player seeing an active item disappear.
 								</FigureCaption>
 							</Figure>
 						</Column>
