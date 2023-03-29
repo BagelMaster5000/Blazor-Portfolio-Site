@@ -108,6 +108,54 @@
 
 				<Divider />
 
+				@*Utilizing External Tools*@
+				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Utilizing External Tools</Heading>
+				<Row Margin="Margin.Is2">
+					<h6>Ink</h6>
+					<Paragraph>
+						We used Ink to handle story progression and branching logic. A C# script runs through our story’s Ink file line-by-line, and uses Ink tags to invoke relevant audio events (such as dialog lines, sound effect cues, and ambience changes when entering new locations) within Wwise.
+					</Paragraph>
+					<Paragraph>
+						A big benefit of having integrated a writing tool into our Unity game was that our writer only needed to update his Ink file in order to make changes to the story in-game (no need to touch the codebase or consider implementation).
+					</Paragraph>
+					<Container TextAlignment="TextAlignment.Center">
+						<Figure Width="Width.Is75">
+							<FigureImage Source="portfolioimages/project9thmonday/ink.jpg" Rounded />
+							<FigureCaption TextAlignment="TextAlignment.Center">
+								Our Ink story file.
+							</FigureCaption>
+						</Figure>
+					</Container>
+
+					<h6>Wwise</h6>
+					<Paragraph>
+						We also used the Wwise audio engine to provide powerful audio functionality such as audio crossfading, pitch+clip randomization, and sequencing.
+					</Paragraph>
+					<Paragraph>
+						Integrating an external audio engine into our game made work simpler for our audio engineer (didn’t need to consider audio implementation) and lowered the likelihood of merge conflicts (programming team and audio team would never need to touch the same files).
+					</Paragraph>
+					<Row>
+						<Column ColumnSize="ColumnSize.Is6" Padding="Padding.Is2">
+							<Figure>
+								<FigureImage Source="portfolioimages/project9thmonday/wwise1.jpg" Rounded />
+								<FigureCaption TextAlignment="TextAlignment.Center">
+									Wwise audio events.
+								</FigureCaption>
+							</Figure>
+						</Column>
+						<Column ColumnSize="ColumnSize.Is6" Padding="Padding.Is2">
+							<Figure>
+								<FigureImage Source="portfolioimages/project9thmonday/wwise2.jpg" Rounded />
+								<FigureCaption TextAlignment="TextAlignment.Center">
+									Contents of a Wwise audio event.
+								</FigureCaption>
+							</Figure>
+						</Column>
+					</Row>
+				</Row>
+
+				<Divider />
+
 				@*Organizing a Multi-Talented Team*@
 				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Organizing a Multi-Talented Team</Heading>
 				<Row Margin="Margin.Is2">
