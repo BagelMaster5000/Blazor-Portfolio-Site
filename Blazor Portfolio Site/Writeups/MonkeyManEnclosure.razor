@@ -140,21 +140,53 @@
 				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Physics-Calculated Throw Arc and AOE Previews</Heading>
 				<Row Margin="Margin.Is2">
 					<Paragraph>
-						Managing the throwable objects was one of my programming responsibilities for this project. To implement throwing and displaying throwing-arc preview lines, I used some equations from my old Physics C notebook!
+						Managing the throwable objects was one of my programming responsibilities for this project.
 					</Paragraph>
+					<Paragraph>
+						In the game, the player throws items by clicking on a target location. The game draws a preview arc and a preview area of effect (AOE) circle when preparing to throw an item, and then executes the throw on-click following the expected trajectory. I created two algorithms to draw these preview lines (with a variable amount of points to tune accuracy/performance) using physics and math equations.
+					</Paragraph>
+					<Container TextAlignment="TextAlignment.Center">
+						<Figure Width="Width.Is75">
+							<FigureImage Source="portfolioimages/monkeymanenclosure/physics1.jpg" Rounded />
+							<FigureCaption>
+								Preview throw arc in-game.
+							</FigureCaption>
+						</Figure>
+					</Container>
+					<Container TextAlignment="TextAlignment.Center">
+						<Figure Width="Width.Is75">
+							<FigureImage Source="portfolioimages/monkeymanenclosure/physics3.jpg" Rounded />
+							<FigureCaption>
+								This method sets the points of a line renderer to form a throw arc with a variable amount of points and a variable amount of air time.
+							</FigureCaption>
+						</Figure>
+					</Container>
+					<Container TextAlignment="TextAlignment.Center">
+						<Figure Width="Width.Is50">
+							<FigureImage Source="portfolioimages/monkeymanenclosure/physics2.jpg" Rounded />
+							<FigureCaption>
+								This method sets the points of a line renderer to form a circle with a variable amount of points (centered at 0,0).
+							</FigureCaption>
+						</Figure>
+					</Container>
 				</Row>
 
 				<Divider />
 
 				@*UML Diagram*@
-				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Physics-Calculated Throw Arc and AOE Previews</Heading>
+				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">UML Diagram</Heading>
 				<Row Margin="Margin.Is2">
 					<Paragraph>
-						Before starting to code, my co-programmer and I created a UML diagram to map-out our game systems. We then divided up the scripts using color-coding to make sure we both had an equal amount of work for the project (my scripts are colored red).
+						Before starting to code, my co-programmer and I created a UML diagram to map-out our game systems. We then divided up the scripts to make sure we both had an equal amount of work for the project.
 					</Paragraph>
-					<Paragraph>
-						Taking the time to plan this out early in the jam really helped as it made our whole development process very organized and straight-forward.
-					</Paragraph>
+					<Container TextAlignment="TextAlignment.Center">
+						<Figure Width="Width.Is100">
+							<FigureImage Source="portfolioimages/monkeymanenclosure/uml.png" Rounded />
+							<FigureCaption>
+								(I was responsible for the red scripts, my co-programmer was responsible for the green)
+							</FigureCaption>
+						</Figure>
+					</Container>
 				</Row>
 
 				<Divider />
@@ -163,8 +195,13 @@
 				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Project Management</Heading>
 				<Row Margin="Margin.Is2">
 					<Paragraph>
-						We had a team of five people for this game jam project: a 3D artist, a 2D artist, a composer, and two programmers. To make sure everyone knew exactly what they needed to do, I created an asset list in Google Sheets to keep track of tasks for all departments and also regularly checked-in with each of the team members.
+						I created a shared spreadsheet to track the assets and tasks for all departments and also regularly checked-in with each team member throughout the duration of the jam. This organization ensured that all team members knew exactly what they were expected to work on at all times and also gave each of them awareness of everyone's progress.
 					</Paragraph>
+					<Container TextAlignment="TextAlignment.Center">
+						<Figure Width="Width.Is100">
+							<FigureImage Source="portfolioimages/monkeymanenclosure/assetlist.jpg" Rounded />
+						</Figure>
+					</Container>
 				</Row>
 
 				<Divider />
@@ -173,7 +210,7 @@
 				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Check Out the Game!</Heading>
 				<Row Margin="Margin.Is2">
 					<Column ColumnSize="ColumnSize.IsHalf" Padding="Padding.Is2">
-						<Link To="https://bagelo-masterson.itch.io/pizza-delivery-bagel" Target="Target.Blank">
+						<Link To="https://bagelo-masterson.itch.io/monkey-man-enclosure" Target="Target.Blank">
 						<Div class="clicky-card-link">
 							<Card Margin="Margin.Is2" class="outlined-card">
 								<CardBody>
