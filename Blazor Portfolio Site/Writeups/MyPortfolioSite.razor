@@ -29,7 +29,7 @@
 							I decided to create this portfolio site as a motivator to learn Microsoft Blazor!
 						</Paragraph>
 						<Paragraph>
-							I’m very happy with how it turned out. It came out much nicer than my previous website (made using a website builder service) and I'm proud to have programmed all of it this time 😁
+							I’m very happy with how it turned out. It came out much nicer than my previous website (made using a website builder service) and I'm proud to have programmed all of it this time.
 						</Paragraph>
 					</Column>
 					<Column ColumnSize="ColumnSize.Is4">
@@ -122,17 +122,25 @@
 					<Container TextAlignment="TextAlignment.Center">
 						<Figure Width="Width.Is75">
 							<FigureImage Source="portfolioimages/myportfoliosite/darkmode.gif" Rounded />
-						<FigureCaption>
+							<FigureCaption>
 								I created custom themes for the light and dark modes and utilized Blazorise's built-in theme switching system to allow toggling dark mode at runtime.
-						</FigureCaption>
+							</FigureCaption>
 						</Figure>
 					</Container>
 					<Paragraph>
 						I wanted the dark mode state of the website to be auto-set using the browser’s dark mode state (light mode users see the light mode site by default, dark mode users see the dark mode site by default). Sadly, this issue was unsolvable using C# and ASP.NET… I had to implement a small javascript function to detect the browser’s dark mode state and then call that from a C# function as soon as the site loaded.
 					</Paragraph>
 					<Paragraph>
-						I ran into an issue that some Blazorise components—such as Cards and List Groups—weren't affected by theme-switching for some reason. So, for those I had to manually adjust their css properties for them to sync correctly with the current theme colors. I also added some unique functionality to the page tabs to make them share the color of their respective page backgrounds (which were different colors depending on if dark mode was on/off).
+						I also ran into an issue that some Blazorise components—such as Cards and List Groups—weren't affected at all by theme-switching for some reason. For those components I had to manually adjust their css properties to sync correctly with the current theme.
 					</Paragraph>
+					<Container TextAlignment="TextAlignment.Center">
+						<Figure Width="Width.Is75">
+							<FigureImage Source="portfolioimages/myportfoliosite/pageanimation.gif" Rounded />
+							<FigureCaption>
+								The page tabs required some additional funcionality to account for dark mode switching. This is because they match color with their respective page backgrounds and each page has a unique color that is affected by dark mode state.
+							</FigureCaption>
+						</Figure>
+					</Container>
 				</Row>
 			</Container>
 		</Card>

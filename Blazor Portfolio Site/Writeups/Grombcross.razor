@@ -132,10 +132,10 @@
 							1.	Each puzzle is generated from just a pair of bitmap images: one black+white (generation image) and one full-color (completed image).
 						</ListGroupItem>
 						<ListGroupItem>
-							2.	The puzzle generation script parses the filenames of these bitmap images for information—such as puzzle name and its id number—and then iterates through the pixels of the black+white generation image to create a 2D boolean array representing the puzzle’s solution state.
+							2.	The puzzle generation script parses the filenames of these bitmap images for information—puzzle name, id number, and image type—and then iterates through the pixels of the black+white generation image to create a 2D boolean array representing the puzzle’s solution state.
 						</ListGroupItem>
 						<ListGroupItem>
-							3.	When a puzzle is selected by the user to play, this 2D boolean array is sent as an argument to the game view to generate a game board with the relevant line hints.
+							3.	When a puzzle is selected by the player to play, this 2D boolean array is sent as an argument to the game view to generate a game board with the relevant line hints.
 						</ListGroupItem>
 					</ListGroup>
 				</Row>
