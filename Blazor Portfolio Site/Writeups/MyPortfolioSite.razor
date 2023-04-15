@@ -128,7 +128,7 @@
 						</Figure>
 					</Container>
 					<Paragraph>
-						I wanted the dark mode state of the website to be auto-set using the browser’s dark mode state (light mode users see the light mode site by default, dark mode users see the dark mode site by default). This issue was unsolvable using C# and ASP.NET, but luckily I was able to solve it by implementing a small javascript function to detect the browser’s dark mode state and call it from a C# startup method.
+						I wanted the dark mode state of the website to be auto-set using the browser’s dark mode state on-page-load (light mode users see the light mode site by default, dark mode users see the dark mode site by default). This issue was unsolvable using C# and ASP.NET, but luckily I was able to solve it by implementing a small javascript function to detect the browser’s dark mode state and call it from a C# startup method.
 					</Paragraph>
 					<Paragraph>
 						I also ran into an issue that some Blazorise components—such as Cards and List Groups—weren't affected at all by theme-switching for some reason. For those components I had to manually adjust their css properties to sync correctly with the current theme.
