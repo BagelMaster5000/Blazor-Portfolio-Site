@@ -14,6 +14,7 @@ jobs:
 
     # changes the base-tag in index.html from '/' to 'Blazor-Portfolio-Site' to match GitHub Pages repository subdirectory
     - name: Change base-tag in index.html from / to Blazor-Portfolio-Site
+      working-directory: ./BlazorPortfolioSite
       run: sed -i 's/<base href="\/" \/>/<base href="\/Blazor-Portfolio-Site\/" \/>/g' wwwroot/index.html
 
     # add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
