@@ -30,19 +30,19 @@ jobs:
       working-directory: ./BlazorPortfolioSite
       run: dotnet publish --configuration Release --output build
 
-    # Changes the base-tag in index.html from '/' to 'Blazor-Portfolio-Site' to match GitHub Pages repository subdirectory
-    - name: Adjusting for MS Blazor Quirks pt. 1
-      run: sed -i 's/<base href="\/" \/>/<base href="\/Blazor-Portfolio-Site\/" \/>/g' BlazorPortfolioSite/build/wwwroot/index.html
+    # # Changes the base-tag in index.html from '/' to 'Blazor-Portfolio-Site' to match GitHub Pages repository subdirectory
+    # - name: Adjusting for MS Blazor Quirks pt. 1
+    #   run: sed -i 's/<base href="\/" \/>/<base href="\/Blazor-Portfolio-Site\/" \/>/g' BlazorPortfolioSite/build/wwwroot/index.html
 
     # # Add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
     # - name: Adjusting for MS Blazor Quirks pt. 2
     #   run: touch BlazorPortfolioSite/build/wwwroot/.nojekyll
 
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        folder: BlazorPortfolioSite/build/wwwroot # The folder the action should deploy.
+    # - name: Deploy to Folder
+    #   uses: JamesIves/github-pages-deploy-action@v4
+    #   with:
+    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #     folder: BlazorPortfolioSite/build/wwwroot # The folder the action should deploy.
 
     - name: Setup Pages
       id: pages
