@@ -1,0 +1,4 @@
+Build automation
+Decrease size of pictures
+Remove unused pictures
+Update resume
