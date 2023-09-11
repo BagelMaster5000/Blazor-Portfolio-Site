@@ -18,7 +18,7 @@ jobs:
         dotnet-version: 7.0.x
 
     - name: Publish
-      working-directory: ./Blazor Portfolio Site
+      working-directory: ./BlazorPortfolioSite
       run: dotnet publish --configuration Release --output build
 
     - name: Deploy
