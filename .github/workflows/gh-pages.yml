@@ -12,7 +12,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-
     - name: Setup .NET 7
       uses: actions/setup-dotnet@v3
       with:
@@ -34,4 +33,5 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        branch: gh-pages # The branch the action should deploy to.
         folder: BlazorPortfolioSite/build/wwwroot # The folder the action should deploy.
