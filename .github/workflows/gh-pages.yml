@@ -41,13 +41,13 @@ jobs:
     #   with:
     #     path: 'public'
 
-    # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+    - name: Set GITHUB_TOKEN Permissions to Allow for GitHub Pages Deployment
       permissions:
         contents: read
         pages: write
         id-token: write
 
-    # Allow one concurrent deployment
+    - name: Allow Concurrent Deployment
       concurrency:
         group: "pages"
         cancel-in-progress: true
