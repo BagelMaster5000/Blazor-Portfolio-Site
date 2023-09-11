@@ -34,9 +34,9 @@ jobs:
       id: pages
       uses: actions/configure-pages@v3
 
-    # Changes the base-tag in index.html from '/' to 'Blazor-Portfolio-Site' to match GitHub Pages repository subdirectory
-    - name: Adjusting for MS Blazor Quirk
-      run: sed -i 's/<base href="\/" \/>/<base href="\/Blazor-Portfolio-Site\/" \/>/g' BlazorPortfolioSite/build/wwwroot/index.html
+    # # Changes the base-tag in index.html from '/' to 'Blazor-Portfolio-Site' to match GitHub Pages repository subdirectory
+    # - name: Adjusting for MS Blazor Quirk
+    #   run: sed -i 's/<base href="\/" \/>/<base href="\/Blazor-Portfolio-Site\/" \/>/g' BlazorPortfolioSite/build/wwwroot/index.html
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v2
