@@ -21,12 +21,11 @@ jobs:
       working-directory: ./BlazorPortfolioSite
       run: dotnet publish --configuration Release --output build
 
-    # changes the base-tag in index.html from '/' to 'Blazor-Portfolio-Site' to match GitHub Pages repository subdirectory
-    - name: Change base-tag in index.html from / to Blazor-Portfolio-Site
+    - name: Adjusting for MS Blazor Quirks
+    # Changes the base-tag in index.html from '/' to 'Blazor-Portfolio-Site' to match GitHub Pages repository subdirectory
       run: sed -i 's/<base href="\/" \/>/<base href="\/Blazor-Portfolio-Site\/" \/>/g' BlazorPortfolioSite/build/wwwroot/index.html
 
-    # add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
-    - name: Add .nojekyll file
+    # Add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
       run: touch BlazorPortfolioSite/build/wwwroot/.nojekyll
 
     # - name: Deploy
@@ -40,6 +39,19 @@ jobs:
     #   uses: actions/upload-pages-artifact@v1
     #   with:
     #     path: 'public'
+
     - name: Deploy to GitHub Pages
+    # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+      permissions:
+        contents: read
+        pages: write
+        id-token: write
+
+    # Allow one concurrent deployment
+      concurrency:
+        group: "pages"
+        cancel-in-progress: true
+
+    # Deploy
       id: deployment
       uses: actions/deploy-pages@v1
