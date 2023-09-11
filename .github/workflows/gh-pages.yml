@@ -34,19 +34,19 @@ jobs:
     - name: Adjusting for MS Blazor Quirks pt. 1
       run: sed -i 's/<base href="\/" \/>/<base href="\/Blazor-Portfolio-Site\/" \/>/g' BlazorPortfolioSite/build/wwwroot/index.html
 
-    # Add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
-    - name: Adjusting for MS Blazor Quirks pt. 2
-      run: touch BlazorPortfolioSite/build/wwwroot/.nojekyll
+    # # Add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
+    # - name: Adjusting for MS Blazor Quirks pt. 2
+    #   run: touch BlazorPortfolioSite/build/wwwroot/.nojekyll
 
     - name: Setup Pages
       id: pages
       uses: actions/configure-pages@v3
 
-    - name: Build with Jekyll
-      uses: actions/jekyll-build-pages@v1
-      with:
-        source: ./
-        destination: ./_site
+    # - name: Build with Jekyll
+    #   uses: actions/jekyll-build-pages@v1
+    #   with:
+    #     source: ./
+    #     destination: ./_site
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v2
