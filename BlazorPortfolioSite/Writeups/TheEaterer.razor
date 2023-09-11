@@ -26,13 +26,13 @@
 				<Row Margin="Margin.Is2">
 					<Column ColumnSize="ColumnSize.Is8">
 						<Paragraph>
-							A first-person horror action game about avoiding unhealthy habits. The player is chased by a fat blob—known as The Eaterer—through a series of pizza box mazes. If the player isn’t able to make the correct lifestyle choices, they become an “Eaterer” themselves…
+							A first-person horror action game about avoiding unhealthy habits. The player is chased by a fat blob—known as The Eaterer—through a series of pizza box mazes. If the player isn’t able to make correct lifestyle choices, they become an “Eaterer” themselves…
 						</Paragraph>
 						<Paragraph>
-							I developed this game during the start of quarantine in 2020 with a classmate. This was my first Unity 3D game and my first non-solo programming project. Us two had originally planned to publish the game onto the Steam marketplace, but design disagreements between us eventually cut the development short. We were able to compromise on a scaled-back idea for the game and eventually released it for free on Itch.io.
+							I developed this game during the start of quarantine in 2020 with a classmate. This was my first Unity 3D game and my first non-solo programming project. Us two had originally planned to publish this game onto the Steam marketplace, but design disagreements between us eventually cut the development short. We were able to compromise on a scaled-back idea for the game and released it for free on Itch.io.
 						</Paragraph>
 						<Paragraph>
-							This project taught me a lot about game development, programming, and collaborating in a team.
+							This project taught me a lot about game development, programming, and collaboration.
 						</Paragraph>
 						<Column ColumnSize="ColumnSize.Is8">
 							<Figure>
@@ -97,7 +97,7 @@
 				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Reading Item Data From Excel Spreadsheet</Heading>
 				<Row Margin="Margin.Is2">
 					<Paragraph>
-						I decided to store item name and item type data within an Excel spreadsheet for this game. The two reasons for this were to be able to adjust item information without touching the codebase and to clearly visualize the ratio of good:bad items throughout development.
+						I decided to store item data in an Excel spreadsheet for this game. The two reasons for this were to allow for adjusting item information without touching the codebase and to clearly track the ratio of good:bad items throughout development.
 					</Paragraph>
 					<Row>
 						<Column ColumnSize="ColumnSize.Is4" TextAlignment="TextAlignment.Center">
@@ -125,13 +125,13 @@
 				<Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Auto-Saving and Auto-Loading</Heading>
 				<Row Margin="Margin.Is2">
 					<Paragraph>
-						The game auto-saved when a level was completed or a setting had been adjusted and would auto-load on-launch.
+						The game auto-saves when a level is completed or a setting is adjusted and auto-loads on launch.
 					</Paragraph>
 					<Paragraph>
-						When the game saved, a save data object was created and initialized with data that reflected the current game state. This object was serialized using a binary formatter and saved as a file in the build directory.
+						When the game saves, a save data object is created and initialized with data reflecting the current game state. This object is serialized using a binary formatter and saved as a file in the build directory.
 					</Paragraph>
 					<Paragraph>
-						When the game loaded, the save file was deserialized and the now-exposed save data object variables were used to restore the last-saved game state.
+						When the game loads, the save file is deserialized and its variables are used to restore the last-saved game state.
 					</Paragraph>
 					<Row>
 						<Column ColumnSize="ColumnSize.Is6" TextAlignment="TextAlignment.Center">
