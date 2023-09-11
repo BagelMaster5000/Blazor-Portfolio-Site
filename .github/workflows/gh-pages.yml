@@ -38,6 +38,18 @@ jobs:
     - name: Adjusting for MS Blazor Quirks pt. 2
       run: touch BlazorPortfolioSite/build/wwwroot/.nojekyll
 
+    # - name: Deploy
+    #   uses: JamesIves/github-pages-deploy-action@v4
+    #   with:
+    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #     branch: gh-pages # The branch the action should deploy to.
+    #     folder: BlazorPortfolioSite/build/wwwroot # The folder the action should deploy.
+
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v1
+      with:
+        path: 'public'
+
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v1
