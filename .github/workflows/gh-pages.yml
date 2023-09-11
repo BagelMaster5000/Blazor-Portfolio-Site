@@ -12,15 +12,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    # changes the base-tag in index.html from '/' to 'Blazor-Portfolio-Site' to match GitHub Pages repository subdirectory
-    - name: Change base-tag in index.html from / to Blazor-Portfolio-Site
-      working-directory: ./BlazorPortfolioSite
-      run: sed -i 's/<base href="\/" \/>/<base href="\/Blazor-Portfolio-Site\/" \/>/g' wwwroot/index.html
-
-    # add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
-    - name: Add .nojekyll file
-      working-directory: ./BlazorPortfolioSite
-      run: touch wwwroot/.nojekyll
 
     - name: Setup .NET 7
       uses: actions/setup-dotnet@v3
@@ -31,8 +22,16 @@ jobs:
       working-directory: ./BlazorPortfolioSite
       run: dotnet publish --configuration Release --output build
 
+    # changes the base-tag in index.html from '/' to 'Blazor-Portfolio-Site' to match GitHub Pages repository subdirectory
+    - name: Change base-tag in index.html from / to Blazor-Portfolio-Site
+      run: sed -i 's/<base href="\/" \/>/<base href="\/Blazor-Portfolio-Site\/" \/>/g' BlazorPortfolioSite/build/wwwroot/index.html
+
+    # add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
+    - name: Add .nojekyll file
+      run: touch BlazorPortfolioSite/build/wwwroot/.nojekyll
+
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        branch: deploy # The branch the action should deploy to.
-        folder: "BlazorPortfolioSite/build/wwwroot" # The folder the action should deploy.
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        folder: BlazorPortfolioSite/build/wwwroot # The folder the action should deploy.
