@@ -1,0 +1,55 @@
+/* /Pages/Resume.razor.rz.scp.css */
+.resume[b-rfiok1rcg4] {
+    height: 800px;
+}
+/* /Shared/MainLayout.razor.rz.scp.css */
+.home-class-light[b-28jkiu3grh] { background-color: var(--home-light); }
+.projects-class-light[b-28jkiu3grh] { background-color: var(--projects-light); }
+.resume-class-light[b-28jkiu3grh] { background-color: var(--resume-light); }
+.contact-class-light[b-28jkiu3grh] { background-color: var(--contact-light); }
+
+
+.home-class-dark[b-28jkiu3grh] { background-color: var(--home-dark); }
+.projects-class-dark[b-28jkiu3grh] { background-color: var(--projects-dark); }
+.resume-class-dark[b-28jkiu3grh] { background-color: var(--resume-dark); }
+.contact-class-dark[b-28jkiu3grh] { background-color: var(--contact-dark); }
+
+.base-class[b-28jkiu3grh] { background: gray; }
+/* /Shared/NavMenu.razor.rz.scp.css */
+nav[b-k2upl3mjh4] {
+    align-content: center;
+    align-items: center;
+    float: unset;
+}
+
+a[b-k2upl3mjh4] {
+    text-decoration: none;
+    color: var(--b-theme-secondary);
+    padding: 6px 45px 7px 45px;
+    border-radius: 5px 5px 0px 0px;
+    transition: .2s ease-out;
+}
+
+    a:hover[b-k2upl3mjh4] {
+        opacity: 0.5;
+    }
+
+.home-link[b-k2upl3mjh4] { background-color: none; }
+.home-link-active-light[b-k2upl3mjh4] { background-color: var(--home-light); }
+.home-link-active-dark[b-k2upl3mjh4] { background-color: var(--home-dark); }
+
+.projects-link[b-k2upl3mjh4] { background-color: none }
+.projects-link-active-light[b-k2upl3mjh4] { background-color: var(--projects-light); }
+.projects-link-active-dark[b-k2upl3mjh4] { background-color: var(--projects-dark); }
+
+.resume-link[b-k2upl3mjh4] { background-color: none }
+.resume-link-active-light[b-k2upl3mjh4] { background-color: var(--resume-light); }
+.resume-link-active-dark[b-k2upl3mjh4] { background-color: var(--resume-dark); }
+
+.contact-link[b-k2upl3mjh4] { background-color: none }
+.contact-link-active-light[b-k2upl3mjh4] { background-color: var(--contact-light); }
+.contact-link-active-dark[b-k2upl3mjh4] { background-color: var(--contact-dark); }
+
+@media (max-width: 1000px) {
+    a[b-k2upl3mjh4] { padding: 6px 20px 7px 20px; }
+}
