@@ -7,7 +7,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "Blazor Portfolio Site.dll": "sha256-8aEaEbvUGXi52j8BMZGcjkof4x1sZpf8DLwrqNYURsc=",
+      "Blazor Portfolio Site.dll": "sha256-RIx1D86KhQYm3bFgoTh0H5mLY\/YEV976I2Lg5+P0m+A=",
       "Blazorise.Animate.dll": "sha256-Lm\/QhZarLOMKi0xnUz9i2D6A4wBk52bLe+GJFeW97cw=",
       "Blazorise.Bootstrap.dll": "sha256-qDIkmg8jxWUk9LXm+2sD69oOjZffMzmnmuezpT8na9U=",
       "Blazorise.dll": "sha256-teUuJLNdaQyz7kSZJpp+7v3d2aD3GZ0iElUCByVsjuU=",
