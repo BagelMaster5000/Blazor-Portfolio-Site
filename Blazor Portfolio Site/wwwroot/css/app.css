@@ -233,12 +233,13 @@ a, .btn-link {
 }
 
 body {
-    overflow: overlay;
+    overflow-y: scroll;
 }
 
 *::-webkit-scrollbar {
-    display: block;
+    display: flow;
     width: 8px;
+    
 }
 
 *::-webkit-scrollbar-button {
