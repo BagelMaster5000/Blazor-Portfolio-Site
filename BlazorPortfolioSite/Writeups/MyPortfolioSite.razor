@@ -142,6 +142,41 @@
 						</Figure>
 					</Container>
 				</Row>
+
+				<Divider />
+
+                @*Build Automation*@
+                <Heading Size="HeadingSize.Is3" Padding="Padding.Is2" TextAlignment="TextAlignment.Center">Build Automation</Heading>
+                <Row Margin="Margin.Is2">
+                    <Container TextAlignment="TextAlignment.Center" Padding="Padding.Is2">
+                        <Figure Width="Width.Is75">
+                            <FigureImage Source="portfolioimages/myportfoliosite/buildautomation.png" Rounded />
+                            <FigureCaption>
+                                I used GitHub Actions for build automation!
+                            </FigureCaption>
+                        </Figure>
+                    </Container>
+                    <Paragraph>
+                        This was slightly complicated to get working. I assumed for some time that build automation wouldn’t be possible for my portfolio site because Microsoft Blazor requires sites be built using the .NET "publish" command (the website is a .NET project, rather than a static html page like a lot of sites). But, I learned you actually can use .NET build tools in a GitHub action file if you import them!
+                    </Paragraph>
+                    <Paragraph>
+                        So, I followed some online resources and created a workflow script to automatically build and deploy my site on push to main. I also moved site hosting to GitHub pages for simplicity of the script.
+                    </Paragraph>
+                    <ListGroup>
+                        <ListGroupItem>
+                            1.	Setup .NET 7.0.
+                        </ListGroupItem>
+                        <ListGroupItem>
+                            2.	Run dotnet publish to build the site.
+                        </ListGroupItem>
+                        <ListGroupItem>
+                            3.	Upload built project as an artifact.
+                        </ListGroupItem>
+                        <ListGroupItem>
+                            4.	Deploy artifact to GitHub pages as a viewable web site!
+                        </ListGroupItem>
+                    </ListGroup>
+                </Row>
 			</Container>
 		</Card>
 
